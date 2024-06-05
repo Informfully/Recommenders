@@ -1,6 +1,6 @@
 # Informfully Recommender
 
-![Informfully](https://informfully.readthedocs.io/en/latest/_images/logo_banner.png)
+![Informfully](https://raw.githubusercontent.com/Informfully/Documentation/main/docs/source/img/logo_banner.png)
 
 Welcome to the [Informfully](https://informfully.ch/)!
 Informfully is a open-source reproducibility platform for content distribution and user experiments.
