@@ -10,6 +10,9 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 **Links and Resources:** [Website](https://informfully.ch/) | [Documentation](https://informfully.readthedocs.io/) | [Informfully](https://github.com/orgs/Informfully/repositories) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
+## Work in Progress
+This repository is part of a RecSys'24 Challenge submission and it currently being update.!
+
 ## Citation
 If you use any Informfully code/repository in a scientific publication, we ask you to cite the following papers:
 
