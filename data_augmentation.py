@@ -3,6 +3,7 @@ import re
 
 data = pl.read_parquet('ebnerd_large/articles.parquet')
 
+
 # Annotating hard and soft news
 hard = ['Erhverv', 'Økonomi', 'Politik', 'National politik', 'Konflikt og krig', 'Ansættelsesforhold', 'International politik', 'Køb og salg', 'Større transportmiddel', 'Bandekriminalitet', 'Videnskab', 'Væbnet konflikt', 'Uddannelse', 'Teknologi', 'Større katastrofe', 'Bedrageri', 'Offentlig instans', 'Samfundsvidenskab og humaniora', 'Naturvidenskab', 'Bæredygtighed og klima', 'Terror', 'Forbrugerelektronik', 'Kunstig intelligens og software','Katastrofe', 'Samfund']
 soft = ['Kendt', 'Livsstil', 'Underholdning', 'Kriminalitet', 'Sport', 'Begivenhed', 'Personfarlig kriminalitet', 'Fodbold', 'Sportsbegivenhed', 'Film og tv', 'Privat virksomhed', 'Erotik', 'Sundhed', 'Transportmiddel', 'Mindre ulykke', 'Musik og lyd', 'Bolig', 'Kultur', 'Partnerskab', 'Bil', 'Mikro', 'Værdier', 'Krop og velvære', 'Reality', 'Underholdningsbegivenhed', 'Personlig begivenhed', 'Mad og drikke', 'Familieliv', 'Dyr', 'Rejse', 'Cykling', 'Makro', 'Ketcher- og batsport', 'Motorsport', 'Håndbold', 'Kosmetisk behandling', 'Tendenser', 'Vejr', 'Museum og seværdighed', 'Litteratur', 'Ungdomsuddannelse', 'Offentlig transport', 'Udlejning', 'Renovering og indretning', 'Religion', 'Grundskole', 'Byliv', 'Mindre transportmiddel', 'Videregående uddannelse', 'Kunst', 'Fritid', 'Mærkedag', 'Sygdom og behandling']
@@ -12,8 +13,7 @@ def check_news_type(topic_list, type_list):
     return any(topic in type_list for topic in topic_list)
 
 
-#%%
-# check all the topics and return True if at least one of them is of type soft/hard
+# Check all the topics and return True if at least one of them is of type soft/hard
 data = data.with_columns(
     pl.col("topics").map_elements(lambda topics: check_news_type(topics, hard), return_dtype=pl.Boolean).alias("is_hard"))
 data = data.with_columns(
@@ -45,7 +45,6 @@ def count_pattern(text, pattern):
     return len(re.findall(pattern, text))
 
 
-
 # if the article body contains a mention of one of its representatives, return True
 for party in political_actors.keys():
     people_from_party = political_actors.get(party, [])
@@ -53,5 +52,6 @@ for party in political_actors.keys():
     data = data.with_columns(
         pl.col('body').map_elements(lambda text: count_pattern(text, pattern), return_dtype=pl.Int8).alias(party)
     )
+
 
 data.write_parquet('data/ebnerd_large/articles_augmented.parquet')
