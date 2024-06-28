@@ -10,8 +10,27 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 **Links and Resources:** [Website](https://informfully.ch/) | [Documentation](https://informfully.readthedocs.io/) | [GitHub](https://github.com/orgs/Informfully/repositories) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
-## Instructions (Work in Progress)
-This repository is part of a RecSys'24 Challenge submission and it currently being updated!
+## Instructions
+This repository is part of a RecSys'24 Challenge submission.
+As we are unable to redistribute any of the challenge datasets, please go and download it at: https://recsys.eb.dk/#dataset
+
+To calculate the article predictions, please `sample.py` located in the random walk folder.
+Structure the input data to match the following format:
+
+```python
+  # List of articles to populate the graph with article nodes.
+  # The labels can be anything as long as the are unique identifiers.
+  articleCollection = ["A", "B", "C"]
+
+  # List of users to populate the graph with user nodes.
+  # Scoring is disabled in the current setup (all users share the same score).
+  userScores = [1, 1, 1]
+
+  # List of user-item interactions to create edges between user and item nodes.
+  # The position in the userHistory array indicates the user in userScores.
+  # E.g., the thirs user in userScores read article B and C.
+  userHistory = [["A"], ["B"], ["B","C"]]
+```
 
 ## Citation
 If you use any Informfully code/repository in a scientific publication, we ask you to cite the following papers:
