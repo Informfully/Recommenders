@@ -12,9 +12,9 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 ## Instructions
 This repository is part of a RecSys'24 Challenge submission.
-As we are unable to redistribute any of the challenge datasets, please go and download it at: https://recsys.eb.dk/#dataset
+As we are unable to redistribute any of the challenge datasets, please go and download the required datasets at: https://recsys.eb.dk/#dataset
 
-To calculate the article predictions, please `sample.py` located in the random walk folder.
+To calculate the article ranking shared in the prediction folder, please run `sample.py` located in the random walk folder.
 Structure the input data to match the following format:
 
 ```python
@@ -28,7 +28,7 @@ Structure the input data to match the following format:
 
   # List of user-item interactions to create edges between user and item nodes.
   # The position in the userHistory array indicates the user in userScores.
-  # E.g., the thirs user in userScores read article B and C.
+  # E.g., the third user in userScores read articles B and C.
   userHistory = [["A"], ["B"], ["B","C"]]
 ```
 
