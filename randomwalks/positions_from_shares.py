@@ -1,3 +1,5 @@
+# Internal version. Please do not share publicly.
+
 import logging
 import numpy as np
 

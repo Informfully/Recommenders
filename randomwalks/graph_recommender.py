@@ -1,3 +1,5 @@
+# Internal version. Please do not share publicly.
+
 from __future__ import print_function
 import numpy as np
 from math import log
