@@ -40,7 +40,7 @@ If you use any Informfully code/repository in a scientific publication, we ask y
 - [Informfully - Research Platform for Reproducible User Studies](https://informfully.ch), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
   ```
-  @inproceedings{heitz2023deliberative,
+  @inproceedings{heitz2024informfully,
     title={Informfully - Research Platform for Reproducible User Studies},
     author={Heitz, Lucien and Croci, Julian A and Sachdeva, Madhav and Bernstein, Abraham},
     booktitle={Proceedings of the 18th ACM Conference on Recommender Systems},
