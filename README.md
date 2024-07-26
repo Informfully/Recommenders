@@ -35,6 +35,19 @@ Structure the input data to match the following format:
 ## Citation
 If you use any Informfully code/repository in a scientific publication, we ask you to cite the following papers:
 
+<!--Update once the final version of the paper has been published.-->
+
+- [Informfully - Research Platform for Reproducible User Studies](https://informfully.ch), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
+
+  ```
+  @inproceedings{heitz2023deliberative,
+    title={Informfully - Research Platform for Reproducible User Studies},
+    author={Heitz, Lucien and Croci, Julian A and Sachdeva, Madhav and Bernstein, Abraham},
+    booktitle={Proceedings of the 18th ACM Conference on Recommender Systems},
+    year={2024}
+  }
+  ``
+
 - [Deliberative Diversity for News Recommendations - Operationalization and Experimental User Study](https://dl.acm.org/doi/10.1145/3604915.3608834), Heitz *et al.*, Proceedings of the 17th ACM Conference on Recommender Systems, 813–819, 2023.
 
   ```
