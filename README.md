@@ -10,7 +10,8 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 **Links and Resources:** [GitHub](https://github.com/orgs/Informfully) | [Website](https://informfully.ch) | [Documentation](https://informfully.readthedocs.io) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
-## Instructions
+## Install Instructions
+
 This repository is part of a RecSys'24 Challenge submission.
 As we are unable to redistribute any of the challenge datasets, please go and download the required datasets at: https://recsys.eb.dk/#dataset
 
@@ -32,7 +33,16 @@ Structure the input data to match the following format:
   userHistory = [["A"], ["B"], ["B","C"]]
 ```
 
+## Algorithm Extensions
+
+| Name                  | Description                           | Source    |
+|-----------------------|---------------------------------------|-----------|
+| Exposure Diversity    | [TBD]                                 | [TBD]     |
+| Political Diversity   | [TBD]                                 | [TBD]     |
+| Random Walks          | [TBD]                                 | [TBD]     |
+
 ## Citation
+
 If you use any Informfully code/repository in a scientific publication, we ask you to cite the following papers:
 
 <!--Update once the final version of the paper has been published.-->
@@ -76,6 +86,7 @@ If you use any Informfully code/repository in a scientific publication, we ask y
   ```
 
 ## Contributing
+
 Your are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
   - fork any of the [Informfully repositories](https://github.com/Informfully)
   - join and write on the [dicussion board](https://github.com/orgs/Informfully/discussions)
