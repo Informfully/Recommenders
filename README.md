@@ -43,7 +43,7 @@ Structure the input data to match the following format:
 
 ## Citation
 
-If you use any Informfully code/repository in a scientific publication, we ask you to cite the following papers:
+If you use any code or data of this repository in a scientific publication, we ask you to cite the following papers:
 
 <!--Update once the final version of the paper has been published.-->
 
