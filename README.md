@@ -53,6 +53,21 @@ If you use any code or data of this repository in a scientific publication, we a
   }
   ```
 
+- [Updatable, Accurate, Diverse, and Scalable Recommendations for Interactive Applications](https://dl.acm.org/doi/abs/10.1145/2955101), Paudel *et al.*, ACM Transactions on Interactive Intelligent Systems, 2016.
+
+  ```
+  @article{paudel2016updatable,
+    title={Updatable, accurate, diverse, and scalable recommendations for interactive applications},
+    author={Paudel, Bibek and Christoffel, Fabian and Newell, Chris and Bernstein, Abraham},
+    journal={ACM Transactions on Interactive Intelligent Systems (TiiS)},
+    volume={7},
+    number={1},
+    pages={1--34},
+    year={2016},
+    publisher={ACM New York, NY, USA}
+  }
+  ```
+
 ## Contributing
 
 Your are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
