@@ -1,9 +1,7 @@
-# Internal version. Please do not share publicly.
-
 import logging
 import numpy as np
 
-# Bibek's code uses sessions (which are no longer part of TF2)
+# Enable sessions (which are no longer part of TF2)
 #import tensorflow as tf
 import tensorflow.compat.v1 as tf
 
