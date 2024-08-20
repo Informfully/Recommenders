@@ -41,7 +41,7 @@ If you use any code or data of this repository in a scientific publication, we a
 <!--Update once the final version of the paper has been published.-->
 
 - [Recommendations for the Recommenders: Reflections on
-  Prioritizing Diversity in the RecSys Challenge](https://github.com/Informfully/Recommenders), Heitz *et al.*, Proceedings of the Recommender Systems Challenge 2024, 2024.
+  Prioritizing Diversity in the RecSys Challenge](https://www.researchgate.net/publication/383261868_Recommendations_for_the_Recommenders_Reflections_on_Prioritizing_Diversity_in_the_RecSys_Challenge), Heitz *et al.*, Proceedings of the Recommender Systems Challenge 2024, 2024.
 
   ```
   @inproceedings{heitz2024recommendations,
