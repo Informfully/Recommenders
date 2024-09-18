@@ -34,6 +34,18 @@ Structure the input data to match the following format:
   userHistory = [["A"], ["B"], ["B","C"]]
 ```
 
+<!--
+
+ ## Algorithms
+
+| Algorithm               | Source                  |
+| ----------------------- | ----------------------- |
+| Political Diversity     | TBD                     |
+| Deliberative Diversity  | TBD                     |
+| RP3B Random Walk        | TBD                     |
+
+ -->
+
 ## Citation
 
 If you use any code or data of this repository in a scientific publication, we ask you to cite the following papers:
