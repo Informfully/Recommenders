@@ -80,7 +80,7 @@ If you use any code or data of this repository in a scientific publication, we a
   }
   ```
 
-  - [Informfully - Research Platform for Reproducible User Studies](https://www.researchgate.net/publication/383261885_Informfully_-_Research_Platform_for_Reproducible_User_Studies), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
+- [Informfully - Research Platform for Reproducible User Studies](https://www.researchgate.net/publication/383261885_Informfully_-_Research_Platform_for_Reproducible_User_Studies), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
   ```
   @inproceedings{heitz2024informfully,
