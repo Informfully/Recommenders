@@ -25,7 +25,10 @@ Structure the input data to match the following format:
   articleCollection = ["A", "B", "C"]
 
   # List of users to populate the graph with user nodes.
-  # Scoring is disabled in the current setup (all users share the same score).
+  # Scores allow to label similar and dissimilar user.
+  # The closer the score, the more similar the users.
+  # However, scoring is disabled in the current submission. 
+  # I.e., all users have the same score.
   userScores = [1, 1, 1]
 
   # List of user-item interactions to create edges between user and item nodes.
