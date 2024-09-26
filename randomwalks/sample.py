@@ -37,9 +37,9 @@ def main():
     # Step 0:   Define your user and item data (variable names still reflect news recommendations)
     #
 
-    articleCollection = ["A","B","C"]       # List of articles (string, int etc.)
+    articleCollection = ["A", "B", "C"]       # List of articles (string, int etc.)
     userScores = [-10,10,0]                 # Will reflect in article scores
-    userHistory = [["A"],["B"],["B","C"]]	# Reading history of users, e.g., first user read article "A"
+    userHistory = [["A"], ["B"], ["B", "C"]]	# Reading history of users, e.g., first user read article "A"
 
     # Step 1:   Create matrix UxI (user x items, i.e., news articles) with cell entries of either "1" or "0"
     #           ("1" -> user has read article, "0" -> user has not read article).

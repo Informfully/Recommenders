@@ -34,20 +34,8 @@ Structure the input data to match the following format:
   # List of user-item interactions to create edges between user and item nodes.
   # The position in the userHistory array indicates the user in userScores.
   # E.g., the third user in userScores read articles B and C.
-  userHistory = [["A"], ["B"], ["B","C"]]
+  userHistory = [["A"], ["B"], ["B", "C"]]
 ```
-
-<!--
-
- ## Algorithms
-
-| Algorithm               | Source                  |
-| ----------------------- | ----------------------- |
-| Political Diversity     | TBD                     |
-| Deliberative Diversity  | TBD                     |
-| RP3B Random Walk        | TBD                     |
-
- -->
 
 ## Citation
 
