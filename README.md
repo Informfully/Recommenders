@@ -78,6 +78,7 @@ If you use any code or data of this repository in a scientific publication, we a
     title={Informfully - Research Platform for Reproducible User Studies},
     author={Heitz, Lucien and Croci, Julian A and Sachdeva, Madhav and Bernstein, Abraham},
     booktitle={Proceedings of the 18th ACM Conference on Recommender Systems},
+    pages={660--669},
     year={2024}
   }
   ```
