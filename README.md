@@ -36,6 +36,16 @@ Structure the input data to match the following format:
   # E.g., the third user in userScores read articles B and C.
   userHistory = [["A"], ["B"], ["B", "C"]]
 ```
+<!--
+## Algorithms
+
+| Algorithm       | Description                           | Source    |
+|-----------------|---------------------------------------|-----------|
+| RP3-β           | Random walk                           | [1]       |
+| PARTD           | Participatory diversity               | [2]       |
+| DELID           | Deliberative diversity                | [3]       |
+
+-->
 
 ## Citation
 
