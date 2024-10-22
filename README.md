@@ -60,6 +60,7 @@ If you use any code or data of this repository in a scientific publication, we a
     title={Recommendations for the Recommenders: Reflections on Prioritizing Diversity in the RecSys Challenge},
     author={Heitz, Lucien and Inel, Oana and Vrijenhoek, Sanne},
     booktitle={Proceedings of the Recommender Systems Challenge 2024},
+    pages={22--26},
     year={2024}
   }
   ```
