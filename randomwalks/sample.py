@@ -1,5 +1,3 @@
-# Internal version. Please do not share publicly.
-
 import datetime
 import numpy
 import pprint
