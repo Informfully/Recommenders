@@ -10,7 +10,6 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 **Links and Resources:** [GitHub](https://github.com/orgs/Informfully) | [Website](https://informfully.ch) | [X](https://x.com/informfully) | [Documentation](https://informfully.readthedocs.io) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
-
 ## Overview
 
 Norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac)...
@@ -37,7 +36,6 @@ Worm in progress...
 ### Metrics Overview
 
 Work in progress...
-
 
 ## Citation
 
