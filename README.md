@@ -23,9 +23,11 @@ Work in progress...
 
 | Algorithm       | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
-| RP3-β           | Random walk                           | [1]       |
-| PARTD           | Participatory diversity               | [2]       |
-| DELID           | Deliberative diversity                | [3]       |
+| PART            | Participatory Diversity               | [1]       |
+| DELIB           | Deliberative Diversity                | [2]       |
+| D-RDW           | Diversity-Driven Random Walks         | [3]       |
+| RP3-β           | Random Walk                           | [4]       |
+| RWE-D           | Random Walk with Erasure              | [5]       |
 
 -->
 
@@ -33,9 +35,31 @@ Work in progress...
 
 Worm in progress...
 
+<!--
+## Algorithms
+
+| Algorithm       | Description                           | Source    |
+|-----------------|---------------------------------------|-----------|
+| G-KL            | G-KL                                  | [1]       |
+| PM-2            | PM-2                                  | [2]       |
+| MMR             | MMR                                   | [3]       |
+
+-->
+
 ### Metrics Overview
 
 Work in progress...
+
+<!--
+## Algorithms
+
+| Algorithm       | Description                           | Source    |
+|-----------------|---------------------------------------|-----------|
+| GINI            | Gini Coefficinet                      | [1]       |
+| ILD             | Intra-lList Distance                  | [2]       |
+| RADio           | RADio Metrics                         | [3]       |
+
+-->
 
 ## Citation
 
@@ -54,12 +78,14 @@ If you use any code or data of this repository in a scientific publication, we a
   ```
 
 ## Contributing
-
 Your are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
   - fork any of the [Informfully repositories](https://github.com/Informfully)
   - join and write on the [dicussion board](https://github.com/orgs/Informfully/discussions)
   - make changes and create pull requests
 
 Please post your feature requests and bug reports in our [GitHub issues](https://github.com/Informfully/Documentation/issues) section.
+
+## License
+Released under the [MIT License](LICENSE). (Please note that the respective copyright licenses of third-party libraries and dependencies apply.)
 
 ![Screenshots](https://raw.githubusercontent.com/Informfully/Documentation/main/docs/source/img/app_screens.png)
