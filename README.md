@@ -10,32 +10,15 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 **Links and Resources:** [GitHub](https://github.com/orgs/Informfully) | [Website](https://informfully.ch) | [X](https://x.com/informfully) | [Documentation](https://informfully.readthedocs.io) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
-RecSys '24 Challenge
---------------------
 
-This repository is part of a RecSys'24 Challenge submission.
-As we are unable to redistribute any of the challenge datasets, please go and download the required datasets at: https://recsys.eb.dk/#dataset
+## Overview
 
-To calculate the article ranking shared in the prediction folder, please run `sample.py` located in the random walk folder.
-Structure the input data to match the following format:
+Norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac)...
 
-```python
-  # List of articles to populate the graph with article nodes.
-  # The labels can be anything as long as the are unique identifiers.
-  articleCollection = ["A", "B", "C"]
+### Model Overview
 
-  # List of users to populate the graph with user nodes.
-  # Scores allow to label similar and dissimilar user.
-  # The closer the score, the more similar the users.
-  # However, scoring is disabled in the current submission. 
-  # I.e., all users have the same score.
-  userScores = [1, 1, 1]
+Work in progress...
 
-  # List of user-item interactions to create edges between user and item nodes.
-  # The position in the userHistory array indicates the user in userScores.
-  # E.g., the third user in userScores read articles B and C.
-  userHistory = [["A"], ["B"], ["B", "C"]]
-```
 <!--
 ## Algorithms
 
@@ -47,38 +30,18 @@ Structure the input data to match the following format:
 
 -->
 
+### Re-ranker Overview
+
+Worm in progress...
+
+### Metrics Overview
+
+Work in progress...
+
+
 ## Citation
 
-If you use any code or data of this repository in a scientific publication, we ask you to cite the following papers:
-
-<!--Update once the final version of the paper has been published.-->
-
-- [Recommendations for the Recommenders: Reflections on Prioritizing Diversity in the RecSys Challenge](https://www.researchgate.net/publication/383261868_Recommendations_for_the_Recommenders_Reflections_on_Prioritizing_Diversity_in_the_RecSys_Challenge), Heitz *et al.*, Proceedings of the Recommender Systems Challenge 2024, 2024.
-
-  ```
-  @inproceedings{heitz2024recommendations,
-    title={Recommendations for the Recommenders: Reflections on Prioritizing Diversity in the RecSys Challenge},
-    author={Heitz, Lucien and Inel, Oana and Vrijenhoek, Sanne},
-    booktitle={Proceedings of the Recommender Systems Challenge 2024},
-    pages={22--26},
-    year={2024}
-  }
-  ```
-
-- [Updatable, Accurate, Diverse, and Scalable Recommendations for Interactive Applications](https://dl.acm.org/doi/abs/10.1145/2955101), Paudel *et al.*, ACM Transactions on Interactive Intelligent Systems, 2016.
-
-  ```
-  @article{paudel2016updatable,
-    title={Updatable, accurate, diverse, and scalable recommendations for interactive applications},
-    author={Paudel, Bibek and Christoffel, Fabian and Newell, Chris and Bernstein, Abraham},
-    journal={ACM Transactions on Interactive Intelligent Systems (TiiS)},
-    volume={7},
-    number={1},
-    pages={1--34},
-    year={2016},
-    publisher={ACM New York, NY, USA}
-  }
-  ```
+If you use any code or data of this repository in a scientific publication, we ask you to cite the following paper:
 
 - [Informfully - Research Platform for Reproducible User Studies](https://dl.acm.org/doi/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
