@@ -12,16 +12,16 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 ## Overview
 
-Norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac)...
+Informfully Recommenders is a norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac).
+Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
 
 ### Model Overview
 
 Work in progress...
 
 <!--
-## Algorithms
 
-| Algorithm       | Description                           | Source    |
+| Model           | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
 | PART            | Participatory Diversity               | [1]       |
 | DELIB           | Deliberative Diversity                | [2]       |
@@ -36,9 +36,8 @@ Work in progress...
 Worm in progress...
 
 <!--
-## Algorithms
 
-| Algorithm       | Description                           | Source    |
+| Re-ranker       | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
 | G-KL            | G-KL                                  | [1]       |
 | PM-2            | PM-2                                  | [2]       |
@@ -51,9 +50,8 @@ Worm in progress...
 Work in progress...
 
 <!--
-## Algorithms
 
-| Algorithm       | Description                           | Source    |
+| Metric          | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
 | GINI            | Gini Coefficinet                      | [1]       |
 | ILD             | Intra-lList Distance                  | [2]       |
