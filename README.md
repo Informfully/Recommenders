@@ -14,6 +14,7 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 Informfully Recommenders is a norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac).
 Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
+And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
 
 ### Model Overview
 

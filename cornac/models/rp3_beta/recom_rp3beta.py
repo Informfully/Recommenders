@@ -7,7 +7,6 @@ from ..recommender import Recommender
 
 
 class RP3_Beta(Recommender):
-
     """Random Walk Algorithm.
 
     Parameters
@@ -52,8 +51,6 @@ class RP3_Beta(Recommender):
         len(user_positions) x len(item_position).
     
     """
-
-
     def __init__(
         self,
         beta = 0.7,
@@ -68,9 +65,7 @@ class RP3_Beta(Recommender):
         self.beta = beta
         self.article_pool = article_pool
 
-
     def fit(self, train_set, val_set=None):
-
         """Fit the model to observations.
 
         Parameters
@@ -87,7 +82,6 @@ class RP3_Beta(Recommender):
 
         train_set:(userId, userHistory, userScore)
         """
-
         Recommender.fit(self, train_set)
 
         def interacted_items(csr_row):
@@ -114,8 +108,7 @@ class RP3_Beta(Recommender):
         self.Model_RDW = GraphRec(self.train_set_rating)
         self.Model_RDW.performInitialHop()
 
-        return self
-    
+        return self  
 
     def score(self, user_idx, item_idx=None):
         """Predict the scores/ratings of a user for an item.
@@ -135,7 +128,6 @@ class RP3_Beta(Recommender):
             Relative scores that the user gives to the item or to all known items
 
         """
-
         if self.is_unknown_user(user_idx):
             print(f'unknown user : {user_idx}\n')
             raise ScoreException(

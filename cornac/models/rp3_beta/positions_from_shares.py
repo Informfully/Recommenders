@@ -24,8 +24,6 @@ logger = logging.getLogger(__name__)
 
 
 class IdeologyFromTweets(object):
-
-
     def __init__(self, 
                  matrix, 
                  user_positions,
@@ -54,7 +52,6 @@ class IdeologyFromTweets(object):
         assert (user_positions.shape[0] == self.ratings_matrix.shape[0])
         self.U = tf.convert_to_tensor(tf.reshape(user_positions, [self.shape_ratings[0], self.rank]))
 
-
     def normalize_matrices(self, matrix_ip, log_msg = ""):
 
         matrix = np.nan_to_num(matrix_ip)
@@ -68,7 +65,6 @@ class IdeologyFromTweets(object):
                      1.0 * num_nz / num_total_cells, 1.0 * (num_total_cells - num_nz) / sum_nz))
 
         return (1.0 * (num_total_cells - num_nz) / sum_nz) * matrix
-
 
     def initialize_variables(self):
 
@@ -97,7 +93,6 @@ class IdeologyFromTweets(object):
         self.learnt_bV = None
 
         self.init = tf.global_variables_initializer()
-
 
     def train(self, steps, print_every_n_steps = 200):
 
@@ -130,18 +125,14 @@ class IdeologyFromTweets(object):
             self.learnt_bU = sess.run(self.b_U)
             self.learnt_bV = sess.run(self.b_V)
 
-
     def getU(self):
         return self.learnt_U
-
 
     def getV(self):
         return self.learnt_V
 
-
     def getb_u(self):
         return self.learnt_bU
-
 
     def getb_v(self):
         return self.learnt_bV

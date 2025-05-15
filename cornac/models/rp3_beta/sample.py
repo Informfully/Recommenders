@@ -80,5 +80,6 @@ def main():
     # Row 1 shows predictions for user 1, listing the probabilities in column 1-3 for each article
     print(predictions)
 
+
 if __name__ == '__main__':
     main()

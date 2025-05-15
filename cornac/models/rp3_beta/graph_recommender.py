@@ -21,7 +21,6 @@ class GraphRec(object):
         P_multi : dict
             Multi-hop probability matrices for multiple hop counts.
     """
-
     def __init__(self, train_matrix):
         """
         Constructs a bipartite graph of size (|U| + |V|) x (|U| + |V|) from a user-item interaction matrix, 
@@ -32,7 +31,6 @@ class GraphRec(object):
         train_matrix : array-like or csr_matrix
             User-item interaction matrix.
         """
-
         # Ensure the train_matrix is in CSR format and convert its data type to float32 for efficiency
         if not isinstance(train_matrix, csr_matrix):
             self.train_matrix = csr_matrix(train_matrix).astype(np.float32)
@@ -57,7 +55,6 @@ class GraphRec(object):
         self.D[self.D == 0] = 0.0001
         self.P = self.A.multiply(1.0 / self.D[:, None])
     
-
     def get_item_degrees(self):
         """
         Calculate the number of edges each item is connected to users.
@@ -72,7 +69,6 @@ class GraphRec(object):
         item_edges = np.array(self.train_matrix.getnnz(axis=0)).flatten()
         return item_edges
     
-
     def performInitialHop(self):
         """
         Computes the 2-hop and 3-hop transition probability matrices.
@@ -90,7 +86,6 @@ class GraphRec(object):
         self.P3 = P2.dot(self.P).astype(np.float32)  # P cubed
         return self.P3
         
- 
     def predict_reranked_scores(self, user_idx, beta=0.7):
         """Calculate re-ranked scores using degree-based regularization
         
@@ -101,7 +96,6 @@ class GraphRec(object):
         Returns:
             ndarray: Re-ranked recommendation scores
         """
-
         # Get initial 3-hop probabilities 
         start_col = self.num_u
         recs = self.P3[user_idx, start_col:]
