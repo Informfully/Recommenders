@@ -64,6 +64,17 @@ Work in progress...
 
 If you use any code or data of this repository in a scientific publication, we ask you to cite the following paper:
 
+- [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
+
+  ```
+  @inproceedings{truong2021multi,
+    title={Multi-modal recommender systems: Hands-on exploration},
+    author={Truong, Quoc-Tuan and Salah, Aghiles and Lauw, Hady},
+    booktitle={Fifteenth ACM Conference on Recommender Systems},
+    pages={834--837},
+    year={2021}
+  }
+
 - [Informfully - Research Platform for Reproducible User Studies](https://dl.acm.org/doi/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
   ```
@@ -85,6 +96,6 @@ Your are welcome to contribute to the Informfully ecosystem and become a part of
 Please post your feature requests and bug reports in our [GitHub issues](https://github.com/Informfully/Documentation/issues) section.
 
 ## License
-Released under the [MIT License](LICENSE). (Please note that the respective copyright licenses of third-party libraries and dependencies apply.)
+Released under the [Apache License 2.0](LICENSE). (Please note that the respective copyright licenses of third-party libraries and dependencies apply.)
 
 ![Screenshots](https://raw.githubusercontent.com/Informfully/Documentation/main/docs/source/img/app_screens.png)
