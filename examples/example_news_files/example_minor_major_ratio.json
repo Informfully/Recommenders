@@ -1,0 +1,2242 @@
+{
+    "article_53": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_55": {
+        "gender": [
+            0.12,
+            0.88
+        ],
+        "ethnicity": [
+            0.12,
+            0.88
+        ],
+        "mainstream": [
+            0.12,
+            0.88
+        ]
+    },
+    "article_99": {
+        "gender": [
+            0.03,
+            0.97
+        ],
+        "ethnicity": [
+            0.03,
+            0.97
+        ],
+        "mainstream": [
+            0.03,
+            0.97
+        ]
+    },
+    "article_47": {
+        "gender": [
+            0.28,
+            0.72
+        ],
+        "ethnicity": [
+            0.28,
+            0.72
+        ],
+        "mainstream": [
+            0.28,
+            0.72
+        ]
+    },
+    "article_146": {
+        "gender": [
+            0.45,
+            0.55
+        ],
+        "ethnicity": [
+            0.45,
+            0.55
+        ],
+        "mainstream": [
+            0.45,
+            0.55
+        ]
+    },
+    "article_104": {
+        "gender": [
+            0.42,
+            0.58
+        ],
+        "ethnicity": [
+            0.42,
+            0.58
+        ],
+        "mainstream": [
+            0.42,
+            0.58
+        ]
+    },
+    "article_69": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_157": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_13": {
+        "gender": [
+            0.21,
+            0.79
+        ],
+        "ethnicity": [
+            0.21,
+            0.79
+        ],
+        "mainstream": [
+            0.21,
+            0.79
+        ]
+    },
+    "article_130": {
+        "gender": [
+            0.43,
+            0.57
+        ],
+        "ethnicity": [
+            0.43,
+            0.57
+        ],
+        "mainstream": [
+            0.43,
+            0.57
+        ]
+    },
+    "article_150": {
+        "gender": [
+            0.34,
+            0.66
+        ],
+        "ethnicity": [
+            0.34,
+            0.66
+        ],
+        "mainstream": [
+            0.34,
+            0.66
+        ]
+    },
+    "article_87": {
+        "gender": [
+            0.45,
+            0.55
+        ],
+        "ethnicity": [
+            0.45,
+            0.55
+        ],
+        "mainstream": [
+            0.45,
+            0.55
+        ]
+    },
+    "article_132": {
+        "gender": [
+            0.19,
+            0.81
+        ],
+        "ethnicity": [
+            0.19,
+            0.81
+        ],
+        "mainstream": [
+            0.19,
+            0.81
+        ]
+    },
+    "article_91": {
+        "gender": [
+            0.42,
+            0.58
+        ],
+        "ethnicity": [
+            0.42,
+            0.58
+        ],
+        "mainstream": [
+            0.42,
+            0.58
+        ]
+    },
+    "article_79": {
+        "gender": [
+            0.67,
+            0.33
+        ],
+        "ethnicity": [
+            0.67,
+            0.33
+        ],
+        "mainstream": [
+            0.67,
+            0.33
+        ]
+    },
+    "article_137": {
+        "gender": [
+            0.24,
+            0.76
+        ],
+        "ethnicity": [
+            0.24,
+            0.76
+        ],
+        "mainstream": [
+            0.24,
+            0.76
+        ]
+    },
+    "article_19": {
+        "gender": [
+            0.3,
+            0.7
+        ],
+        "ethnicity": [
+            0.3,
+            0.7
+        ],
+        "mainstream": [
+            0.3,
+            0.7
+        ]
+    },
+    "article_41": {
+        "gender": [
+            0.45,
+            0.55
+        ],
+        "ethnicity": [
+            0.45,
+            0.55
+        ],
+        "mainstream": [
+            0.45,
+            0.55
+        ]
+    },
+    "article_4": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_70": {
+        "gender": [
+            0.17,
+            0.83
+        ],
+        "ethnicity": [
+            0.17,
+            0.83
+        ],
+        "mainstream": [
+            0.17,
+            0.83
+        ]
+    },
+    "article_121": {
+        "gender": [
+            0.91,
+            0.09
+        ],
+        "ethnicity": [
+            0.91,
+            0.09
+        ],
+        "mainstream": [
+            0.91,
+            0.09
+        ]
+    },
+    "article_133": {
+        "gender": [
+            0.09,
+            0.91
+        ],
+        "ethnicity": [
+            0.09,
+            0.91
+        ],
+        "mainstream": [
+            0.09,
+            0.91
+        ]
+    },
+    "article_39": {
+        "gender": [
+            0.12,
+            0.88
+        ],
+        "ethnicity": [
+            0.12,
+            0.88
+        ],
+        "mainstream": [
+            0.12,
+            0.88
+        ]
+    },
+    "article_151": {
+        "gender": [
+            0.16,
+            0.84
+        ],
+        "ethnicity": [
+            0.16,
+            0.84
+        ],
+        "mainstream": [
+            0.16,
+            0.84
+        ]
+    },
+    "article_23": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_135": {
+        "gender": [
+            0.12,
+            0.88
+        ],
+        "ethnicity": [
+            0.12,
+            0.88
+        ],
+        "mainstream": [
+            0.12,
+            0.88
+        ]
+    },
+    "article_158": {
+        "gender": [
+            0.2,
+            0.8
+        ],
+        "ethnicity": [
+            0.2,
+            0.8
+        ],
+        "mainstream": [
+            0.2,
+            0.8
+        ]
+    },
+    "article_35": {
+        "gender": [
+            0.5,
+            0.5
+        ],
+        "ethnicity": [
+            0.5,
+            0.5
+        ],
+        "mainstream": [
+            0.5,
+            0.5
+        ]
+    },
+    "article_145": {
+        "gender": [
+            0.27,
+            0.73
+        ],
+        "ethnicity": [
+            0.27,
+            0.73
+        ],
+        "mainstream": [
+            0.27,
+            0.73
+        ]
+    },
+    "article_96": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_66": {
+        "gender": [
+            0.27,
+            0.73
+        ],
+        "ethnicity": [
+            0.27,
+            0.73
+        ],
+        "mainstream": [
+            0.27,
+            0.73
+        ]
+    },
+    "article_14": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_131": {
+        "gender": [
+            0.48,
+            0.52
+        ],
+        "ethnicity": [
+            0.48,
+            0.52
+        ],
+        "mainstream": [
+            0.48,
+            0.52
+        ]
+    },
+    "article_8": {
+        "gender": [
+            0.31,
+            0.69
+        ],
+        "ethnicity": [
+            0.31,
+            0.69
+        ],
+        "mainstream": [
+            0.31,
+            0.69
+        ]
+    },
+    "article_110": {
+        "gender": [
+            0.56,
+            0.44
+        ],
+        "ethnicity": [
+            0.56,
+            0.44
+        ],
+        "mainstream": [
+            0.56,
+            0.44
+        ]
+    },
+    "article_51": {
+        "gender": [
+            0.65,
+            0.35
+        ],
+        "ethnicity": [
+            0.65,
+            0.35
+        ],
+        "mainstream": [
+            0.65,
+            0.35
+        ]
+    },
+    "article_149": {
+        "gender": [
+            0.28,
+            0.72
+        ],
+        "ethnicity": [
+            0.28,
+            0.72
+        ],
+        "mainstream": [
+            0.28,
+            0.72
+        ]
+    },
+    "article_1": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_80": {
+        "gender": [
+            0.31,
+            0.69
+        ],
+        "ethnicity": [
+            0.31,
+            0.69
+        ],
+        "mainstream": [
+            0.31,
+            0.69
+        ]
+    },
+    "article_71": {
+        "gender": [
+            0.54,
+            0.46
+        ],
+        "ethnicity": [
+            0.54,
+            0.46
+        ],
+        "mainstream": [
+            0.54,
+            0.46
+        ]
+    },
+    "article_139": {
+        "gender": [
+            0.23,
+            0.77
+        ],
+        "ethnicity": [
+            0.23,
+            0.77
+        ],
+        "mainstream": [
+            0.23,
+            0.77
+        ]
+    },
+    "article_5": {
+        "gender": [
+            0.3,
+            0.7
+        ],
+        "ethnicity": [
+            0.3,
+            0.7
+        ],
+        "mainstream": [
+            0.3,
+            0.7
+        ]
+    },
+    "article_123": {
+        "gender": [
+            0.01,
+            0.99
+        ],
+        "ethnicity": [
+            0.01,
+            0.99
+        ],
+        "mainstream": [
+            0.01,
+            0.99
+        ]
+    },
+    "article_93": {
+        "gender": [
+            0.29,
+            0.71
+        ],
+        "ethnicity": [
+            0.29,
+            0.71
+        ],
+        "mainstream": [
+            0.29,
+            0.71
+        ]
+    },
+    "article_114": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_126": {
+        "gender": [
+            0.13,
+            0.87
+        ],
+        "ethnicity": [
+            0.13,
+            0.87
+        ],
+        "mainstream": [
+            0.13,
+            0.87
+        ]
+    },
+    "article_11": {
+        "gender": [
+            0.27,
+            0.73
+        ],
+        "ethnicity": [
+            0.27,
+            0.73
+        ],
+        "mainstream": [
+            0.27,
+            0.73
+        ]
+    },
+    "article_65": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_160": {
+        "gender": [
+            0.01,
+            0.99
+        ],
+        "ethnicity": [
+            0.01,
+            0.99
+        ],
+        "mainstream": [
+            0.01,
+            0.99
+        ]
+    },
+    "article_148": {
+        "gender": [
+            0.96,
+            0.04
+        ],
+        "ethnicity": [
+            0.96,
+            0.04
+        ],
+        "mainstream": [
+            0.96,
+            0.04
+        ]
+    },
+    "article_117": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_24": {
+        "gender": [
+            0.1,
+            0.9
+        ],
+        "ethnicity": [
+            0.1,
+            0.9
+        ],
+        "mainstream": [
+            0.1,
+            0.9
+        ]
+    },
+    "article_7": {
+        "gender": [
+            0.64,
+            0.36
+        ],
+        "ethnicity": [
+            0.64,
+            0.36
+        ],
+        "mainstream": [
+            0.64,
+            0.36
+        ]
+    },
+    "article_147": {
+        "gender": [
+            0.24,
+            0.76
+        ],
+        "ethnicity": [
+            0.24,
+            0.76
+        ],
+        "mainstream": [
+            0.24,
+            0.76
+        ]
+    },
+    "article_45": {
+        "gender": [
+            0.62,
+            0.38
+        ],
+        "ethnicity": [
+            0.62,
+            0.38
+        ],
+        "mainstream": [
+            0.62,
+            0.38
+        ]
+    },
+    "article_37": {
+        "gender": [
+            0.69,
+            0.31
+        ],
+        "ethnicity": [
+            0.69,
+            0.31
+        ],
+        "mainstream": [
+            0.69,
+            0.31
+        ]
+    },
+    "article_109": {
+        "gender": [
+            0.72,
+            0.28
+        ],
+        "ethnicity": [
+            0.72,
+            0.28
+        ],
+        "mainstream": [
+            0.72,
+            0.28
+        ]
+    },
+    "article_3": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_141": {
+        "gender": [
+            0.03,
+            0.97
+        ],
+        "ethnicity": [
+            0.03,
+            0.97
+        ],
+        "mainstream": [
+            0.03,
+            0.97
+        ]
+    },
+    "article_113": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_106": {
+        "gender": [
+            0.21,
+            0.79
+        ],
+        "ethnicity": [
+            0.21,
+            0.79
+        ],
+        "mainstream": [
+            0.21,
+            0.79
+        ]
+    },
+    "article_56": {
+        "gender": [
+            0.46,
+            0.54
+        ],
+        "ethnicity": [
+            0.46,
+            0.54
+        ],
+        "mainstream": [
+            0.46,
+            0.54
+        ]
+    },
+    "article_17": {
+        "gender": [
+            0.4,
+            0.6
+        ],
+        "ethnicity": [
+            0.4,
+            0.6
+        ],
+        "mainstream": [
+            0.4,
+            0.6
+        ]
+    },
+    "article_22": {
+        "gender": [
+            0.23,
+            0.77
+        ],
+        "ethnicity": [
+            0.23,
+            0.77
+        ],
+        "mainstream": [
+            0.23,
+            0.77
+        ]
+    },
+    "article_143": {
+        "gender": [
+            0.29,
+            0.71
+        ],
+        "ethnicity": [
+            0.29,
+            0.71
+        ],
+        "mainstream": [
+            0.29,
+            0.71
+        ]
+    },
+    "article_75": {
+        "gender": [
+            0.96,
+            0.04
+        ],
+        "ethnicity": [
+            0.96,
+            0.04
+        ],
+        "mainstream": [
+            0.96,
+            0.04
+        ]
+    },
+    "article_28": {
+        "gender": [
+            0.33,
+            0.67
+        ],
+        "ethnicity": [
+            0.33,
+            0.67
+        ],
+        "mainstream": [
+            0.33,
+            0.67
+        ]
+    },
+    "article_144": {
+        "gender": [
+            0.05,
+            0.95
+        ],
+        "ethnicity": [
+            0.05,
+            0.95
+        ],
+        "mainstream": [
+            0.05,
+            0.95
+        ]
+    },
+    "article_38": {
+        "gender": [
+            0.68,
+            0.32
+        ],
+        "ethnicity": [
+            0.68,
+            0.32
+        ],
+        "mainstream": [
+            0.68,
+            0.32
+        ]
+    },
+    "article_67": {
+        "gender": [
+            0.04,
+            0.96
+        ],
+        "ethnicity": [
+            0.04,
+            0.96
+        ],
+        "mainstream": [
+            0.04,
+            0.96
+        ]
+    },
+    "article_103": {
+        "gender": [
+            0.23,
+            0.77
+        ],
+        "ethnicity": [
+            0.23,
+            0.77
+        ],
+        "mainstream": [
+            0.23,
+            0.77
+        ]
+    },
+    "article_152": {
+        "gender": [
+            0.78,
+            0.22
+        ],
+        "ethnicity": [
+            0.78,
+            0.22
+        ],
+        "mainstream": [
+            0.78,
+            0.22
+        ]
+    },
+    "article_49": {
+        "gender": [
+            0.02,
+            0.98
+        ],
+        "ethnicity": [
+            0.02,
+            0.98
+        ],
+        "mainstream": [
+            0.02,
+            0.98
+        ]
+    },
+    "article_119": {
+        "gender": [
+            0.47,
+            0.53
+        ],
+        "ethnicity": [
+            0.47,
+            0.53
+        ],
+        "mainstream": [
+            0.47,
+            0.53
+        ]
+    },
+    "article_82": {
+        "gender": [
+            0.19,
+            0.81
+        ],
+        "ethnicity": [
+            0.19,
+            0.81
+        ],
+        "mainstream": [
+            0.19,
+            0.81
+        ]
+    },
+    "article_25": {
+        "gender": [
+            0.45,
+            0.55
+        ],
+        "ethnicity": [
+            0.45,
+            0.55
+        ],
+        "mainstream": [
+            0.45,
+            0.55
+        ]
+    },
+    "article_140": {
+        "gender": [
+            0.11,
+            0.89
+        ],
+        "ethnicity": [
+            0.11,
+            0.89
+        ],
+        "mainstream": [
+            0.11,
+            0.89
+        ]
+    },
+    "article_60": {
+        "gender": [
+            0.41,
+            0.59
+        ],
+        "ethnicity": [
+            0.41,
+            0.59
+        ],
+        "mainstream": [
+            0.41,
+            0.59
+        ]
+    },
+    "article_59": {
+        "gender": [
+            0.57,
+            0.43
+        ],
+        "ethnicity": [
+            0.57,
+            0.43
+        ],
+        "mainstream": [
+            0.57,
+            0.43
+        ]
+    },
+    "article_34": {
+        "gender": [
+            0.18,
+            0.82
+        ],
+        "ethnicity": [
+            0.18,
+            0.82
+        ],
+        "mainstream": [
+            0.18,
+            0.82
+        ]
+    },
+    "article_84": {
+        "gender": [
+            0.24,
+            0.76
+        ],
+        "ethnicity": [
+            0.24,
+            0.76
+        ],
+        "mainstream": [
+            0.24,
+            0.76
+        ]
+    },
+    "article_156": {
+        "gender": [
+            0.43,
+            0.57
+        ],
+        "ethnicity": [
+            0.43,
+            0.57
+        ],
+        "mainstream": [
+            0.43,
+            0.57
+        ]
+    },
+    "article_43": {
+        "gender": [
+            0.54,
+            0.46
+        ],
+        "ethnicity": [
+            0.54,
+            0.46
+        ],
+        "mainstream": [
+            0.54,
+            0.46
+        ]
+    },
+    "article_9": {
+        "gender": [
+            0.27,
+            0.73
+        ],
+        "ethnicity": [
+            0.27,
+            0.73
+        ],
+        "mainstream": [
+            0.27,
+            0.73
+        ]
+    },
+    "article_86": {
+        "gender": [
+            0.4,
+            0.6
+        ],
+        "ethnicity": [
+            0.4,
+            0.6
+        ],
+        "mainstream": [
+            0.4,
+            0.6
+        ]
+    },
+    "article_128": {
+        "gender": [
+            0.72,
+            0.28
+        ],
+        "ethnicity": [
+            0.72,
+            0.28
+        ],
+        "mainstream": [
+            0.72,
+            0.28
+        ]
+    },
+    "article_61": {
+        "gender": [
+            0.48,
+            0.52
+        ],
+        "ethnicity": [
+            0.48,
+            0.52
+        ],
+        "mainstream": [
+            0.48,
+            0.52
+        ]
+    },
+    "article_32": {
+        "gender": [
+            0.29,
+            0.71
+        ],
+        "ethnicity": [
+            0.29,
+            0.71
+        ],
+        "mainstream": [
+            0.29,
+            0.71
+        ]
+    },
+    "article_18": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_30": {
+        "gender": [
+            0.42,
+            0.58
+        ],
+        "ethnicity": [
+            0.42,
+            0.58
+        ],
+        "mainstream": [
+            0.42,
+            0.58
+        ]
+    },
+    "article_102": {
+        "gender": [
+            0.21,
+            0.79
+        ],
+        "ethnicity": [
+            0.21,
+            0.79
+        ],
+        "mainstream": [
+            0.21,
+            0.79
+        ]
+    },
+    "article_72": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_54": {
+        "gender": [
+            0.02,
+            0.98
+        ],
+        "ethnicity": [
+            0.02,
+            0.98
+        ],
+        "mainstream": [
+            0.02,
+            0.98
+        ]
+    },
+    "article_136": {
+        "gender": [
+            0.47,
+            0.53
+        ],
+        "ethnicity": [
+            0.47,
+            0.53
+        ],
+        "mainstream": [
+            0.47,
+            0.53
+        ]
+    },
+    "article_154": {
+        "gender": [
+            0.33,
+            0.67
+        ],
+        "ethnicity": [
+            0.33,
+            0.67
+        ],
+        "mainstream": [
+            0.33,
+            0.67
+        ]
+    },
+    "article_26": {
+        "gender": [
+            0.21,
+            0.79
+        ],
+        "ethnicity": [
+            0.21,
+            0.79
+        ],
+        "mainstream": [
+            0.21,
+            0.79
+        ]
+    },
+    "article_125": {
+        "gender": [
+            0.2,
+            0.8
+        ],
+        "ethnicity": [
+            0.2,
+            0.8
+        ],
+        "mainstream": [
+            0.2,
+            0.8
+        ]
+    },
+    "article_16": {
+        "gender": [
+            0.16,
+            0.84
+        ],
+        "ethnicity": [
+            0.16,
+            0.84
+        ],
+        "mainstream": [
+            0.16,
+            0.84
+        ]
+    },
+    "article_12": {
+        "gender": [
+            0.25,
+            0.75
+        ],
+        "ethnicity": [
+            0.25,
+            0.75
+        ],
+        "mainstream": [
+            0.25,
+            0.75
+        ]
+    },
+    "article_33": {
+        "gender": [
+            0.29,
+            0.71
+        ],
+        "ethnicity": [
+            0.29,
+            0.71
+        ],
+        "mainstream": [
+            0.29,
+            0.71
+        ]
+    },
+    "article_94": {
+        "gender": [
+            0.96,
+            0.04
+        ],
+        "ethnicity": [
+            0.96,
+            0.04
+        ],
+        "mainstream": [
+            0.96,
+            0.04
+        ]
+    },
+    "article_118": {
+        "gender": [
+            0.44,
+            0.56
+        ],
+        "ethnicity": [
+            0.44,
+            0.56
+        ],
+        "mainstream": [
+            0.44,
+            0.56
+        ]
+    },
+    "article_134": {
+        "gender": [
+            0.39,
+            0.61
+        ],
+        "ethnicity": [
+            0.39,
+            0.61
+        ],
+        "mainstream": [
+            0.39,
+            0.61
+        ]
+    },
+    "article_120": {
+        "gender": [
+            0.09,
+            0.91
+        ],
+        "ethnicity": [
+            0.09,
+            0.91
+        ],
+        "mainstream": [
+            0.09,
+            0.91
+        ]
+    },
+    "article_36": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_29": {
+        "gender": [
+            0.3,
+            0.7
+        ],
+        "ethnicity": [
+            0.3,
+            0.7
+        ],
+        "mainstream": [
+            0.3,
+            0.7
+        ]
+    },
+    "article_92": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_108": {
+        "gender": [
+            0.87,
+            0.13
+        ],
+        "ethnicity": [
+            0.87,
+            0.13
+        ],
+        "mainstream": [
+            0.87,
+            0.13
+        ]
+    },
+    "article_62": {
+        "gender": [
+            0.48,
+            0.52
+        ],
+        "ethnicity": [
+            0.48,
+            0.52
+        ],
+        "mainstream": [
+            0.48,
+            0.52
+        ]
+    },
+    "article_90": {
+        "gender": [
+            0.12,
+            0.88
+        ],
+        "ethnicity": [
+            0.12,
+            0.88
+        ],
+        "mainstream": [
+            0.12,
+            0.88
+        ]
+    },
+    "article_27": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_46": {
+        "gender": [
+            0.03,
+            0.97
+        ],
+        "ethnicity": [
+            0.03,
+            0.97
+        ],
+        "mainstream": [
+            0.03,
+            0.97
+        ]
+    },
+    "article_81": {
+        "gender": [
+            0.8,
+            0.2
+        ],
+        "ethnicity": [
+            0.8,
+            0.2
+        ],
+        "mainstream": [
+            0.8,
+            0.2
+        ]
+    },
+    "article_124": {
+        "gender": [
+            0.33,
+            0.67
+        ],
+        "ethnicity": [
+            0.33,
+            0.67
+        ],
+        "mainstream": [
+            0.33,
+            0.67
+        ]
+    },
+    "article_159": {
+        "gender": [
+            0.84,
+            0.16
+        ],
+        "ethnicity": [
+            0.84,
+            0.16
+        ],
+        "mainstream": [
+            0.84,
+            0.16
+        ]
+    },
+    "article_40": {
+        "gender": [
+            0.67,
+            0.33
+        ],
+        "ethnicity": [
+            0.67,
+            0.33
+        ],
+        "mainstream": [
+            0.67,
+            0.33
+        ]
+    },
+    "article_48": {
+        "gender": [
+            0.27,
+            0.73
+        ],
+        "ethnicity": [
+            0.27,
+            0.73
+        ],
+        "mainstream": [
+            0.27,
+            0.73
+        ]
+    },
+    "article_52": {
+        "gender": [
+            0.35,
+            0.65
+        ],
+        "ethnicity": [
+            0.35,
+            0.65
+        ],
+        "mainstream": [
+            0.35,
+            0.65
+        ]
+    },
+    "article_100": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_15": {
+        "gender": [
+            0.47,
+            0.53
+        ],
+        "ethnicity": [
+            0.47,
+            0.53
+        ],
+        "mainstream": [
+            0.47,
+            0.53
+        ]
+    },
+    "article_155": {
+        "gender": [
+            0.24,
+            0.76
+        ],
+        "ethnicity": [
+            0.24,
+            0.76
+        ],
+        "mainstream": [
+            0.24,
+            0.76
+        ]
+    },
+    "article_63": {
+        "gender": [
+            0.38,
+            0.62
+        ],
+        "ethnicity": [
+            0.38,
+            0.62
+        ],
+        "mainstream": [
+            0.38,
+            0.62
+        ]
+    },
+    "article_111": {
+        "gender": [
+            0.94,
+            0.06
+        ],
+        "ethnicity": [
+            0.94,
+            0.06
+        ],
+        "mainstream": [
+            0.94,
+            0.06
+        ]
+    },
+    "article_116": {
+        "gender": [
+            0.05,
+            0.95
+        ],
+        "ethnicity": [
+            0.05,
+            0.95
+        ],
+        "mainstream": [
+            0.05,
+            0.95
+        ]
+    },
+    "article_138": {
+        "gender": [
+            0.23,
+            0.77
+        ],
+        "ethnicity": [
+            0.23,
+            0.77
+        ],
+        "mainstream": [
+            0.23,
+            0.77
+        ]
+    },
+    "article_6": {
+        "gender": [
+            0.21,
+            0.79
+        ],
+        "ethnicity": [
+            0.21,
+            0.79
+        ],
+        "mainstream": [
+            0.21,
+            0.79
+        ]
+    },
+    "article_95": {
+        "gender": [
+            0.06,
+            0.94
+        ],
+        "ethnicity": [
+            0.06,
+            0.94
+        ],
+        "mainstream": [
+            0.06,
+            0.94
+        ]
+    },
+    "article_107": {
+        "gender": [
+            0.18,
+            0.82
+        ],
+        "ethnicity": [
+            0.18,
+            0.82
+        ],
+        "mainstream": [
+            0.18,
+            0.82
+        ]
+    },
+    "article_88": {
+        "gender": [
+            0.25,
+            0.75
+        ],
+        "ethnicity": [
+            0.25,
+            0.75
+        ],
+        "mainstream": [
+            0.25,
+            0.75
+        ]
+    },
+    "article_44": {
+        "gender": [
+            0.01,
+            0.99
+        ],
+        "ethnicity": [
+            0.01,
+            0.99
+        ],
+        "mainstream": [
+            0.01,
+            0.99
+        ]
+    },
+    "article_64": {
+        "gender": [
+            0.39,
+            0.61
+        ],
+        "ethnicity": [
+            0.39,
+            0.61
+        ],
+        "mainstream": [
+            0.39,
+            0.61
+        ]
+    },
+    "article_85": {
+        "gender": [
+            0.39,
+            0.61
+        ],
+        "ethnicity": [
+            0.39,
+            0.61
+        ],
+        "mainstream": [
+            0.39,
+            0.61
+        ]
+    },
+    "article_142": {
+        "gender": [
+            0.16,
+            0.84
+        ],
+        "ethnicity": [
+            0.16,
+            0.84
+        ],
+        "mainstream": [
+            0.16,
+            0.84
+        ]
+    },
+    "article_153": {
+        "gender": [
+            0.18,
+            0.82
+        ],
+        "ethnicity": [
+            0.18,
+            0.82
+        ],
+        "mainstream": [
+            0.18,
+            0.82
+        ]
+    },
+    "article_78": {
+        "gender": [
+            0.09,
+            0.91
+        ],
+        "ethnicity": [
+            0.09,
+            0.91
+        ],
+        "mainstream": [
+            0.09,
+            0.91
+        ]
+    },
+    "article_98": {
+        "gender": [
+            0.16,
+            0.84
+        ],
+        "ethnicity": [
+            0.16,
+            0.84
+        ],
+        "mainstream": [
+            0.16,
+            0.84
+        ]
+    },
+    "article_42": {
+        "gender": [
+            0.34,
+            0.66
+        ],
+        "ethnicity": [
+            0.34,
+            0.66
+        ],
+        "mainstream": [
+            0.34,
+            0.66
+        ]
+    },
+    "article_77": {
+        "gender": [
+            0.64,
+            0.36
+        ],
+        "ethnicity": [
+            0.64,
+            0.36
+        ],
+        "mainstream": [
+            0.64,
+            0.36
+        ]
+    },
+    "article_115": {
+        "gender": [
+            0.48,
+            0.52
+        ],
+        "ethnicity": [
+            0.48,
+            0.52
+        ],
+        "mainstream": [
+            0.48,
+            0.52
+        ]
+    },
+    "article_10": {
+        "gender": [
+            0.39,
+            0.61
+        ],
+        "ethnicity": [
+            0.39,
+            0.61
+        ],
+        "mainstream": [
+            0.39,
+            0.61
+        ]
+    },
+    "article_68": {
+        "gender": [
+            0.47,
+            0.53
+        ],
+        "ethnicity": [
+            0.47,
+            0.53
+        ],
+        "mainstream": [
+            0.47,
+            0.53
+        ]
+    },
+    "article_83": {
+        "gender": [
+            0.14,
+            0.86
+        ],
+        "ethnicity": [
+            0.14,
+            0.86
+        ],
+        "mainstream": [
+            0.14,
+            0.86
+        ]
+    },
+    "article_58": {
+        "gender": [
+            0.13,
+            0.87
+        ],
+        "ethnicity": [
+            0.13,
+            0.87
+        ],
+        "mainstream": [
+            0.13,
+            0.87
+        ]
+    },
+    "article_76": {
+        "gender": [
+            0.07,
+            0.93
+        ],
+        "ethnicity": [
+            0.07,
+            0.93
+        ],
+        "mainstream": [
+            0.07,
+            0.93
+        ]
+    },
+    "article_21": {
+        "gender": [
+            0.98,
+            0.02
+        ],
+        "ethnicity": [
+            0.98,
+            0.02
+        ],
+        "mainstream": [
+            0.98,
+            0.02
+        ]
+    },
+    "article_89": {
+        "gender": [
+            0.4,
+            0.6
+        ],
+        "ethnicity": [
+            0.4,
+            0.6
+        ],
+        "mainstream": [
+            0.4,
+            0.6
+        ]
+    },
+    "article_101": {
+        "gender": [
+            0.18,
+            0.82
+        ],
+        "ethnicity": [
+            0.18,
+            0.82
+        ],
+        "mainstream": [
+            0.18,
+            0.82
+        ]
+    },
+    "article_122": {
+        "gender": [
+            0.21,
+            0.79
+        ],
+        "ethnicity": [
+            0.21,
+            0.79
+        ],
+        "mainstream": [
+            0.21,
+            0.79
+        ]
+    },
+    "article_2": {
+        "gender": [
+            0.23,
+            0.77
+        ],
+        "ethnicity": [
+            0.23,
+            0.77
+        ],
+        "mainstream": [
+            0.23,
+            0.77
+        ]
+    },
+    "article_105": {
+        "gender": [
+            0.76,
+            0.24
+        ],
+        "ethnicity": [
+            0.76,
+            0.24
+        ],
+        "mainstream": [
+            0.76,
+            0.24
+        ]
+    },
+    "article_31": {
+        "gender": [
+            0.76,
+            0.24
+        ],
+        "ethnicity": [
+            0.76,
+            0.24
+        ],
+        "mainstream": [
+            0.76,
+            0.24
+        ]
+    },
+    "article_73": {
+        "gender": [
+            0.31,
+            0.69
+        ],
+        "ethnicity": [
+            0.31,
+            0.69
+        ],
+        "mainstream": [
+            0.31,
+            0.69
+        ]
+    },
+    "article_97": {
+        "gender": [
+            0.31,
+            0.69
+        ],
+        "ethnicity": [
+            0.31,
+            0.69
+        ],
+        "mainstream": [
+            0.31,
+            0.69
+        ]
+    },
+    "article_127": {
+        "gender": [
+            0.11,
+            0.89
+        ],
+        "ethnicity": [
+            0.11,
+            0.89
+        ],
+        "mainstream": [
+            0.11,
+            0.89
+        ]
+    },
+    "article_57": {
+        "gender": [
+            0.4,
+            0.6
+        ],
+        "ethnicity": [
+            0.4,
+            0.6
+        ],
+        "mainstream": [
+            0.4,
+            0.6
+        ]
+    },
+    "article_74": {
+        "gender": [
+            0.07,
+            0.93
+        ],
+        "ethnicity": [
+            0.07,
+            0.93
+        ],
+        "mainstream": [
+            0.07,
+            0.93
+        ]
+    },
+    "article_112": {
+        "gender": [
+            0.13,
+            0.87
+        ],
+        "ethnicity": [
+            0.13,
+            0.87
+        ],
+        "mainstream": [
+            0.13,
+            0.87
+        ]
+    },
+    "article_20": {
+        "gender": [
+            0.48,
+            0.52
+        ],
+        "ethnicity": [
+            0.48,
+            0.52
+        ],
+        "mainstream": [
+            0.48,
+            0.52
+        ]
+    },
+    "article_50": {
+        "gender": [
+            0.75,
+            0.25
+        ],
+        "ethnicity": [
+            0.75,
+            0.25
+        ],
+        "mainstream": [
+            0.75,
+            0.25
+        ]
+    },
+    "article_129": {
+        "gender": [
+            0.02,
+            0.98
+        ],
+        "ethnicity": [
+            0.02,
+            0.98
+        ],
+        "mainstream": [
+            0.02,
+            0.98
+        ]
+    }
+}

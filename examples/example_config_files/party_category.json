@@ -1,0 +1,27 @@
+[
+    {
+        "name": "GOV_ONLY",
+        "type": "only",
+        "keywords": ["party1","party4"]
+    },
+    {
+        "name": "OPP_ONLY",
+        "type": "only",
+        "keywords": ["party3", "party6"]
+    },
+    {
+        "name": "GOV_OPP_COMPOSITION",
+        "type": "composition",
+        "keywords": [["party1","party4"], ["party3", "party6"]]
+    },
+    {
+        "name": "MINORITY",
+        "type": "minority",
+        "keywords": ["party1","party4", "party3", "party6"]
+    },
+    {
+        "name": "NO_PARTY",
+        "type": "no_party",
+        "keywords": []
+    }
+]

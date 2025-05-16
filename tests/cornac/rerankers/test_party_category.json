@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Republican",
+        "type": "only",
+        "keywords": ["Republican"]
+    },
+    {
+        "name": "Democratic",
+        "type": "only",
+        "keywords": ["Democratic"]
+    },
+    {
+        "name": "Both",
+        "type": "composition",
+        "keywords": [["Republican"], ["Democratic"]]
+    },
+    {
+        "name": "Minority",
+        "type": "minority",
+        "keywords": ["Republican", "Democratic"]
+    },
+    {
+        "name": "None",
+        "type": "no_party",
+        "keywords": []
+    }
+]

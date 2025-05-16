@@ -1,0 +1,3628 @@
+{
+    "article_53": {
+        "category": "b",
+        "sentiment": -0.95,
+        "readability": 24.48,
+        "story": 31,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_55": {
+        "category": "f",
+        "sentiment": 0.15,
+        "readability": 71.83,
+        "story": 25,
+        "minor_major_ratio": {
+            "gender": [
+                0.12,
+                0.88
+            ],
+            "ethnicity": [
+                0.12,
+                0.88
+            ],
+            "mainstream": [
+                0.12,
+                0.88
+            ]
+        },
+        "party_mentions": {
+            "party1": 1
+        }
+    },
+    "article_99": {
+        "category": "d",
+        "sentiment": -0.56,
+        "readability": 80.41,
+        "story": 45,
+        "minor_major_ratio": {
+            "gender": [
+                0.03,
+                0.97
+            ],
+            "ethnicity": [
+                0.03,
+                0.97
+            ],
+            "mainstream": [
+                0.03,
+                0.97
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_47": {
+        "category": "a",
+        "sentiment": -0.09,
+        "readability": 80.14,
+        "story": 43,
+        "minor_major_ratio": {
+            "gender": [
+                0.28,
+                0.72
+            ],
+            "ethnicity": [
+                0.28,
+                0.72
+            ],
+            "mainstream": [
+                0.28,
+                0.72
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_146": {
+        "category": "d",
+        "sentiment": 0.23,
+        "readability": 71.93,
+        "story": 33,
+        "minor_major_ratio": {
+            "gender": [
+                0.45,
+                0.55
+            ],
+            "ethnicity": [
+                0.45,
+                0.55
+            ],
+            "mainstream": [
+                0.45,
+                0.55
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_104": {
+        "category": "b",
+        "sentiment": 0.49,
+        "readability": 47.47,
+        "story": 17,
+        "minor_major_ratio": {
+            "gender": [
+                0.42,
+                0.58
+            ],
+            "ethnicity": [
+                0.42,
+                0.58
+            ],
+            "mainstream": [
+                0.42,
+                0.58
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_69": {
+        "category": "e",
+        "sentiment": -0.03,
+        "readability": 23.92,
+        "story": 29,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_157": {
+        "category": "c",
+        "sentiment": 0.79,
+        "readability": 8.06,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {
+            "party6": 1
+        }
+    },
+    "article_13": {
+        "category": "d",
+        "sentiment": -0.34,
+        "readability": 46.59,
+        "story": 4,
+        "minor_major_ratio": {
+            "gender": [
+                0.21,
+                0.79
+            ],
+            "ethnicity": [
+                0.21,
+                0.79
+            ],
+            "mainstream": [
+                0.21,
+                0.79
+            ]
+        },
+        "party_mentions": {
+            "party9": 1
+        }
+    },
+    "article_130": {
+        "category": "d",
+        "sentiment": -0.05,
+        "readability": 94.27,
+        "story": 20,
+        "minor_major_ratio": {
+            "gender": [
+                0.43,
+                0.57
+            ],
+            "ethnicity": [
+                0.43,
+                0.57
+            ],
+            "mainstream": [
+                0.43,
+                0.57
+            ]
+        },
+        "party_mentions": {
+            "party8": 1,
+            "party9": 1,
+            "party3": 1,
+            "party7": 1
+        }
+    },
+    "article_150": {
+        "category": "b",
+        "sentiment": -0.45,
+        "readability": 48.56,
+        "story": 25,
+        "minor_major_ratio": {
+            "gender": [
+                0.34,
+                0.66
+            ],
+            "ethnicity": [
+                0.34,
+                0.66
+            ],
+            "mainstream": [
+                0.34,
+                0.66
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_87": {
+        "category": "b",
+        "sentiment": 0.68,
+        "readability": 91.95,
+        "story": 40,
+        "minor_major_ratio": {
+            "gender": [
+                0.45,
+                0.55
+            ],
+            "ethnicity": [
+                0.45,
+                0.55
+            ],
+            "mainstream": [
+                0.45,
+                0.55
+            ]
+        },
+        "party_mentions": {
+            "party1": 1
+        }
+    },
+    "article_132": {
+        "category": "f",
+        "sentiment": -0.14,
+        "readability": 86.69,
+        "story": 12,
+        "minor_major_ratio": {
+            "gender": [
+                0.19,
+                0.81
+            ],
+            "ethnicity": [
+                0.19,
+                0.81
+            ],
+            "mainstream": [
+                0.19,
+                0.81
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_91": {
+        "category": "c",
+        "sentiment": -0.32,
+        "readability": 87.96,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.42,
+                0.58
+            ],
+            "ethnicity": [
+                0.42,
+                0.58
+            ],
+            "mainstream": [
+                0.42,
+                0.58
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_79": {
+        "category": "a",
+        "sentiment": -0.06,
+        "readability": 74.9,
+        "story": 4,
+        "minor_major_ratio": {
+            "gender": [
+                0.67,
+                0.33
+            ],
+            "ethnicity": [
+                0.67,
+                0.33
+            ],
+            "mainstream": [
+                0.67,
+                0.33
+            ]
+        },
+        "party_mentions": {
+            "party0": 1
+        }
+    },
+    "article_137": {
+        "category": "b",
+        "sentiment": -0.6,
+        "readability": 2.04,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.24,
+                0.76
+            ],
+            "ethnicity": [
+                0.24,
+                0.76
+            ],
+            "mainstream": [
+                0.24,
+                0.76
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_19": {
+        "category": "b",
+        "sentiment": -0.07,
+        "readability": 25.62,
+        "story": 24,
+        "minor_major_ratio": {
+            "gender": [
+                0.3,
+                0.7
+            ],
+            "ethnicity": [
+                0.3,
+                0.7
+            ],
+            "mainstream": [
+                0.3,
+                0.7
+            ]
+        },
+        "party_mentions": {
+            "party2": 1
+        }
+    },
+    "article_41": {
+        "category": "c",
+        "sentiment": -0.78,
+        "readability": 2.57,
+        "story": 20,
+        "minor_major_ratio": {
+            "gender": [
+                0.45,
+                0.55
+            ],
+            "ethnicity": [
+                0.45,
+                0.55
+            ],
+            "mainstream": [
+                0.45,
+                0.55
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_4": {
+        "category": "f",
+        "sentiment": -0.6,
+        "readability": 59.21,
+        "story": 41,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_70": {
+        "category": "f",
+        "sentiment": 0.2,
+        "readability": 12.11,
+        "story": 37,
+        "minor_major_ratio": {
+            "gender": [
+                0.17,
+                0.83
+            ],
+            "ethnicity": [
+                0.17,
+                0.83
+            ],
+            "mainstream": [
+                0.17,
+                0.83
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_121": {
+        "category": "c",
+        "sentiment": -0.86,
+        "readability": 64.75,
+        "story": 1,
+        "minor_major_ratio": {
+            "gender": [
+                0.91,
+                0.09
+            ],
+            "ethnicity": [
+                0.91,
+                0.09
+            ],
+            "mainstream": [
+                0.91,
+                0.09
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_133": {
+        "category": "c",
+        "sentiment": 0.27,
+        "readability": 82.87,
+        "story": 46,
+        "minor_major_ratio": {
+            "gender": [
+                0.09,
+                0.91
+            ],
+            "ethnicity": [
+                0.09,
+                0.91
+            ],
+            "mainstream": [
+                0.09,
+                0.91
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party8": 1,
+            "party7": 1
+        }
+    },
+    "article_39": {
+        "category": "d",
+        "sentiment": -0.13,
+        "readability": 73.1,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.12,
+                0.88
+            ],
+            "ethnicity": [
+                0.12,
+                0.88
+            ],
+            "mainstream": [
+                0.12,
+                0.88
+            ]
+        },
+        "party_mentions": {
+            "party7": 1,
+            "party3": 1,
+            "party9": 1
+        }
+    },
+    "article_151": {
+        "category": "e",
+        "sentiment": 0.22,
+        "readability": 37.9,
+        "story": 2,
+        "minor_major_ratio": {
+            "gender": [
+                0.16,
+                0.84
+            ],
+            "ethnicity": [
+                0.16,
+                0.84
+            ],
+            "mainstream": [
+                0.16,
+                0.84
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_23": {
+        "category": "c",
+        "sentiment": 0.6,
+        "readability": 34.03,
+        "story": 39,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_135": {
+        "category": "b",
+        "sentiment": -0.83,
+        "readability": 72.01,
+        "story": 32,
+        "minor_major_ratio": {
+            "gender": [
+                0.12,
+                0.88
+            ],
+            "ethnicity": [
+                0.12,
+                0.88
+            ],
+            "mainstream": [
+                0.12,
+                0.88
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_158": {
+        "category": "f",
+        "sentiment": -0.02,
+        "readability": 79.29,
+        "story": 6,
+        "minor_major_ratio": {
+            "gender": [
+                0.2,
+                0.8
+            ],
+            "ethnicity": [
+                0.2,
+                0.8
+            ],
+            "mainstream": [
+                0.2,
+                0.8
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_35": {
+        "category": "f",
+        "sentiment": 0.16,
+        "readability": 47.33,
+        "story": 34,
+        "minor_major_ratio": {
+            "gender": [
+                0.5,
+                0.5
+            ],
+            "ethnicity": [
+                0.5,
+                0.5
+            ],
+            "mainstream": [
+                0.5,
+                0.5
+            ]
+        },
+        "party_mentions": {
+            "party7": 1,
+            "party4": 1,
+            "party8": 1
+        }
+    },
+    "article_145": {
+        "category": "c",
+        "sentiment": -0.54,
+        "readability": 72.13,
+        "story": 21,
+        "minor_major_ratio": {
+            "gender": [
+                0.27,
+                0.73
+            ],
+            "ethnicity": [
+                0.27,
+                0.73
+            ],
+            "mainstream": [
+                0.27,
+                0.73
+            ]
+        },
+        "party_mentions": {
+            "party3": 1,
+            "party9": 1
+        }
+    },
+    "article_96": {
+        "category": "f",
+        "sentiment": -0.03,
+        "readability": 72.46,
+        "story": 49,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_66": {
+        "category": "b",
+        "sentiment": -0.41,
+        "readability": 36.09,
+        "story": 20,
+        "minor_major_ratio": {
+            "gender": [
+                0.27,
+                0.73
+            ],
+            "ethnicity": [
+                0.27,
+                0.73
+            ],
+            "mainstream": [
+                0.27,
+                0.73
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_14": {
+        "category": "a",
+        "sentiment": 0.11,
+        "readability": 69.74,
+        "story": 9,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_131": {
+        "category": "a",
+        "sentiment": 0.15,
+        "readability": 46.94,
+        "story": 29,
+        "minor_major_ratio": {
+            "gender": [
+                0.48,
+                0.52
+            ],
+            "ethnicity": [
+                0.48,
+                0.52
+            ],
+            "mainstream": [
+                0.48,
+                0.52
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_8": {
+        "category": "d",
+        "sentiment": -0.77,
+        "readability": 6.53,
+        "story": 32,
+        "minor_major_ratio": {
+            "gender": [
+                0.31,
+                0.69
+            ],
+            "ethnicity": [
+                0.31,
+                0.69
+            ],
+            "mainstream": [
+                0.31,
+                0.69
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_110": {
+        "category": "b",
+        "sentiment": 0.62,
+        "readability": 94.91,
+        "story": 6,
+        "minor_major_ratio": {
+            "gender": [
+                0.56,
+                0.44
+            ],
+            "ethnicity": [
+                0.56,
+                0.44
+            ],
+            "mainstream": [
+                0.56,
+                0.44
+            ]
+        },
+        "party_mentions": {
+            "party8": 1,
+            "party6": 1
+        }
+    },
+    "article_51": {
+        "category": "d",
+        "sentiment": 0.82,
+        "readability": 29.74,
+        "story": 38,
+        "minor_major_ratio": {
+            "gender": [
+                0.65,
+                0.35
+            ],
+            "ethnicity": [
+                0.65,
+                0.35
+            ],
+            "mainstream": [
+                0.65,
+                0.35
+            ]
+        },
+        "party_mentions": {
+            "party3": 1
+        }
+    },
+    "article_149": {
+        "category": "f",
+        "sentiment": -0.58,
+        "readability": 66.04,
+        "story": 11,
+        "minor_major_ratio": {
+            "gender": [
+                0.28,
+                0.72
+            ],
+            "ethnicity": [
+                0.28,
+                0.72
+            ],
+            "mainstream": [
+                0.28,
+                0.72
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_1": {
+        "category": "d",
+        "sentiment": -0.1,
+        "readability": 59.38,
+        "story": 19,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_80": {
+        "category": "d",
+        "sentiment": -0.86,
+        "readability": 23.34,
+        "story": 17,
+        "minor_major_ratio": {
+            "gender": [
+                0.31,
+                0.69
+            ],
+            "ethnicity": [
+                0.31,
+                0.69
+            ],
+            "mainstream": [
+                0.31,
+                0.69
+            ]
+        },
+        "party_mentions": {
+            "party6": 1,
+            "party1": 1
+        }
+    },
+    "article_71": {
+        "category": "e",
+        "sentiment": -0.55,
+        "readability": 14.9,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.54,
+                0.46
+            ],
+            "ethnicity": [
+                0.54,
+                0.46
+            ],
+            "mainstream": [
+                0.54,
+                0.46
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_139": {
+        "category": "c",
+        "sentiment": 0.19,
+        "readability": 82.42,
+        "story": 19,
+        "minor_major_ratio": {
+            "gender": [
+                0.23,
+                0.77
+            ],
+            "ethnicity": [
+                0.23,
+                0.77
+            ],
+            "mainstream": [
+                0.23,
+                0.77
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_5": {
+        "category": "d",
+        "sentiment": 0.89,
+        "readability": 50.05,
+        "story": 32,
+        "minor_major_ratio": {
+            "gender": [
+                0.3,
+                0.7
+            ],
+            "ethnicity": [
+                0.3,
+                0.7
+            ],
+            "mainstream": [
+                0.3,
+                0.7
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party4": 1,
+            "party0": 1
+        }
+    },
+    "article_123": {
+        "category": "a",
+        "sentiment": -0.54,
+        "readability": 67.43,
+        "story": 37,
+        "minor_major_ratio": {
+            "gender": [
+                0.01,
+                0.99
+            ],
+            "ethnicity": [
+                0.01,
+                0.99
+            ],
+            "mainstream": [
+                0.01,
+                0.99
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party0": 1,
+            "party2": 1
+        }
+    },
+    "article_93": {
+        "category": "d",
+        "sentiment": 0.04,
+        "readability": 44.22,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.29,
+                0.71
+            ],
+            "ethnicity": [
+                0.29,
+                0.71
+            ],
+            "mainstream": [
+                0.29,
+                0.71
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party7": 1,
+            "party5": 1,
+            "party3": 1
+        }
+    },
+    "article_114": {
+        "category": "c",
+        "sentiment": -0.36,
+        "readability": 10.46,
+        "story": 11,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_126": {
+        "category": "d",
+        "sentiment": 0.63,
+        "readability": 55.01,
+        "story": 30,
+        "minor_major_ratio": {
+            "gender": [
+                0.13,
+                0.87
+            ],
+            "ethnicity": [
+                0.13,
+                0.87
+            ],
+            "mainstream": [
+                0.13,
+                0.87
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_11": {
+        "category": "d",
+        "sentiment": 0.73,
+        "readability": 82.49,
+        "story": 1,
+        "minor_major_ratio": {
+            "gender": [
+                0.27,
+                0.73
+            ],
+            "ethnicity": [
+                0.27,
+                0.73
+            ],
+            "mainstream": [
+                0.27,
+                0.73
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_65": {
+        "category": "b",
+        "sentiment": 0.04,
+        "readability": 62.26,
+        "story": 32,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_160": {
+        "category": "e",
+        "sentiment": -0.74,
+        "readability": 28.8,
+        "story": 45,
+        "minor_major_ratio": {
+            "gender": [
+                0.01,
+                0.99
+            ],
+            "ethnicity": [
+                0.01,
+                0.99
+            ],
+            "mainstream": [
+                0.01,
+                0.99
+            ]
+        },
+        "party_mentions": {
+            "party2": 1,
+            "party4": 1
+        }
+    },
+    "article_148": {
+        "category": "e",
+        "sentiment": -0.97,
+        "readability": 40.8,
+        "story": 15,
+        "minor_major_ratio": {
+            "gender": [
+                0.96,
+                0.04
+            ],
+            "ethnicity": [
+                0.96,
+                0.04
+            ],
+            "mainstream": [
+                0.96,
+                0.04
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_117": {
+        "category": "a",
+        "sentiment": 0.3,
+        "readability": 15.4,
+        "story": 46,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_24": {
+        "category": "d",
+        "sentiment": 0.96,
+        "readability": 24.37,
+        "story": 36,
+        "minor_major_ratio": {
+            "gender": [
+                0.1,
+                0.9
+            ],
+            "ethnicity": [
+                0.1,
+                0.9
+            ],
+            "mainstream": [
+                0.1,
+                0.9
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party4": 1
+        }
+    },
+    "article_7": {
+        "category": "d",
+        "sentiment": -0.32,
+        "readability": 78.77,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.64,
+                0.36
+            ],
+            "ethnicity": [
+                0.64,
+                0.36
+            ],
+            "mainstream": [
+                0.64,
+                0.36
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_147": {
+        "category": "e",
+        "sentiment": 0.16,
+        "readability": 65.99,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.24,
+                0.76
+            ],
+            "ethnicity": [
+                0.24,
+                0.76
+            ],
+            "mainstream": [
+                0.24,
+                0.76
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_45": {
+        "category": "e",
+        "sentiment": -0.25,
+        "readability": 93.29,
+        "story": 13,
+        "minor_major_ratio": {
+            "gender": [
+                0.62,
+                0.38
+            ],
+            "ethnicity": [
+                0.62,
+                0.38
+            ],
+            "mainstream": [
+                0.62,
+                0.38
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_37": {
+        "category": "d",
+        "sentiment": -0.91,
+        "readability": 74.47,
+        "story": 46,
+        "minor_major_ratio": {
+            "gender": [
+                0.69,
+                0.31
+            ],
+            "ethnicity": [
+                0.69,
+                0.31
+            ],
+            "mainstream": [
+                0.69,
+                0.31
+            ]
+        },
+        "party_mentions": {
+            "party7": 1,
+            "party0": 1
+        }
+    },
+    "article_109": {
+        "category": "b",
+        "sentiment": 0.0,
+        "readability": 59.02,
+        "story": 7,
+        "minor_major_ratio": {
+            "gender": [
+                0.72,
+                0.28
+            ],
+            "ethnicity": [
+                0.72,
+                0.28
+            ],
+            "mainstream": [
+                0.72,
+                0.28
+            ]
+        },
+        "party_mentions": {
+            "party0": 1,
+            "party2": 1,
+            "party6": 1,
+            "party7": 1
+        }
+    },
+    "article_3": {
+        "category": "f",
+        "sentiment": 0.94,
+        "readability": 7.48,
+        "story": 17,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {
+            "party8": 1,
+            "party6": 1,
+            "party5": 1
+        }
+    },
+    "article_141": {
+        "category": "f",
+        "sentiment": 0.44,
+        "readability": 75.94,
+        "story": 35,
+        "minor_major_ratio": {
+            "gender": [
+                0.03,
+                0.97
+            ],
+            "ethnicity": [
+                0.03,
+                0.97
+            ],
+            "mainstream": [
+                0.03,
+                0.97
+            ]
+        },
+        "party_mentions": {
+            "party3": 1,
+            "party1": 1,
+            "party6": 1
+        }
+    },
+    "article_113": {
+        "category": "a",
+        "sentiment": 0.52,
+        "readability": 70.39,
+        "story": 7,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {
+            "party5": 1
+        }
+    },
+    "article_106": {
+        "category": "a",
+        "sentiment": -0.41,
+        "readability": 37.48,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.21,
+                0.79
+            ],
+            "ethnicity": [
+                0.21,
+                0.79
+            ],
+            "mainstream": [
+                0.21,
+                0.79
+            ]
+        },
+        "party_mentions": {
+            "party2": 1,
+            "party9": 1
+        }
+    },
+    "article_56": {
+        "category": "a",
+        "sentiment": 0.22,
+        "readability": 38.25,
+        "story": 44,
+        "minor_major_ratio": {
+            "gender": [
+                0.46,
+                0.54
+            ],
+            "ethnicity": [
+                0.46,
+                0.54
+            ],
+            "mainstream": [
+                0.46,
+                0.54
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_17": {
+        "category": "d",
+        "sentiment": 0.28,
+        "readability": 45.96,
+        "story": 43,
+        "minor_major_ratio": {
+            "gender": [
+                0.4,
+                0.6
+            ],
+            "ethnicity": [
+                0.4,
+                0.6
+            ],
+            "mainstream": [
+                0.4,
+                0.6
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party7": 1
+        }
+    },
+    "article_22": {
+        "category": "c",
+        "sentiment": 0.98,
+        "readability": 29.92,
+        "story": 28,
+        "minor_major_ratio": {
+            "gender": [
+                0.23,
+                0.77
+            ],
+            "ethnicity": [
+                0.23,
+                0.77
+            ],
+            "mainstream": [
+                0.23,
+                0.77
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_143": {
+        "category": "d",
+        "sentiment": 0.71,
+        "readability": 10.67,
+        "story": 25,
+        "minor_major_ratio": {
+            "gender": [
+                0.29,
+                0.71
+            ],
+            "ethnicity": [
+                0.29,
+                0.71
+            ],
+            "mainstream": [
+                0.29,
+                0.71
+            ]
+        },
+        "party_mentions": {
+            "party0": 1,
+            "party6": 1,
+            "party4": 1
+        }
+    },
+    "article_75": {
+        "category": "a",
+        "sentiment": 0.13,
+        "readability": 68.58,
+        "story": 48,
+        "minor_major_ratio": {
+            "gender": [
+                0.96,
+                0.04
+            ],
+            "ethnicity": [
+                0.96,
+                0.04
+            ],
+            "mainstream": [
+                0.96,
+                0.04
+            ]
+        },
+        "party_mentions": {
+            "party3": 1,
+            "party5": 1,
+            "party9": 1
+        }
+    },
+    "article_28": {
+        "category": "f",
+        "sentiment": -0.62,
+        "readability": 25.06,
+        "story": 49,
+        "minor_major_ratio": {
+            "gender": [
+                0.33,
+                0.67
+            ],
+            "ethnicity": [
+                0.33,
+                0.67
+            ],
+            "mainstream": [
+                0.33,
+                0.67
+            ]
+        },
+        "party_mentions": {
+            "party0": 1
+        }
+    },
+    "article_144": {
+        "category": "c",
+        "sentiment": 0.58,
+        "readability": 3.34,
+        "story": 24,
+        "minor_major_ratio": {
+            "gender": [
+                0.05,
+                0.95
+            ],
+            "ethnicity": [
+                0.05,
+                0.95
+            ],
+            "mainstream": [
+                0.05,
+                0.95
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_38": {
+        "category": "f",
+        "sentiment": -0.17,
+        "readability": 20.08,
+        "story": 35,
+        "minor_major_ratio": {
+            "gender": [
+                0.68,
+                0.32
+            ],
+            "ethnicity": [
+                0.68,
+                0.32
+            ],
+            "mainstream": [
+                0.68,
+                0.32
+            ]
+        },
+        "party_mentions": {
+            "party2": 1,
+            "party4": 1,
+            "party7": 1
+        }
+    },
+    "article_67": {
+        "category": "c",
+        "sentiment": 0.49,
+        "readability": 33.87,
+        "story": 8,
+        "minor_major_ratio": {
+            "gender": [
+                0.04,
+                0.96
+            ],
+            "ethnicity": [
+                0.04,
+                0.96
+            ],
+            "mainstream": [
+                0.04,
+                0.96
+            ]
+        },
+        "party_mentions": {
+            "party6": 1,
+            "party8": 1
+        }
+    },
+    "article_103": {
+        "category": "c",
+        "sentiment": -0.82,
+        "readability": 39.46,
+        "story": 17,
+        "minor_major_ratio": {
+            "gender": [
+                0.23,
+                0.77
+            ],
+            "ethnicity": [
+                0.23,
+                0.77
+            ],
+            "mainstream": [
+                0.23,
+                0.77
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party6": 1,
+            "party5": 1
+        }
+    },
+    "article_152": {
+        "category": "a",
+        "sentiment": 0.35,
+        "readability": 47.15,
+        "story": 40,
+        "minor_major_ratio": {
+            "gender": [
+                0.78,
+                0.22
+            ],
+            "ethnicity": [
+                0.78,
+                0.22
+            ],
+            "mainstream": [
+                0.78,
+                0.22
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party7": 1
+        }
+    },
+    "article_49": {
+        "category": "f",
+        "sentiment": -0.4,
+        "readability": 40.83,
+        "story": 9,
+        "minor_major_ratio": {
+            "gender": [
+                0.02,
+                0.98
+            ],
+            "ethnicity": [
+                0.02,
+                0.98
+            ],
+            "mainstream": [
+                0.02,
+                0.98
+            ]
+        },
+        "party_mentions": {
+            "party1": 1
+        }
+    },
+    "article_119": {
+        "category": "b",
+        "sentiment": 0.77,
+        "readability": 13.57,
+        "story": 30,
+        "minor_major_ratio": {
+            "gender": [
+                0.47,
+                0.53
+            ],
+            "ethnicity": [
+                0.47,
+                0.53
+            ],
+            "mainstream": [
+                0.47,
+                0.53
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party2": 1,
+            "party6": 1,
+            "party5": 1
+        }
+    },
+    "article_82": {
+        "category": "a",
+        "sentiment": 0.67,
+        "readability": 61.57,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.19,
+                0.81
+            ],
+            "ethnicity": [
+                0.19,
+                0.81
+            ],
+            "mainstream": [
+                0.19,
+                0.81
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_25": {
+        "category": "b",
+        "sentiment": 0.71,
+        "readability": 9.94,
+        "story": 44,
+        "minor_major_ratio": {
+            "gender": [
+                0.45,
+                0.55
+            ],
+            "ethnicity": [
+                0.45,
+                0.55
+            ],
+            "mainstream": [
+                0.45,
+                0.55
+            ]
+        },
+        "party_mentions": {
+            "party6": 1
+        }
+    },
+    "article_140": {
+        "category": "c",
+        "sentiment": -0.62,
+        "readability": 12.22,
+        "story": 30,
+        "minor_major_ratio": {
+            "gender": [
+                0.11,
+                0.89
+            ],
+            "ethnicity": [
+                0.11,
+                0.89
+            ],
+            "mainstream": [
+                0.11,
+                0.89
+            ]
+        },
+        "party_mentions": {
+            "party0": 1
+        }
+    },
+    "article_60": {
+        "category": "c",
+        "sentiment": -0.51,
+        "readability": 12.59,
+        "story": 37,
+        "minor_major_ratio": {
+            "gender": [
+                0.41,
+                0.59
+            ],
+            "ethnicity": [
+                0.41,
+                0.59
+            ],
+            "mainstream": [
+                0.41,
+                0.59
+            ]
+        },
+        "party_mentions": {
+            "party3": 1,
+            "party5": 1
+        }
+    },
+    "article_59": {
+        "category": "b",
+        "sentiment": 0.58,
+        "readability": 59.6,
+        "story": 18,
+        "minor_major_ratio": {
+            "gender": [
+                0.57,
+                0.43
+            ],
+            "ethnicity": [
+                0.57,
+                0.43
+            ],
+            "mainstream": [
+                0.57,
+                0.43
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_34": {
+        "category": "c",
+        "sentiment": 0.6,
+        "readability": 10.99,
+        "story": 2,
+        "minor_major_ratio": {
+            "gender": [
+                0.18,
+                0.82
+            ],
+            "ethnicity": [
+                0.18,
+                0.82
+            ],
+            "mainstream": [
+                0.18,
+                0.82
+            ]
+        },
+        "party_mentions": {
+            "party0": 1,
+            "party2": 1,
+            "party4": 1
+        }
+    },
+    "article_84": {
+        "category": "a",
+        "sentiment": -0.75,
+        "readability": 42.1,
+        "story": 8,
+        "minor_major_ratio": {
+            "gender": [
+                0.24,
+                0.76
+            ],
+            "ethnicity": [
+                0.24,
+                0.76
+            ],
+            "mainstream": [
+                0.24,
+                0.76
+            ]
+        },
+        "party_mentions": {
+            "party7": 1
+        }
+    },
+    "article_156": {
+        "category": "e",
+        "sentiment": -0.56,
+        "readability": 61.51,
+        "story": 47,
+        "minor_major_ratio": {
+            "gender": [
+                0.43,
+                0.57
+            ],
+            "ethnicity": [
+                0.43,
+                0.57
+            ],
+            "mainstream": [
+                0.43,
+                0.57
+            ]
+        },
+        "party_mentions": {
+            "party0": 1,
+            "party9": 1,
+            "party7": 1,
+            "party6": 1
+        }
+    },
+    "article_43": {
+        "category": "d",
+        "sentiment": -0.15,
+        "readability": 10.8,
+        "story": 46,
+        "minor_major_ratio": {
+            "gender": [
+                0.54,
+                0.46
+            ],
+            "ethnicity": [
+                0.54,
+                0.46
+            ],
+            "mainstream": [
+                0.54,
+                0.46
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_9": {
+        "category": "e",
+        "sentiment": -0.7,
+        "readability": 12.62,
+        "story": 40,
+        "minor_major_ratio": {
+            "gender": [
+                0.27,
+                0.73
+            ],
+            "ethnicity": [
+                0.27,
+                0.73
+            ],
+            "mainstream": [
+                0.27,
+                0.73
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_86": {
+        "category": "e",
+        "sentiment": 0.06,
+        "readability": 45.37,
+        "story": 39,
+        "minor_major_ratio": {
+            "gender": [
+                0.4,
+                0.6
+            ],
+            "ethnicity": [
+                0.4,
+                0.6
+            ],
+            "mainstream": [
+                0.4,
+                0.6
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_128": {
+        "category": "f",
+        "sentiment": 0.3,
+        "readability": 76.9,
+        "story": 47,
+        "minor_major_ratio": {
+            "gender": [
+                0.72,
+                0.28
+            ],
+            "ethnicity": [
+                0.72,
+                0.28
+            ],
+            "mainstream": [
+                0.72,
+                0.28
+            ]
+        },
+        "party_mentions": {
+            "party5": 1,
+            "party7": 1,
+            "party6": 1,
+            "party3": 1
+        }
+    },
+    "article_61": {
+        "category": "f",
+        "sentiment": -0.81,
+        "readability": 42.68,
+        "story": 43,
+        "minor_major_ratio": {
+            "gender": [
+                0.48,
+                0.52
+            ],
+            "ethnicity": [
+                0.48,
+                0.52
+            ],
+            "mainstream": [
+                0.48,
+                0.52
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party9": 1,
+            "party8": 1,
+            "party0": 1
+        }
+    },
+    "article_32": {
+        "category": "d",
+        "sentiment": -0.81,
+        "readability": 73.88,
+        "story": 9,
+        "minor_major_ratio": {
+            "gender": [
+                0.29,
+                0.71
+            ],
+            "ethnicity": [
+                0.29,
+                0.71
+            ],
+            "mainstream": [
+                0.29,
+                0.71
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party6": 1,
+            "party5": 1
+        }
+    },
+    "article_18": {
+        "category": "f",
+        "sentiment": 0.88,
+        "readability": 42.29,
+        "story": 47,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_30": {
+        "category": "a",
+        "sentiment": 0.16,
+        "readability": 21.27,
+        "story": 43,
+        "minor_major_ratio": {
+            "gender": [
+                0.42,
+                0.58
+            ],
+            "ethnicity": [
+                0.42,
+                0.58
+            ],
+            "mainstream": [
+                0.42,
+                0.58
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_102": {
+        "category": "e",
+        "sentiment": -0.26,
+        "readability": 76.26,
+        "story": 37,
+        "minor_major_ratio": {
+            "gender": [
+                0.21,
+                0.79
+            ],
+            "ethnicity": [
+                0.21,
+                0.79
+            ],
+            "mainstream": [
+                0.21,
+                0.79
+            ]
+        },
+        "party_mentions": {
+            "party9": 1
+        }
+    },
+    "article_72": {
+        "category": "f",
+        "sentiment": 0.66,
+        "readability": 26.74,
+        "story": 12,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {
+            "party0": 1,
+            "party2": 1,
+            "party8": 1
+        }
+    },
+    "article_54": {
+        "category": "e",
+        "sentiment": 0.31,
+        "readability": 6.96,
+        "story": 48,
+        "minor_major_ratio": {
+            "gender": [
+                0.02,
+                0.98
+            ],
+            "ethnicity": [
+                0.02,
+                0.98
+            ],
+            "mainstream": [
+                0.02,
+                0.98
+            ]
+        },
+        "party_mentions": {
+            "party6": 1,
+            "party9": 1
+        }
+    },
+    "article_136": {
+        "category": "d",
+        "sentiment": -0.32,
+        "readability": 37.01,
+        "story": 47,
+        "minor_major_ratio": {
+            "gender": [
+                0.47,
+                0.53
+            ],
+            "ethnicity": [
+                0.47,
+                0.53
+            ],
+            "mainstream": [
+                0.47,
+                0.53
+            ]
+        },
+        "party_mentions": {
+            "party2": 1
+        }
+    },
+    "article_154": {
+        "category": "b",
+        "sentiment": 0.51,
+        "readability": 4.98,
+        "story": 6,
+        "minor_major_ratio": {
+            "gender": [
+                0.33,
+                0.67
+            ],
+            "ethnicity": [
+                0.33,
+                0.67
+            ],
+            "mainstream": [
+                0.33,
+                0.67
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_26": {
+        "category": "d",
+        "sentiment": -0.17,
+        "readability": 21.56,
+        "story": 33,
+        "minor_major_ratio": {
+            "gender": [
+                0.21,
+                0.79
+            ],
+            "ethnicity": [
+                0.21,
+                0.79
+            ],
+            "mainstream": [
+                0.21,
+                0.79
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_125": {
+        "category": "f",
+        "sentiment": 0.19,
+        "readability": 52.69,
+        "story": 20,
+        "minor_major_ratio": {
+            "gender": [
+                0.2,
+                0.8
+            ],
+            "ethnicity": [
+                0.2,
+                0.8
+            ],
+            "mainstream": [
+                0.2,
+                0.8
+            ]
+        },
+        "party_mentions": {
+            "party3": 1
+        }
+    },
+    "article_16": {
+        "category": "c",
+        "sentiment": 0.89,
+        "readability": 76.73,
+        "story": 49,
+        "minor_major_ratio": {
+            "gender": [
+                0.16,
+                0.84
+            ],
+            "ethnicity": [
+                0.16,
+                0.84
+            ],
+            "mainstream": [
+                0.16,
+                0.84
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_12": {
+        "category": "f",
+        "sentiment": -0.14,
+        "readability": 12.92,
+        "story": 35,
+        "minor_major_ratio": {
+            "gender": [
+                0.25,
+                0.75
+            ],
+            "ethnicity": [
+                0.25,
+                0.75
+            ],
+            "mainstream": [
+                0.25,
+                0.75
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party6": 1,
+            "party0": 1
+        }
+    },
+    "article_33": {
+        "category": "d",
+        "sentiment": -0.96,
+        "readability": 92.12,
+        "story": 21,
+        "minor_major_ratio": {
+            "gender": [
+                0.29,
+                0.71
+            ],
+            "ethnicity": [
+                0.29,
+                0.71
+            ],
+            "mainstream": [
+                0.29,
+                0.71
+            ]
+        },
+        "party_mentions": {
+            "party4": 1,
+            "party1": 1,
+            "party6": 1,
+            "party0": 1
+        }
+    },
+    "article_94": {
+        "category": "c",
+        "sentiment": -0.66,
+        "readability": 94.76,
+        "story": 30,
+        "minor_major_ratio": {
+            "gender": [
+                0.96,
+                0.04
+            ],
+            "ethnicity": [
+                0.96,
+                0.04
+            ],
+            "mainstream": [
+                0.96,
+                0.04
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_118": {
+        "category": "a",
+        "sentiment": -0.51,
+        "readability": 58.89,
+        "story": 34,
+        "minor_major_ratio": {
+            "gender": [
+                0.44,
+                0.56
+            ],
+            "ethnicity": [
+                0.44,
+                0.56
+            ],
+            "mainstream": [
+                0.44,
+                0.56
+            ]
+        },
+        "party_mentions": {
+            "party5": 1,
+            "party2": 1
+        }
+    },
+    "article_134": {
+        "category": "a",
+        "sentiment": 0.02,
+        "readability": 11.4,
+        "story": 33,
+        "minor_major_ratio": {
+            "gender": [
+                0.39,
+                0.61
+            ],
+            "ethnicity": [
+                0.39,
+                0.61
+            ],
+            "mainstream": [
+                0.39,
+                0.61
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_120": {
+        "category": "f",
+        "sentiment": 0.63,
+        "readability": 23.63,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.09,
+                0.91
+            ],
+            "ethnicity": [
+                0.09,
+                0.91
+            ],
+            "mainstream": [
+                0.09,
+                0.91
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_36": {
+        "category": "f",
+        "sentiment": -0.85,
+        "readability": 95.13,
+        "story": 41,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party5": 1,
+            "party8": 1,
+            "party1": 1
+        }
+    },
+    "article_29": {
+        "category": "d",
+        "sentiment": -0.86,
+        "readability": 44.22,
+        "story": 20,
+        "minor_major_ratio": {
+            "gender": [
+                0.3,
+                0.7
+            ],
+            "ethnicity": [
+                0.3,
+                0.7
+            ],
+            "mainstream": [
+                0.3,
+                0.7
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_92": {
+        "category": "a",
+        "sentiment": -0.38,
+        "readability": 45.19,
+        "story": 4,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {
+            "party9": 1
+        }
+    },
+    "article_108": {
+        "category": "e",
+        "sentiment": 0.01,
+        "readability": 46.27,
+        "story": 36,
+        "minor_major_ratio": {
+            "gender": [
+                0.87,
+                0.13
+            ],
+            "ethnicity": [
+                0.87,
+                0.13
+            ],
+            "mainstream": [
+                0.87,
+                0.13
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_62": {
+        "category": "e",
+        "sentiment": 0.3,
+        "readability": 32.15,
+        "story": 31,
+        "minor_major_ratio": {
+            "gender": [
+                0.48,
+                0.52
+            ],
+            "ethnicity": [
+                0.48,
+                0.52
+            ],
+            "mainstream": [
+                0.48,
+                0.52
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_90": {
+        "category": "c",
+        "sentiment": 0.96,
+        "readability": 8.43,
+        "story": 42,
+        "minor_major_ratio": {
+            "gender": [
+                0.12,
+                0.88
+            ],
+            "ethnicity": [
+                0.12,
+                0.88
+            ],
+            "mainstream": [
+                0.12,
+                0.88
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_27": {
+        "category": "d",
+        "sentiment": 0.05,
+        "readability": 60.98,
+        "story": 24,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_46": {
+        "category": "c",
+        "sentiment": 0.36,
+        "readability": 5.24,
+        "story": 41,
+        "minor_major_ratio": {
+            "gender": [
+                0.03,
+                0.97
+            ],
+            "ethnicity": [
+                0.03,
+                0.97
+            ],
+            "mainstream": [
+                0.03,
+                0.97
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_81": {
+        "category": "f",
+        "sentiment": -0.23,
+        "readability": 25.2,
+        "story": 43,
+        "minor_major_ratio": {
+            "gender": [
+                0.8,
+                0.2
+            ],
+            "ethnicity": [
+                0.8,
+                0.2
+            ],
+            "mainstream": [
+                0.8,
+                0.2
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_124": {
+        "category": "a",
+        "sentiment": 0.17,
+        "readability": 14.14,
+        "story": 23,
+        "minor_major_ratio": {
+            "gender": [
+                0.33,
+                0.67
+            ],
+            "ethnicity": [
+                0.33,
+                0.67
+            ],
+            "mainstream": [
+                0.33,
+                0.67
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party1": 1
+        }
+    },
+    "article_159": {
+        "category": "c",
+        "sentiment": 0.12,
+        "readability": 64.35,
+        "story": 22,
+        "minor_major_ratio": {
+            "gender": [
+                0.84,
+                0.16
+            ],
+            "ethnicity": [
+                0.84,
+                0.16
+            ],
+            "mainstream": [
+                0.84,
+                0.16
+            ]
+        },
+        "party_mentions": {
+            "party6": 1
+        }
+    },
+    "article_40": {
+        "category": "e",
+        "sentiment": -0.28,
+        "readability": 36.26,
+        "story": 12,
+        "minor_major_ratio": {
+            "gender": [
+                0.67,
+                0.33
+            ],
+            "ethnicity": [
+                0.67,
+                0.33
+            ],
+            "mainstream": [
+                0.67,
+                0.33
+            ]
+        },
+        "party_mentions": {
+            "party3": 1,
+            "party2": 1
+        }
+    },
+    "article_48": {
+        "category": "b",
+        "sentiment": -0.85,
+        "readability": 84.44,
+        "story": 7,
+        "minor_major_ratio": {
+            "gender": [
+                0.27,
+                0.73
+            ],
+            "ethnicity": [
+                0.27,
+                0.73
+            ],
+            "mainstream": [
+                0.27,
+                0.73
+            ]
+        },
+        "party_mentions": {
+            "party5": 1
+        }
+    },
+    "article_52": {
+        "category": "e",
+        "sentiment": -0.74,
+        "readability": 37.67,
+        "story": 11,
+        "minor_major_ratio": {
+            "gender": [
+                0.35,
+                0.65
+            ],
+            "ethnicity": [
+                0.35,
+                0.65
+            ],
+            "mainstream": [
+                0.35,
+                0.65
+            ]
+        },
+        "party_mentions": {
+            "party7": 1,
+            "party0": 1
+        }
+    },
+    "article_100": {
+        "category": "d",
+        "sentiment": -0.27,
+        "readability": 71.96,
+        "story": 29,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {
+            "party8": 1,
+            "party3": 1
+        }
+    },
+    "article_15": {
+        "category": "c",
+        "sentiment": 0.93,
+        "readability": 78.44,
+        "story": 13,
+        "minor_major_ratio": {
+            "gender": [
+                0.47,
+                0.53
+            ],
+            "ethnicity": [
+                0.47,
+                0.53
+            ],
+            "mainstream": [
+                0.47,
+                0.53
+            ]
+        },
+        "party_mentions": {
+            "party4": 1,
+            "party6": 1,
+            "party8": 1,
+            "party1": 1
+        }
+    },
+    "article_155": {
+        "category": "b",
+        "sentiment": 0.6,
+        "readability": 13.84,
+        "story": 17,
+        "minor_major_ratio": {
+            "gender": [
+                0.24,
+                0.76
+            ],
+            "ethnicity": [
+                0.24,
+                0.76
+            ],
+            "mainstream": [
+                0.24,
+                0.76
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_63": {
+        "category": "a",
+        "sentiment": 0.42,
+        "readability": 51.59,
+        "story": 8,
+        "minor_major_ratio": {
+            "gender": [
+                0.38,
+                0.62
+            ],
+            "ethnicity": [
+                0.38,
+                0.62
+            ],
+            "mainstream": [
+                0.38,
+                0.62
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_111": {
+        "category": "e",
+        "sentiment": -0.71,
+        "readability": 43.75,
+        "story": 15,
+        "minor_major_ratio": {
+            "gender": [
+                0.94,
+                0.06
+            ],
+            "ethnicity": [
+                0.94,
+                0.06
+            ],
+            "mainstream": [
+                0.94,
+                0.06
+            ]
+        },
+        "party_mentions": {
+            "party0": 1,
+            "party6": 1,
+            "party5": 1,
+            "party1": 1
+        }
+    },
+    "article_116": {
+        "category": "d",
+        "sentiment": 0.99,
+        "readability": 37.49,
+        "story": 2,
+        "minor_major_ratio": {
+            "gender": [
+                0.05,
+                0.95
+            ],
+            "ethnicity": [
+                0.05,
+                0.95
+            ],
+            "mainstream": [
+                0.05,
+                0.95
+            ]
+        },
+        "party_mentions": {
+            "party2": 1,
+            "party9": 1,
+            "party0": 1
+        }
+    },
+    "article_138": {
+        "category": "c",
+        "sentiment": 0.83,
+        "readability": 47.25,
+        "story": 9,
+        "minor_major_ratio": {
+            "gender": [
+                0.23,
+                0.77
+            ],
+            "ethnicity": [
+                0.23,
+                0.77
+            ],
+            "mainstream": [
+                0.23,
+                0.77
+            ]
+        },
+        "party_mentions": {
+            "party0": 1
+        }
+    },
+    "article_6": {
+        "category": "c",
+        "sentiment": -0.57,
+        "readability": 14.95,
+        "story": 47,
+        "minor_major_ratio": {
+            "gender": [
+                0.21,
+                0.79
+            ],
+            "ethnicity": [
+                0.21,
+                0.79
+            ],
+            "mainstream": [
+                0.21,
+                0.79
+            ]
+        },
+        "party_mentions": {
+            "party4": 1,
+            "party1": 1
+        }
+    },
+    "article_95": {
+        "category": "a",
+        "sentiment": -0.52,
+        "readability": 63.9,
+        "story": 40,
+        "minor_major_ratio": {
+            "gender": [
+                0.06,
+                0.94
+            ],
+            "ethnicity": [
+                0.06,
+                0.94
+            ],
+            "mainstream": [
+                0.06,
+                0.94
+            ]
+        },
+        "party_mentions": {
+            "party8": 1
+        }
+    },
+    "article_107": {
+        "category": "e",
+        "sentiment": -0.52,
+        "readability": 14.36,
+        "story": 28,
+        "minor_major_ratio": {
+            "gender": [
+                0.18,
+                0.82
+            ],
+            "ethnicity": [
+                0.18,
+                0.82
+            ],
+            "mainstream": [
+                0.18,
+                0.82
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party8": 1
+        }
+    },
+    "article_88": {
+        "category": "c",
+        "sentiment": -0.86,
+        "readability": 52.61,
+        "story": 33,
+        "minor_major_ratio": {
+            "gender": [
+                0.25,
+                0.75
+            ],
+            "ethnicity": [
+                0.25,
+                0.75
+            ],
+            "mainstream": [
+                0.25,
+                0.75
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_44": {
+        "category": "d",
+        "sentiment": -0.91,
+        "readability": 38.69,
+        "story": 24,
+        "minor_major_ratio": {
+            "gender": [
+                0.01,
+                0.99
+            ],
+            "ethnicity": [
+                0.01,
+                0.99
+            ],
+            "mainstream": [
+                0.01,
+                0.99
+            ]
+        },
+        "party_mentions": {
+            "party3": 1,
+            "party1": 1,
+            "party5": 1
+        }
+    },
+    "article_64": {
+        "category": "b",
+        "sentiment": -0.91,
+        "readability": 54.6,
+        "story": 42,
+        "minor_major_ratio": {
+            "gender": [
+                0.39,
+                0.61
+            ],
+            "ethnicity": [
+                0.39,
+                0.61
+            ],
+            "mainstream": [
+                0.39,
+                0.61
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_85": {
+        "category": "f",
+        "sentiment": -0.04,
+        "readability": 18.23,
+        "story": 9,
+        "minor_major_ratio": {
+            "gender": [
+                0.39,
+                0.61
+            ],
+            "ethnicity": [
+                0.39,
+                0.61
+            ],
+            "mainstream": [
+                0.39,
+                0.61
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_142": {
+        "category": "c",
+        "sentiment": -0.6,
+        "readability": 79.11,
+        "story": 3,
+        "minor_major_ratio": {
+            "gender": [
+                0.16,
+                0.84
+            ],
+            "ethnicity": [
+                0.16,
+                0.84
+            ],
+            "mainstream": [
+                0.16,
+                0.84
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_153": {
+        "category": "e",
+        "sentiment": -0.05,
+        "readability": 3.66,
+        "story": 42,
+        "minor_major_ratio": {
+            "gender": [
+                0.18,
+                0.82
+            ],
+            "ethnicity": [
+                0.18,
+                0.82
+            ],
+            "mainstream": [
+                0.18,
+                0.82
+            ]
+        },
+        "party_mentions": {
+            "party4": 1,
+            "party1": 1,
+            "party5": 1
+        }
+    },
+    "article_78": {
+        "category": "d",
+        "sentiment": 0.78,
+        "readability": 74.33,
+        "story": 25,
+        "minor_major_ratio": {
+            "gender": [
+                0.09,
+                0.91
+            ],
+            "ethnicity": [
+                0.09,
+                0.91
+            ],
+            "mainstream": [
+                0.09,
+                0.91
+            ]
+        },
+        "party_mentions": {
+            "party8": 1,
+            "party4": 1,
+            "party1": 1
+        }
+    },
+    "article_98": {
+        "category": "f",
+        "sentiment": -0.15,
+        "readability": 43.06,
+        "story": 12,
+        "minor_major_ratio": {
+            "gender": [
+                0.16,
+                0.84
+            ],
+            "ethnicity": [
+                0.16,
+                0.84
+            ],
+            "mainstream": [
+                0.16,
+                0.84
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_42": {
+        "category": "f",
+        "sentiment": -0.41,
+        "readability": 44.59,
+        "story": 46,
+        "minor_major_ratio": {
+            "gender": [
+                0.34,
+                0.66
+            ],
+            "ethnicity": [
+                0.34,
+                0.66
+            ],
+            "mainstream": [
+                0.34,
+                0.66
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_77": {
+        "category": "a",
+        "sentiment": 0.45,
+        "readability": 91.16,
+        "story": 40,
+        "minor_major_ratio": {
+            "gender": [
+                0.64,
+                0.36
+            ],
+            "ethnicity": [
+                0.64,
+                0.36
+            ],
+            "mainstream": [
+                0.64,
+                0.36
+            ]
+        },
+        "party_mentions": {
+            "party1": 1
+        }
+    },
+    "article_115": {
+        "category": "f",
+        "sentiment": 0.28,
+        "readability": 36.33,
+        "story": 48,
+        "minor_major_ratio": {
+            "gender": [
+                0.48,
+                0.52
+            ],
+            "ethnicity": [
+                0.48,
+                0.52
+            ],
+            "mainstream": [
+                0.48,
+                0.52
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_10": {
+        "category": "e",
+        "sentiment": 0.36,
+        "readability": 43.82,
+        "story": 9,
+        "minor_major_ratio": {
+            "gender": [
+                0.39,
+                0.61
+            ],
+            "ethnicity": [
+                0.39,
+                0.61
+            ],
+            "mainstream": [
+                0.39,
+                0.61
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_68": {
+        "category": "d",
+        "sentiment": 0.9,
+        "readability": 3.24,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.47,
+                0.53
+            ],
+            "ethnicity": [
+                0.47,
+                0.53
+            ],
+            "mainstream": [
+                0.47,
+                0.53
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_83": {
+        "category": "a",
+        "sentiment": 0.15,
+        "readability": 52.95,
+        "story": 26,
+        "minor_major_ratio": {
+            "gender": [
+                0.14,
+                0.86
+            ],
+            "ethnicity": [
+                0.14,
+                0.86
+            ],
+            "mainstream": [
+                0.14,
+                0.86
+            ]
+        },
+        "party_mentions": {
+            "party2": 1
+        }
+    },
+    "article_58": {
+        "category": "d",
+        "sentiment": 0.04,
+        "readability": 91.35,
+        "story": 8,
+        "minor_major_ratio": {
+            "gender": [
+                0.13,
+                0.87
+            ],
+            "ethnicity": [
+                0.13,
+                0.87
+            ],
+            "mainstream": [
+                0.13,
+                0.87
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_76": {
+        "category": "e",
+        "sentiment": -0.43,
+        "readability": 91.65,
+        "story": 32,
+        "minor_major_ratio": {
+            "gender": [
+                0.07,
+                0.93
+            ],
+            "ethnicity": [
+                0.07,
+                0.93
+            ],
+            "mainstream": [
+                0.07,
+                0.93
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_21": {
+        "category": "b",
+        "sentiment": 0.8,
+        "readability": 44.51,
+        "story": 6,
+        "minor_major_ratio": {
+            "gender": [
+                0.98,
+                0.02
+            ],
+            "ethnicity": [
+                0.98,
+                0.02
+            ],
+            "mainstream": [
+                0.98,
+                0.02
+            ]
+        },
+        "party_mentions": {
+            "party1": 1,
+            "party8": 1,
+            "party4": 1
+        }
+    },
+    "article_89": {
+        "category": "c",
+        "sentiment": 0.7,
+        "readability": 71.18,
+        "story": 45,
+        "minor_major_ratio": {
+            "gender": [
+                0.4,
+                0.6
+            ],
+            "ethnicity": [
+                0.4,
+                0.6
+            ],
+            "mainstream": [
+                0.4,
+                0.6
+            ]
+        },
+        "party_mentions": {
+            "party3": 1
+        }
+    },
+    "article_101": {
+        "category": "b",
+        "sentiment": -0.53,
+        "readability": 49.4,
+        "story": 24,
+        "minor_major_ratio": {
+            "gender": [
+                0.18,
+                0.82
+            ],
+            "ethnicity": [
+                0.18,
+                0.82
+            ],
+            "mainstream": [
+                0.18,
+                0.82
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party1": 1
+        }
+    },
+    "article_122": {
+        "category": "a",
+        "sentiment": -0.38,
+        "readability": 99.96,
+        "story": 47,
+        "minor_major_ratio": {
+            "gender": [
+                0.21,
+                0.79
+            ],
+            "ethnicity": [
+                0.21,
+                0.79
+            ],
+            "mainstream": [
+                0.21,
+                0.79
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_2": {
+        "category": "e",
+        "sentiment": -0.85,
+        "readability": 97.24,
+        "story": 42,
+        "minor_major_ratio": {
+            "gender": [
+                0.23,
+                0.77
+            ],
+            "ethnicity": [
+                0.23,
+                0.77
+            ],
+            "mainstream": [
+                0.23,
+                0.77
+            ]
+        },
+        "party_mentions": {
+            "party8": 1,
+            "party2": 1
+        }
+    },
+    "article_105": {
+        "category": "b",
+        "sentiment": -0.13,
+        "readability": 91.07,
+        "story": 4,
+        "minor_major_ratio": {
+            "gender": [
+                0.76,
+                0.24
+            ],
+            "ethnicity": [
+                0.76,
+                0.24
+            ],
+            "mainstream": [
+                0.76,
+                0.24
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_31": {
+        "category": "b",
+        "sentiment": -0.35,
+        "readability": 70.93,
+        "story": 23,
+        "minor_major_ratio": {
+            "gender": [
+                0.76,
+                0.24
+            ],
+            "ethnicity": [
+                0.76,
+                0.24
+            ],
+            "mainstream": [
+                0.76,
+                0.24
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_73": {
+        "category": "a",
+        "sentiment": -0.5,
+        "readability": 63.51,
+        "story": 36,
+        "minor_major_ratio": {
+            "gender": [
+                0.31,
+                0.69
+            ],
+            "ethnicity": [
+                0.31,
+                0.69
+            ],
+            "mainstream": [
+                0.31,
+                0.69
+            ]
+        },
+        "party_mentions": {
+            "party8": 1
+        }
+    },
+    "article_97": {
+        "category": "f",
+        "sentiment": -0.66,
+        "readability": 94.16,
+        "story": 10,
+        "minor_major_ratio": {
+            "gender": [
+                0.31,
+                0.69
+            ],
+            "ethnicity": [
+                0.31,
+                0.69
+            ],
+            "mainstream": [
+                0.31,
+                0.69
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party0": 1,
+            "party8": 1
+        }
+    },
+    "article_127": {
+        "category": "a",
+        "sentiment": -0.91,
+        "readability": 64.15,
+        "story": 37,
+        "minor_major_ratio": {
+            "gender": [
+                0.11,
+                0.89
+            ],
+            "ethnicity": [
+                0.11,
+                0.89
+            ],
+            "mainstream": [
+                0.11,
+                0.89
+            ]
+        },
+        "party_mentions": {
+            "party7": 1
+        }
+    },
+    "article_57": {
+        "category": "f",
+        "sentiment": 0.09,
+        "readability": 64.19,
+        "story": 20,
+        "minor_major_ratio": {
+            "gender": [
+                0.4,
+                0.6
+            ],
+            "ethnicity": [
+                0.4,
+                0.6
+            ],
+            "mainstream": [
+                0.4,
+                0.6
+            ]
+        },
+        "party_mentions": {
+            "party7": 1,
+            "party1": 1,
+            "party0": 1
+        }
+    },
+    "article_74": {
+        "category": "b",
+        "sentiment": -0.12,
+        "readability": 48.43,
+        "story": 14,
+        "minor_major_ratio": {
+            "gender": [
+                0.07,
+                0.93
+            ],
+            "ethnicity": [
+                0.07,
+                0.93
+            ],
+            "mainstream": [
+                0.07,
+                0.93
+            ]
+        },
+        "party_mentions": {
+            "party5": 1,
+            "party6": 1,
+            "party2": 1
+        }
+    },
+    "article_112": {
+        "category": "c",
+        "sentiment": 0.03,
+        "readability": 10.62,
+        "story": 16,
+        "minor_major_ratio": {
+            "gender": [
+                0.13,
+                0.87
+            ],
+            "ethnicity": [
+                0.13,
+                0.87
+            ],
+            "mainstream": [
+                0.13,
+                0.87
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_20": {
+        "category": "a",
+        "sentiment": -0.9,
+        "readability": 94.54,
+        "story": 40,
+        "minor_major_ratio": {
+            "gender": [
+                0.48,
+                0.52
+            ],
+            "ethnicity": [
+                0.48,
+                0.52
+            ],
+            "mainstream": [
+                0.48,
+                0.52
+            ]
+        },
+        "party_mentions": {
+            "party9": 1,
+            "party5": 1,
+            "party3": 1
+        }
+    },
+    "article_50": {
+        "category": "b",
+        "sentiment": -0.0,
+        "readability": 51.47,
+        "story": 32,
+        "minor_major_ratio": {
+            "gender": [
+                0.75,
+                0.25
+            ],
+            "ethnicity": [
+                0.75,
+                0.25
+            ],
+            "mainstream": [
+                0.75,
+                0.25
+            ]
+        },
+        "party_mentions": {}
+    },
+    "article_129": {
+        "category": "d",
+        "sentiment": 0.01,
+        "readability": 96.67,
+        "story": 14,
+        "minor_major_ratio": {
+            "gender": [
+                0.02,
+                0.98
+            ],
+            "ethnicity": [
+                0.02,
+                0.98
+            ],
+            "mainstream": [
+                0.02,
+                0.98
+            ]
+        },
+        "party_mentions": {}
+    }
+}

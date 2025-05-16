@@ -6,7 +6,6 @@ from scipy.sparse import csr_matrix
 from scipy.sparse import hstack, vstack
 from tqdm import tqdm
 
-
 class GraphRec(object):
     """
      A graph-based recommender model that constructs a bipartite graph from a user-item interaction matrix.
@@ -21,6 +20,7 @@ class GraphRec(object):
         P_multi : dict
             Multi-hop probability matrices for multiple hop counts.
     """
+
     def __init__(self, train_matrix):
         """
         Constructs a bipartite graph of size (|U| + |V|) x (|U| + |V|) from a user-item interaction matrix, 
@@ -51,8 +51,7 @@ class GraphRec(object):
 
         # Compute degree-normalized adjacency matrix
         self.D = np.array(self.A.sum(axis=1)).flatten()
-        # Prevent division by zero
-        self.D[self.D == 0] = 0.0001
+        self.D[self.D == 0] = 0.0001  # Prevent division by zero
         self.P = self.A.multiply(1.0 / self.D[:, None])
     
     def get_item_degrees(self):
@@ -65,8 +64,7 @@ class GraphRec(object):
             An array with the number of edges (interactions) for each item.
         """
         # Get the number of non-zero entries (edges) for each column (item) in the train_matrix
-        # Count non-zero elements in each column
-        item_edges = np.array(self.train_matrix.getnnz(axis=0)).flatten()
+        item_edges = np.array(self.train_matrix.getnnz(axis=0)).flatten()  # Count non-zero elements in each column
         return item_edges
     
     def performInitialHop(self):
@@ -85,7 +83,7 @@ class GraphRec(object):
         P2 = self.P.dot(self.P).astype(np.float32)  # P squared
         self.P3 = P2.dot(self.P).astype(np.float32)  # P cubed
         return self.P3
-        
+
     def predict_reranked_scores(self, user_idx, beta=0.7):
         """Calculate re-ranked scores using degree-based regularization
         
@@ -106,14 +104,15 @@ class GraphRec(object):
         item_degrees = self.get_item_degrees() 
         # print(f"item_degrees:{item_degrees}")
 
-        # Avoid division by zero
-        item_degrees[item_degrees == 0] = 0.0001
+        item_degrees[item_degrees == 0] = 0.0001   # Avoid division by zero
       
         # Popularity beta weighting
         popularity_penalty = 1 / (item_degrees ** beta)
+
         # print(f"popularity_penalty:{popularity_penalty}")
 
         # Perform element-wise multiplication with popularity_penalty
         reranked_scores = recs_dense * popularity_penalty
         
         return reranked_scores
+    
