@@ -41,12 +41,12 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 
 ### Re-ranker List
 
-| Re-ranker       | Description                           | Source                                                                      |
-|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
-| G-KL            | G-KL (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/3240323.3240372)                 |
-| PM-2            | PM-2 (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296)                 |
-| MMR             | MMR (static re-ranking)               | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025)                   |
-| DAP             | Dynamix Attribute Penalization        | TBA                                                                         |
+| Re-ranker       | Description                                         | Source                                                        |
+|-----------------|-----------------------------------------------------|---------------------------------------------------------------|
+| G-KL            | G-KL (static re-ranking)                            | [Paper](https://dl.acm.org/doi/abs/10.1145/3240323.3240372)   |
+| PM-2            | PM-2 (static re-ranking)                            | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296)   |
+| MMR             | MMR (static re-ranking)                             | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025)     |
+| DAP             | Dynamic Attribute Penalization (dynamic re-ranking) | TBA                                                           |
 
 ### Metrics List
 
