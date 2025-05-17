@@ -17,51 +17,43 @@ Please see the [Experiments Repository](https://github.com/Informfully/Experimen
 And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
 
 ![Informfully Recommenders Pipeline Overview](assets/extension_overview.png "Informfully Recommenders Pipeline Overview")
-<p align="center"><i>Informfully Recommenders Pipeline Overview</i></p>
+<p align="center"><i>Overview of the Informfully Recommenders Pipeline</i></p>
 
-### Model Overview
+Please find below an overview datasets, models, re-rankers, and metrics for which we provide out-of-the-box support (these are in addition to what is already supported by Cornac).
 
-Work in progress...
-
-<!--
+### Dataset List
 
 | Model           | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
-| PART            | Participatory Diversity               | [1]       |
-| DELIB           | Deliberative Diversity                | [2]       |
-| D-RDW           | Diversity-Driven Random Walks         | [3]       |
-| RP3-β           | Random Walk                           | [4]       |
-| RWE-D           | Random Walk with Erasure              | [5]       |
+| EB-NeRD         | Danish News Dataset                   | [Website](https://recsys.eb.dk)                                             |
+| MIND            | English (US) News Dataset             | [Website](https://msnews.github.io/index.html)                              |
+| NeMig           | German News Dataset                   | [Website](https://github.com/andreeaiana/nemig)]                            |
 
--->
+### Model List
 
-### Re-ranker Overview
+| Model           | Description                           | Source    |
+|-----------------|---------------------------------------|-----------|
+| PLD             | Participatory Diversity               | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804) |
+| EPD             | Deliberative Diversity                | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834)                 |
+| D-RDW           | Diversity-Driven Random Walks         | TBA                                                                         |
+| RP3-β           | Random Walk                           | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180)                 |
+| RWE-D           | Random Walk with Erasure              | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970)                 |
 
-Worm in progress...
-
-<!--
+### Re-ranker List
 
 | Re-ranker       | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
-| G-KL            | G-KL                                  | [1]       |
-| PM-2            | PM-2                                  | [2]       |
-| MMR             | MMR                                   | [3]       |
+| G-KL            | G-KL (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/3240323.3240372)                 |
+| PM-2            | PM-2 (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296)                 |
+| MMR             | MMR (static re-ranking)               | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025)                   |
 
--->
-
-### Metrics Overview
-
-Work in progress...
-
-<!--
+### Metrics List
 
 | Metric          | Description                           | Source    |
 |-----------------|---------------------------------------|-----------|
-| GINI            | Gini Coefficinet                      | [1]       |
-| ILD             | Intra-lList Distance                  | [2]       |
-| RADio           | RADio Metrics                         | [3]       |
-
--->
+| GINI            | Gini Coefficinet                      | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16)     |
+| ILD             | Intra-lList Distance                  | [Paper](https://api.semanticscholar.org/CorpusID:11075976)                  |
+| RADio           | RADio Metrics                         | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780)                 |
 
 ## Citation
 
