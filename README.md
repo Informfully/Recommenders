@@ -35,7 +35,8 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 |-|-|-|
 | PLD | Participatory Diversity | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/pld) |
 | EPD | Deliberative Diversity  | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/epd) |
-| D-RDW | Diversity-Driven Random Walks | TBA |
+| D-RDW | Diversity-Driven Random Walks | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/drdw) |
+<!-- D-RDW Paper TBA -->
 | RP3-β | Random Walk | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rp3_beta) |
 | RWE-D | Random Walk with Erasure | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rwe_d) |
 | EMNF | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/enmf) |
@@ -51,7 +52,8 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | G-KL | G-KL (static re-ranking) | [Paper](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/greedy_kl), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | PM-2 | PM-2 (static re-ranking) | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
 | MMR | MMR (static re-ranking) | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
-| DAP | Dynamic Attribute Penalization (dynamic re-ranking) | TBA |
+| DAP | Dynamic Attribute Penalization (dynamic re-ranking) | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
+<!-- DAP Paper TBA -->
 
 ### Metrics List
 
