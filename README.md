@@ -36,7 +36,6 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | PLD | Participatory Diversity | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/pld) |
 | EPD | Deliberative Diversity  | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/epd) |
 | D-RDW | Diversity-Driven Random Walks | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/drdw) |
-<!-- D-RDW Paper TBA -->
 | RP3-β | Random Walk | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rp3_beta) |
 | RWE-D | Random Walk with Erasure | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rwe_d) |
 | EMNF | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/enmf) |
@@ -44,6 +43,7 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | NPA | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3292500.3330665), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/npa) |
 | NRMS | Neural Baseline | [Paper](https://aclanthology.org/D19-1671), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/nrms) |
 | VAE | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3178876.3186150), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/dae) |
+<!-- D-RDW Paper TBA -->
 
 ### Re-ranker List
 
