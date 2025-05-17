@@ -27,7 +27,7 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 |-----------------|---------------------------------------|-----------|
 | EB-NeRD         | Danish News Dataset                   | [Website](https://recsys.eb.dk)                                             |
 | MIND            | English (US) News Dataset             | [Website](https://msnews.github.io/index.html)                              |
-| NeMig           | German News Dataset                   | [Website](https://github.com/andreeaiana/nemig)]                            |
+| NeMig           | German News Dataset                   | [Website](https://github.com/andreeaiana/nemig)                             |
 
 ### Model List
 
