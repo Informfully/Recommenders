@@ -23,43 +23,43 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 
 ### Dataset List
 
-| Dataset         | Description                           | Source                                                                      |
-|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
-| EB-NeRD         | Danish News Dataset                   | [Website](https://recsys.eb.dk)                                             |
-| MIND            | English (US) News Dataset             | [Website](https://msnews.github.io)                                         |
-| NeMig           | German News Dataset                   | [Website](https://github.com/andreeaiana/nemig)                             |
+| Dataset | Description | Links |
+|-|-|-|
+| EB-NeRD | Danish News Dataset | [Website](https://recsys.eb.dk) |
+| MIND| English (US) News Dataset | [Website](https://msnews.github.io) |
+| NeMig | German News Dataset | [Website](https://github.com/andreeaiana/nemig) |
 
 ### Model List
 
-| Model           | Description                           | Source                                                                      |
-|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
-| PLD             | Participatory Diversity               | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804) |
-| EPD             | Deliberative Diversity                | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834)                 |
-| D-RDW           | Diversity-Driven Random Walks         | TBA                                                                         |
-| RP3-β           | Random Walk                           | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180)                 |
-| RWE-D           | Random Walk with Erasure              | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970)                 |
-| EMNF            | Neural Baseline                       | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807)                         |
-| LSTUR           | Neural Baseline                       | [Paper](https://aclanthology.org/P19-1033)                                  |
-| NPA             | Neural Baseline                       | [Paper](https://dl.acm.org/doi/abs/10.1145/3292500.3330665)                 |
-| NRMS            | Neural Baseline                       | [Paper](https://aclanthology.org/D19-1671)                                  |
-| VAE             | Neural Baseline                       | [Paper](https://dl.acm.org/doi/abs/10.1145/3178876.3186150)                 |
+| Model | Description | Links |
+|-|-|-|
+| PLD | Participatory Diversity | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/pld) |
+| EPD | Deliberative Diversity  | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/epd) |
+| D-RDW | Diversity-Driven Random Walks | TBA |
+| RP3-β | Random Walk | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rp3_beta) |
+| RWE-D | Random Walk with Erasure | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rwe_d) |
+| EMNF | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/enmf) |
+| LSTUR | Neural Baseline | [Paper](https://aclanthology.org/P19-1033), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/lstur) |
+| NPA | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3292500.3330665), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/npa) |
+| NRMS | Neural Baseline | [Paper](https://aclanthology.org/D19-1671), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/nrms) |
+| VAE | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3178876.3186150), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/dae) |
 
 ### Re-ranker List
 
-| Re-ranker       | Description                                         | Source                                                        |
-|-----------------|-----------------------------------------------------|---------------------------------------------------------------|
-| G-KL            | G-KL (static re-ranking)                            | [Paper](https://dl.acm.org/doi/abs/10.1145/3240323.3240372)   |
-| PM-2            | PM-2 (static re-ranking)                            | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296)   |
-| MMR             | MMR (static re-ranking)                             | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025)     |
-| DAP             | Dynamic Attribute Penalization (dynamic re-ranking) | TBA                                                           |
+| Re-ranker | Description | Links |
+|-|-|-|
+| G-KL | G-KL (static re-ranking) | [Paper](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/greedy_kl), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| PM-2 | PM-2 (static re-ranking) | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
+| MMR | MMR (static re-ranking) | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
+| DAP | Dynamic Attribute Penalization (dynamic re-ranking) | TBA |
 
 ### Metrics List
 
-| Metric          | Description                           | Source                                                                      |
-|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
-| GINI            | Gini Coefficinet                      | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16)     |
-| ILD             | Intra-lList Distance                  | [Paper](https://api.semanticscholar.org/CorpusID:11075976)                  |
-| RADio           | RADio Metrics                         | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780)                 |
+| Metric | Description | Links |
+|-|-|-|
+| GINI | Gini Coefficinet | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| ILD | Intra-lList Distance | [Paper](https://api.semanticscholar.org/CorpusID:11075976), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| RADio | RADio Metrics | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 
 ## Citation
 
