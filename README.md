@@ -10,11 +10,14 @@ It is the combined documentation for all [code repositories](https://github.com/
 
 **Links and Resources:** [GitHub](https://github.com/orgs/Informfully) | [Website](https://informfully.ch) | [X](https://x.com/informfully) | [Documentation](https://informfully.readthedocs.io) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
-## Overview
+## Pipeline Overview
 
 Informfully Recommenders is a norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac).
 Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
 And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
+
+![Informfully Recommenders Pipeline Overview](assets/extension_overview.png "Informfully Recommenders Pipeline Overview")
+<p align="center"><i>Informfully Recommenders Pipeline Overview</i></p>
 
 ### Model Overview
 
