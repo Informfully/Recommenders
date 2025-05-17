@@ -46,7 +46,7 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | G-KL            | G-KL (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/3240323.3240372)                 |
 | PM-2            | PM-2 (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296)                 |
 | MMR             | MMR (static re-ranking)               | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025)                   |
-| DYN-DAP         | Dynamix Attribute Penalization        | TBA                                                                         |
+| DAP             | Dynamix Attribute Penalization        | TBA                                                                         |
 
 ### Metrics List
 
