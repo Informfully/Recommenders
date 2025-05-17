@@ -38,6 +38,11 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | D-RDW           | Diversity-Driven Random Walks         | TBA                                                                         |
 | RP3-β           | Random Walk                           | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180)                 |
 | RWE-D           | Random Walk with Erasure              | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970)                 |
+| EMNF            | Neural Baseline                       | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807)                         |
+| LSTUR           | Neural Baseline                       | [Paper](https://aclanthology.org/P19-1033)                                  |
+| NPA             | Neural Baseline                       | [Paper](https://dl.acm.org/doi/abs/10.1145/3292500.3330665)                 |
+| NRMS            | Neural Baseline                       | [Paper](https://aclanthology.org/D19-1671)                                  |
+| VAE             | Neural Baseline                       | [Paper](https://dl.acm.org/doi/abs/10.1145/3178876.3186150)                 |
 
 ### Re-ranker List
 
