@@ -23,16 +23,16 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 
 ### Dataset List
 
-| Model           | Description                           | Source    |
-|-----------------|---------------------------------------|-----------|
+| Dataset         | Description                           | Source                                                                      |
+|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
 | EB-NeRD         | Danish News Dataset                   | [Website](https://recsys.eb.dk)                                             |
-| MIND            | English (US) News Dataset             | [Website](https://msnews.github.io/index.html)                              |
+| MIND            | English (US) News Dataset             | [Website](https://msnews.github.io)                                         |
 | NeMig           | German News Dataset                   | [Website](https://github.com/andreeaiana/nemig)                             |
 
 ### Model List
 
-| Model           | Description                           | Source    |
-|-----------------|---------------------------------------|-----------|
+| Model           | Description                           | Source                                                                      |
+|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
 | PLD             | Participatory Diversity               | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804) |
 | EPD             | Deliberative Diversity                | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834)                 |
 | D-RDW           | Diversity-Driven Random Walks         | TBA                                                                         |
@@ -41,16 +41,17 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 
 ### Re-ranker List
 
-| Re-ranker       | Description                           | Source    |
-|-----------------|---------------------------------------|-----------|
+| Re-ranker       | Description                           | Source                                                                      |
+|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
 | G-KL            | G-KL (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/3240323.3240372)                 |
 | PM-2            | PM-2 (static re-ranking)              | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296)                 |
 | MMR             | MMR (static re-ranking)               | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025)                   |
+| DYN-DAP         | Dynamix Attribute Penalization        | TBA                                                                         |
 
 ### Metrics List
 
-| Metric          | Description                           | Source    |
-|-----------------|---------------------------------------|-----------|
+| Metric          | Description                           | Source                                                                      |
+|-----------------|---------------------------------------|-----------------------------------------------------------------------------|
 | GINI            | Gini Coefficinet                      | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16)     |
 | ILD             | Intra-lList Distance                  | [Paper](https://api.semanticscholar.org/CorpusID:11075976)                  |
 | RADio           | RADio Metrics                         | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780)                 |
