@@ -26,8 +26,19 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | Dataset | Description | Links |
 |-|-|-|
 | EB-NeRD | Danish News Dataset | [Website](https://recsys.eb.dk) |
-| MIND| English (US) News Dataset | [Website](https://msnews.github.io) |
+| MIND | English (US) News Dataset | [Website](https://msnews.github.io) |
 | NeMig | German News Dataset | [Website](https://github.com/andreeaiana/nemig) |
+
+### Augmentation List
+
+| Augmentation | Links |
+|-|-|
+| Sentiment Analysis | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/sentiment.py) |
+| Named Entities | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/readability.py) |
+| Political Actors | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/party.py) |
+| Text Complexity | [Script]() |
+| Story Cluster | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/story.py) |
+| Article Category | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/category.py) |
 
 ### Model List
 
