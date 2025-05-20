@@ -16,8 +16,8 @@ import scipy.sparse as sp
 import numpy as np
 from .graph_recommender import GraphRec
 
-class RP3_Beta(Recommender):
 
+class RP3_Beta(Recommender):
     """Random Walk Algorithm.
 
     Parameters
@@ -36,7 +36,6 @@ class RP3_Beta(Recommender):
     For details, refer to the paper.
     
     """
-
     def __init__(
         self,
         beta = 0.7,
@@ -70,7 +69,6 @@ class RP3_Beta(Recommender):
 
         train_set:(userId, userHistory, userScore)
         """
-
         Recommender.fit(self, train_set)
 
         def interacted_items(csr_row):
@@ -118,8 +116,6 @@ class RP3_Beta(Recommender):
             Relative scores that the user gives to the item or to all known items
 
         """
-
-
         if self.is_unknown_user(user_idx):
             print(f'unknown user : {user_idx}\n')
             raise ScoreException(
@@ -129,17 +125,12 @@ class RP3_Beta(Recommender):
         if item_idx is not None and self.is_unknown_item(item_idx):
             raise ScoreException("Can't make score prediction for item %d" % item_idx)
 
-
         score = self.Model_RDW.predict_reranked_scores(user_idx, beta =  self.beta )
-        
-    
-
 
         if item_idx == None:
             return score
         
         return score[item_idx]
-    
 
     def rank(self, user_idx, item_indices=None, k=-1, **kwargs):
         """
@@ -162,14 +153,12 @@ class RP3_Beta(Recommender):
         item_scores : list of float
             The random walk scores corresponding to the `item_indices`.
 
-
         """
         if  self.is_unknown_user(user_idx):
             raise ScoreException(
                 "Can't make score prediction for (user_id=%d)" % user_idx
             )
    
-
         if self.article_pool is not None:
 
             # item_idx2id = kwargs.get("item_idx2id")
@@ -178,8 +167,6 @@ class RP3_Beta(Recommender):
             item_idx2id = {v: k for k, v in self.iid_map.items()} # cornac item ID : raw item ID
             user_idx2id = {v: k for k, v in self.uid_map.items()} # cornac user ID : raw user ID
             item_id2idx = {k: v for k, v in self.iid_map.items()} # raw item ID : cornac item ID
-
-
 
             assert isinstance(item_idx2id, dict), "item_idx2id must be a dictionary"
             assert isinstance(user_idx2id, dict), "user_idx2id must be a dictionary"
@@ -191,7 +178,6 @@ class RP3_Beta(Recommender):
                     idx = item_id2idx[iid]
                     impression_items_list.append(idx)
 
-
             ranked_items, item_scores = self.rank_partial( user_idx=user_idx, item_indices = impression_items_list, item_idx2id = item_idx2id, user_idx2id = user_idx2id)
 
             self.ranked_items[user_idx] = ranked_items
@@ -199,8 +185,6 @@ class RP3_Beta(Recommender):
             self.item_scores_mapped_indices[user_idx] = impression_items_list
 
             return ranked_items, item_scores
-
-        
 
         # original cornac code: rank known items
         # obtain item scores from the model
@@ -236,13 +220,9 @@ class RP3_Beta(Recommender):
 
         self.ranked_items[user_idx] = ranked_items
         self.item_scores[user_idx] = item_scores
-
-
         self.item_scores_mapped_indices[user_idx]= item_indices
 
         return ranked_items, item_scores
-        
-    
 
     def rank_partial(self, user_idx, item_indices=None, **kwargs):
         """
@@ -268,7 +248,6 @@ class RP3_Beta(Recommender):
         item_scores : list of float
             The scores corresponding to the `item_indices`.
         """
-
         try:
             known_item_scores = self.score(user_idx, **kwargs)
         except ScoreException:
@@ -293,4 +272,3 @@ class RP3_Beta(Recommender):
         random_walk_prob = np.asarray([all_item_scores[item] for item in item_indices])
 
         return ranked_items, random_walk_prob
-

@@ -1,10 +1,11 @@
+from __future__ import print_function
 import numpy as np
 import scipy.sparse as sp
-from __future__ import print_function
 from math import log
 from scipy.sparse import csr_matrix
 from scipy.sparse import hstack, vstack
 from tqdm import tqdm
+
 
 class GraphRec(object):
     """
