@@ -1158,7 +1158,6 @@ class Activation(DiversityMetric):
     In Proceedings of the 16th ACM Conference on Recommender Systems (pp. 208-219).
 
     """
-
     def __init__(self, item_sentiment, k=-1, divergence_type="KL", discount=False, n_bins=5):
         DiversityMetric.__init__(self, name="Activation@{}".format(k), k=k)
         if isinstance(item_sentiment, dict):
@@ -1279,7 +1278,6 @@ class Calibration(DiversityMetric):
     In Proceedings of the 16th ACM Conference on Recommender Systems (pp. 208-219).
 
     """
-
     def __init__(self, item_feature, data_type, k=-1, divergence_type="KL", discount=False, n_bins=5):
         if data_type.lower() == "complexity":
             DiversityMetric.__init__(
@@ -1528,7 +1526,6 @@ class Representation(DiversityMetric):
     In Proceedings of the 16th ACM Conference on Recommender Systems (pp. 208-219).
 
     """
-
     def __init__(self, item_entities, k=-1, divergence_type="KL", discount=False, n_samples=5):
         DiversityMetric.__init__(self, name="Representation@{}".format(k), k=k)
         if isinstance(item_entities, dict):
@@ -1624,7 +1621,6 @@ class AlternativeVoices(DiversityMetric):
     In Proceedings of the 16th ACM Conference on Recommender Systems (pp. 208-219).
 
     """
-
     def __init__(self, item_minor_major, data_type='mainstream',  k=-1, divergence_type="KL", discount=False):
         if data_type.lower() == "gender":
             DiversityMetric.__init__(

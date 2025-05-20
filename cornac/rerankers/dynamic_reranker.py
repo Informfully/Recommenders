@@ -13,7 +13,6 @@ class DynamicReRanker(ReRanker):
     Subclasses are expected to implement specific re-ranking logic and customize behavior as needed.
 
     """
-
     def __init__(self, name: str,  item_dataframe: Optional[pd.DataFrame] = None, diversity_dimension: Optional[List[str]] = None, top_k: int = 20,  pool_size: int = -1, feedback_window_size: int = 1,  config_file: Optional[str] = None,
                    user_simulator_config_path: str = "./reranker_configs/user_simulator_config.ini", **kwargs):
         """
@@ -37,7 +36,7 @@ class DynamicReRanker(ReRanker):
         ----------------------
         - Attributes for managing candidate items, prediction scores, user history, and feedback:
         `candidate_items`, `candidate_scores`, `user_history`, `shownHistory`, 
-      `feedbackFromLastIteration`, and `users`.
+        `feedbackFromLastIteration`, and `users`.
 
         """
         super().__init__(name=name, item_dataframe=item_dataframe,
@@ -210,4 +209,3 @@ class DynamicReRanker(ReRanker):
         - This method is intended to be overridden by subclasses for specific re-ranking logic.
         """
         self.filter_seen_items(user_id)
-        # implementation

@@ -21,15 +21,13 @@ And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/ma
 
 Please find below an overview datasets, models, re-rankers, and metrics for which we provide out-of-the-box support (these are in addition to what is already supported by Cornac).
 
-### Dataset List
+### Pre-processing Stage
 
 | Dataset | Description | Links |
 |-|-|-|
 | EB-NeRD | Danish News Dataset | [Website](https://recsys.eb.dk) |
 | MIND | English (US) News Dataset | [Website](https://msnews.github.io) |
 | NeMig | German News Dataset | [Website](https://github.com/andreeaiana/nemig) |
-
-### Augmentation List
 
 | Augmentation | Links |
 |-|-|
@@ -40,7 +38,7 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | Story Cluster | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/story.py) |
 | Article Category | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/category.py) |
 
-### Model List
+### In-processing Stage
 
 | Model | Description | Links |
 |-|-|-|
@@ -56,7 +54,7 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | VAE | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3178876.3186150), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/dae) |
 <!-- D-RDW Paper TBA -->
 
-### Re-ranker List
+### Post-processing Stage
 
 | Re-ranker | Description | Links |
 |-|-|-|
@@ -66,13 +64,18 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | DAP | Dynamic Attribute Penalization (dynamic re-ranking) | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
 <!-- DAP Paper TBA -->
 
-### Metrics List
+| Simulator | Links |
+|-|-|
+| Rank-based User Simulator | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
+| Preference-based User Simulator | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
+
+### Evaluation Stage
 
 | Metric | Description | Links |
 |-|-|-|
 | GINI | Gini Coefficinet | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | ILD | Intra-lList Distance | [Paper](https://api.semanticscholar.org/CorpusID:11075976), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
-| RADio | RADio Metrics | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| RADio | RADio Divergence | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 
 ## Citation
 

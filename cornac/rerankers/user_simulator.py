@@ -5,6 +5,7 @@
 # Simulated Users. In Proceedings of the Second Workshop on Fairness, Accountability,
 # Transparency, Ethics and Society on the Web. ACM, New York, NY, USA, 10 pages.
 # ============================================================================
+
 import numpy as np
 import datetime
 import configparser
@@ -16,7 +17,6 @@ class UserSimulator:
     UserSimulator: A class to simulate user interaction behavior in recommender systems.
 
     """
-
     def __init__(self, user_id, user_history, choice_model='logarithmic_rank_bias', config_path='./experiments/configs/reranker_configs/user_simulator_config.ini', preference=None, attribute_items_mapping=None):
         """
         Initialize the UserSimulator with configuration.
@@ -113,7 +113,6 @@ class UserSimulator:
         Raises:
         - `ValueError`: If an error occurs while loading levels.
 
-
         """
         try:
             levels = list(config[section].keys())
@@ -134,7 +133,6 @@ class UserSimulator:
         - `thresholds` (dict): A dictionary mapping activity levels to their respective thresholds.
 
         """
-
         try:
             return {level: config.getfloat(section, level) for level in config[section].keys()}
         except Exception as e:
@@ -233,7 +231,6 @@ class UserSimulator:
         Returns:
         - `max_iterations` (int): The maximum number of iterations allowed for the user.
         """
-
         # Get max iterations based on the user's activity level, with a default of 3 if not set.
         max_iterations_for_level = self.max_iterations_config.get(
             self.active_level, 3)
@@ -256,14 +253,12 @@ class UserSimulator:
             - Positive $\alpha$ values indicate preference for items with the attribute.
             - Negative $\alpha$ values indicate a dislike for items with the attribute.
 
-
         Parameters:
         - `item_ids` (list): A list of item IDs for which preference scores need to be calculated.
 
         Returns:
         - `scores` (np.ndarray): An array containing the preference scores for the provided items.
         """
-
         scores = np.zeros(len(item_ids))
 
         # Iterate over each dimension and their preferences
@@ -287,7 +282,6 @@ class UserSimulator:
         Returns:
         - `probabilities` (np.ndarray): Softmax-transformed probabilities.
         """
-
         if scores.size == 0:
             return np.array([])
         exp_scores = np.exp(scores - np.max(scores))
@@ -304,7 +298,6 @@ class UserSimulator:
         Returns:
         - `probabilities` (np.ndarray): Array of click probabilities for the items.
         """
-
         if self.choice_model == 'preference_based_bias':
             scores = self.rho(item_ids)
             probabilities = self.softmax(scores)
@@ -330,7 +323,6 @@ class UserSimulator:
         Effect:
         - Updates `seen_items` and `interacted_items` with the results of the interaction.
         """
-
         clicks = []
         self.lastIterationClicked = []
         # Check if item_ids is empty
