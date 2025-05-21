@@ -77,6 +77,9 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | ILD | Intra-lList Distance | [Paper](https://api.semanticscholar.org/CorpusID:11075976), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | RADio | RADio Divergence | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 
+Item visualization is done using the [Informfully Platform](https://github.com/Informfully/Platform).
+Please look at the relevant documentation page for a [demo script](https://informfully.readthedocs.io/en/latest/recommendations.html).
+
 ## Citation
 
 If you use any code or data of this repository in a scientific publication, we ask you to cite the following paper:
@@ -105,6 +108,7 @@ If you use any code or data of this repository in a scientific publication, we a
   ```
 
 ## Contributing
+
 Your are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
   - fork any of the [Informfully repositories](https://github.com/Informfully)
   - join and write on the [dicussion board](https://github.com/orgs/Informfully/discussions)
@@ -113,6 +117,7 @@ Your are welcome to contribute to the Informfully ecosystem and become a part of
 Please post your feature requests and bug reports in our [GitHub issues](https://github.com/Informfully/Documentation/issues) section.
 
 ## License
+
 Released under the [Apache License 2.0](LICENSE). (Please note that the respective copyright licenses of third-party libraries and dependencies apply.)
 
 ![Screenshots](https://raw.githubusercontent.com/Informfully/Documentation/main/docs/source/img/app_screens.png)
