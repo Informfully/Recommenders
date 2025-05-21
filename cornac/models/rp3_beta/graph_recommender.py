@@ -21,7 +21,6 @@ class GraphRec(object):
         P_multi : dict
             Multi-hop probability matrices for multiple hop counts.
     """
-
     def __init__(self, train_matrix):
         """
         Constructs a bipartite graph of size (|U| + |V|) x (|U| + |V|) from a user-item interaction matrix, 
@@ -116,4 +115,3 @@ class GraphRec(object):
         reranked_scores = recs_dense * popularity_penalty
         
         return reranked_scores
-    

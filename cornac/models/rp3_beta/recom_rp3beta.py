@@ -7,8 +7,6 @@
 #               ACM Transactions on Interactive Intelligent Systems (TiiS), 7(1), 1-34.                     #
 #############################################################################################################
 
-import numpy 
-
 from ..recommender import Recommender
 from cornac.utils import common
 from ...exception import ScoreException
