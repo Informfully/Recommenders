@@ -58,10 +58,10 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 
 | Re-ranker | Description | Links |
 |-|-|-|
-| G-KL | G-KL (static re-ranking) | [Paper](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/greedy_kl), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
-| PM-2 | PM-2 (static re-ranking) | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
-| MMR | MMR (static re-ranking) | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
-| DAP | Dynamic Attribute Penalization (dynamic re-ranking) | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
+| G-KL | Greedy Kullback-Leibler Divergence | [Paper](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/greedy_kl), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| PM-2 | Diversity by Proportionality | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
+| MMR | Maximal Marginal Relevance | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
+| DAP | Dynamic Attribute Penalization | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
 <!-- DAP Paper TBA -->
 
 | Simulator | Links |
@@ -73,9 +73,29 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 
 | Metric | Description | Links |
 |-|-|-|
-| GINI | Gini Coefficinet | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
-| ILD | Intra-lList Distance | [Paper](https://api.semanticscholar.org/CorpusID:11075976), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| Gini | Gini Coefficinet | [Paper](https://link.springer.com/chapter/10.1007/978-1-0716-2197-4_16), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+| ILD | Intra-list Distance | [Paper](https://api.semanticscholar.org/CorpusID:11075976), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | RADio | RADio Divergence | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
+
+| Gini Dimension | Required Augmentation |
+| - | - |
+| Category Gini | Article Category |
+| Sentiment Gini | Sentiment Analysis |
+| Party Gini | Political Actors |
+
+| ILD Dimension | Required Augmentation |
+| - | - |
+| Category ILD | Article Category |
+| Sentiment ILD | Sentiment Analysis |
+| Party ILD | Political Actors |
+
+| RADio Dimension | Required Augmentation |
+| - | - |
+| Activation | Sentiment Analysis |
+| Calibration | Article Category, Text Complexity |
+| Fragmentation | Story Cluster |
+| Alternative Voices | Political Actors, Named Entities |
+| Representation | Political Actors, Named Entities |
 
 Item visualization is done using the [Informfully Platform](https://github.com/Informfully/Platform).
 Please look at the relevant documentation page for a [demo script](https://informfully.readthedocs.io/en/latest/recommendations.html).
