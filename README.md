@@ -19,7 +19,9 @@ And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/ma
 ![Informfully Recommenders Pipeline Overview](assets/extension_overview.png "Informfully Recommenders Pipeline Overview")
 <p align="center"><i>Overview of the Informfully Recommenders Pipeline</i></p>
 
-Please find below an overview datasets, models, re-rankers, and metrics for which we provide out-of-the-box support (these are in addition to what is already supported by Cornac).
+Please find below an overview of the norm-aware Extension of datasets, models, re-rankers, and metrics for which Informfully Recommenders provide out-of-the-box support.
+(Please that this repository is fully backwards compatible.
+It includes and supports all elements that were already part of Cornac.)
 
 ### Pre-processing Stage
 
@@ -62,7 +64,6 @@ Please find below an overview datasets, models, re-rankers, and metrics for whic
 | PM-2 | Diversity by Proportionality | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
 | MMR | Maximal Marginal Relevance | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
 | DAP | Dynamic Attribute Penalization | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
-<!-- DAP Paper TBA -->
 
 | Simulator | Links |
 |-|-|
