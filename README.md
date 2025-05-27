@@ -20,8 +20,8 @@ And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/ma
 <p align="center"><i>Overview of the Informfully Recommenders Pipeline</i></p>
 
 Please find below an overview of the norm-aware Extension of datasets, models, re-rankers, and metrics for which Informfully Recommenders provide out-of-the-box support.
-(Please that this repository is fully backwards compatible.
-It includes and supports all elements that were already part of Cornac.)
+Please note that this repository is fully backwards compatible.
+It includes and supports all elements that were already part of Cornac.
 
 ### Pre-processing Stage
 
@@ -103,7 +103,7 @@ Please look at the relevant documentation page for a [demo script](https://infor
 
 ## Citation
 
-If you use any code or data of this repository in a scientific publication, we ask you to cite the following paper:
+If you use any code or data from this repository in a scientific publication, we ask you to cite the following paper:
 
 - [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
 
@@ -130,9 +130,9 @@ If you use any code or data of this repository in a scientific publication, we a
 
 ## Contributing
 
-Your are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
+You are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
   - fork any of the [Informfully repositories](https://github.com/Informfully)
-  - join and write on the [dicussion board](https://github.com/orgs/Informfully/discussions)
+  - join and write on the [discussion board](https://github.com/orgs/Informfully/discussions)
   - make changes and create pull requests
 
 Please post your feature requests and bug reports in our [GitHub issues](https://github.com/Informfully/Documentation/issues) section.
