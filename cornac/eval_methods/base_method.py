@@ -1251,6 +1251,7 @@ class BaseMethod:
                 exclude_unknowns=self.exclude_unknowns,
                 rating_metrics=rating_metrics,
                 ranking_metrics=ranking_metrics,
+                diversity_metrics= diversity_metrics,
                 user_based=user_based,
                 verbose=self.verbose,
             )
