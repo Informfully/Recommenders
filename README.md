@@ -16,7 +16,7 @@ Informfully Recommenders is a norm-aware extension of [Cornac](https://github.co
 Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
 And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
 
-![Informfully Recommenders Pipeline Overview](assets/extension_overview.png "Informfully Recommenders Pipeline Overview")
+![Informfully Recommenders Pipeline Overview](https://github.com/Informfully/Documentation/blob/main/docs/source/img/extension_overview.png "Informfully Recommenders Pipeline Overview")
 <p align="center"><i>Overview of the Informfully Recommenders Pipeline</i></p>
 
 Please find below an overview of the norm-aware Extension of datasets, models, re-rankers, and metrics for which Informfully Recommenders provide out-of-the-box support.
