@@ -3,11 +3,10 @@
 # DESCRIPTION:  EPD - Exposure Diversity Model for Cornac                                                   #
 #############################################################################################################
 
-import random
-import configparser
-
 from operator import itemgetter as i
 from functools import cmp_to_key
+import random
+import configparser
 import copy
 
 class EPD_CORE():
@@ -23,14 +22,14 @@ class EPD_CORE():
         The maximum number of articles added for each user group
 
     """
+
     def __init__(self, k, pageWidth, name = "EPD"):
         self.k = k
         self.pageWidth = pageWidth
         self.name = name
 
-    def prepare_recommendations(self, articles_collection, political_type_dict, configure_path, dataset_name):
 
-        
+    def prepare_recommendations(self, articles_collection, political_type_dict, configure_path, dataset_name):
 
         non_political_articles = self.load_articles_in_list(articles_collection = articles_collection, type='non-political', dataset_name = dataset_name )
 
@@ -51,10 +50,9 @@ class EPD_CORE():
             raise configparser.Error(f"Error reading config file {configure_path}: {e}")
 
         # config.read(configure_path)
-
         # user_group_id_list = [int(i) for i in config['EPD']["USERGROUPID"].split(',')]
-
         recommendations_collection_dict = {}
+
         # for i in list(political_type_dict.keys()):
         for i in political_type_dict.keys():
             recommendations_collection = []
@@ -79,6 +77,7 @@ class EPD_CORE():
 
         return user_recommendation_id_dict
  
+
     def load_articles_in_list(self, articles_collection, type, political='neutral', dataset_name = "mind"):
 
         articles = [] 
@@ -111,7 +110,6 @@ class EPD_CORE():
                         if article['political_references_count'] > 0 and article['majority_count'] > 0 :
                             articles.append(article)    
 
-
         elif type == 'non-political':
             for article in articles_collection:
                 if article['political_references_count'] == 0:
@@ -119,6 +117,7 @@ class EPD_CORE():
 
         # print(f"type:{type}, political:{political}, article len:{len(articles)}")
         return articles
+
 
     def create_recommendations(self, group, political_articles, non_political_articles):
     
@@ -162,6 +161,7 @@ class EPD_CORE():
 
         return recommendations_collection
 
+
     def generate_user_recommendation_list(self, recommendations_collection, user_group, pageWidth):
         recommendation_lists = []
         processed_article_ids = set()
@@ -181,23 +181,3 @@ class EPD_CORE():
                 processed_article_ids.add(article_id)
 
         return recommendation_lists
-
-    # def generate_user_recommendation_list(self, recommendations_collection, user_group, pageWidth):
-
-    #     recommendation_lists = []
-    #     prediction_counter = 999
-
-    #     recommendations_cursor = []
-    #     for recom in recommendations_collection:
-    #         if recom['group'] == user_group:
-    #             recommendations_cursor.append(recom)
-
-    #     for recommendation in recommendations_cursor:
-    #         for _ in range(pageWidth):
-    #             recommendation_lists.append(recommendation['article_id'])
-        
-    #         prediction_counter -= 1
-    #         if prediction_counter == 0 :
-    #             break
-
-    #     return recommendation_lists

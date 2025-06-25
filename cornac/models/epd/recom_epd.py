@@ -11,6 +11,8 @@ from cornac.utils import common
 import os
 import json
 import configparser
+
+
 class EPD(Recommender):
 
     """Explosure Diversity Algorithm.
@@ -43,10 +45,6 @@ class EPD(Recommender):
         When True, running logs are displayed.
     
     """
-    # model = EPD( name = "EPD", party_path=party_path, political_type_dict= political_type_dict, num_items=num_items, configure_path=config_path,
-        
-    #     k=2, pageWidth = 20, article_pool = impression_iid_list, userGroupDict = user_group_dict, dataset_name = "ebnerd" , political_ref_path=political_ref_path)
-
 
     def __init__(self,
                  party_path, 
@@ -64,7 +62,6 @@ class EPD(Recommender):
                          **kwargs
                  ):
         super().__init__( name=name, trainable=trainable, verbose=verbose, **kwargs)
-
       
         self.party_path =  party_path
         self.political_ref_path = political_ref_path
@@ -77,7 +74,7 @@ class EPD(Recommender):
 
         self.dataset_name = dataset_name
 
-         # Assert that dataset_name is valid
+        # Assert that dataset_name is valid
         allowed_datasets = {"mind", "ebnerd", "nemig"}
         assert self.dataset_name.lower() in allowed_datasets, (
             f"Invalid dataset_name: {self.dataset_name}. "
@@ -95,7 +92,6 @@ class EPD(Recommender):
     
     def load_article_collection(self, political_ref_path, party_path, configure_path, iid_map):
 
-     
         dataset_lower = self.dataset_name.lower()
   
         if dataset_lower == "mind":
@@ -105,7 +101,6 @@ class EPD(Recommender):
 
         with open(political_ref_path, 'w', encoding="utf-8") as json_file:
             json.dump(articles, json_file, indent=4)
-
 
         return articles
 
@@ -125,6 +120,7 @@ class EPD(Recommender):
                 )
 
             majority = config[section_name]['majority'].replace('_', ' ').split(',')
+            
         except (configparser.Error, KeyError) as e:
             raise configparser.Error(f"Error reading config file {configure_path}: {e}")
 
@@ -236,6 +232,7 @@ class EPD(Recommender):
         
         return article_list
 
+
     def fit(self, train_set, val_set=None):
 
         """Fit the model to observations.
@@ -257,11 +254,8 @@ class EPD(Recommender):
         Recommender.fit(self, train_set)
 
         # train_uir = list(zip(*train_set.uir_tuple))
-
         # users_collection = common.load_user_group_type(train_uir)
-
         # self.userGroupDict = {user['userId']:user['userGroup'] for user in users_collection}
-
         # train_articles = np.array([i for u,i,r in train_uir])
 
         # articles_collection = [article for article in self.article_collection if article['article_id'] in train_articles]
@@ -270,15 +264,10 @@ class EPD(Recommender):
         
         self.epd_core = EPD_CORE(self.k, self.pageWidth, name  = self.name)
 
-
         return self
-
-
     
 
     def rank(self, user_idx, item_indices=None, k=-1, **kwargs):
-        
-        
 
         # item_idx2id = kwargs.get("item_idx2id")
         # user_idx2id = kwargs.get("user_idx2id")
@@ -287,20 +276,23 @@ class EPD(Recommender):
         user_idx2id = {v: k for k, v in self.uid_map.items()} # cornac user ID : raw user ID
         item_id2idx = {k: v for k, v in self.iid_map.items()} # raw item ID : cornac item ID
 
-
         assert isinstance(item_idx2id, dict), "item_idx2id must be a dictionary"
         assert isinstance(user_idx2id, dict), "user_idx2id must be a dictionary"
         assert isinstance(item_id2idx, dict), "item_id2idx must be a dictionary"
+
         if self.article_collection is None: 
 
-            article_collection = self.load_article_collection(political_ref_path=self.political_ref_path, party_path=self.party_path, configure_path=self.configure_path, iid_map= item_id2idx)
+            article_collection = self.load_article_collection(
+                political_ref_path = self.political_ref_path,
+                party_path = self.party_path,
+                configure_path = self.configure_path,
+                iid_map = item_id2idx)
             if self.article_pool is None or len(self.article_pool)==0:
                 self.article_collection = article_collection
             else:
-
                 self.article_collection = []
                 for id in self.article_pool:
-            # Find the article with the matching article_id and append it to article_collection
+                # Find the article with the matching article_id and append it to article_collection
                     for article in article_collection:
                         if article['article_id'] == id:
                             self.article_collection.append(article)
@@ -319,10 +311,13 @@ class EPD(Recommender):
             return self.recommendation_groups[group], self.recommendation_scores[group] # already computed for this group
 
         if self.recommendations_id_dict is None:
-            self.recommendations_id_dict = self.epd_core.prepare_recommendations(articles_collection, self.political_type_dict, self.configure_path, self.dataset_name)
+            self.recommendations_id_dict = self.epd_core.prepare_recommendations(
+                articles_collection,
+                self.political_type_dict, 
+                self.configure_path,
+                self.dataset_name)
             # print(f"self.recommendations_id_dict:{self.recommendations_id_dict}")
          
- 
         recommendation_rawID_list = self.recommendations_id_dict[group]
 
         recommendation_list = []
@@ -330,12 +325,10 @@ class EPD(Recommender):
             if iid in item_id2idx:
                 idx = item_id2idx[iid]
                 recommendation_list.append(idx)
-
         
         if  self.article_pool is not None:
             scores = np.zeros(len(self.article_pool))
 
-    
             max_score = len(recommendation_rawID_list )
             for item in recommendation_rawID_list :
                 
@@ -361,9 +354,6 @@ class EPD(Recommender):
             
         scores = common.roundRowScore(scores, 1, 0)
 
-   
-
-
         self.recommendation_scores[group] = scores
         self.recommendation_groups[group] = recommendation_list
         # print(f"group added: {group}")
@@ -371,4 +361,3 @@ class EPD(Recommender):
         # print(f"len scores:{len(scores)}")
 
         return recommendation_list, scores
-

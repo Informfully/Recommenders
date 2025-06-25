@@ -7,6 +7,7 @@ import math
 import numpy as np
 import random
 
+
 # Calculate the difference in political score for a given user-article item
 def CalculateDistance(user, article):
 
@@ -24,6 +25,7 @@ def CalculateDistance(user, article):
 
     return overallDistance
 
+
 # Function to round either user or article score to the level of granularity of score groups
 def RoundScore(score, distribution, group_granularity):
 
@@ -36,6 +38,7 @@ def RoundScore(score, distribution, group_granularity):
                 score[i] = distribution[group][0][0]
 
     return score
+
 
 # Predict score for a given user-item combination
 def Predict(user, articles, distribution, group_granularity):
@@ -53,11 +56,9 @@ def Predict(user, articles, distribution, group_granularity):
     random.shuffle(indexed_articles)
 
     distributionD = np.zeros((len(user), len(distribution[0][1])))
-
     distributionMerged = None
-
-
-        # Find the distribution groups that fit the article score in each dimension
+    
+    # Find the distribution groups that fit the article score in each dimension
     for k in range(len(distributionD)):
         for group in range(0, len(distribution)):
             if (distribution[group][0] == userScoreRounded[k]):
@@ -70,11 +71,10 @@ def Predict(user, articles, distribution, group_granularity):
         X, Y, Z = random.choices(range(len(distributionD)), k=3)
         distributionD = distributionD[[X,Y,Z]]
     
-    ##############add for 1-D user score
+    # Modification for 1-D user score
     if len(distributionD) == 1:
         distributionMerged = distributionD
-    
-    ##############
+
     if len(distributionD)>1:
         for i in range(len(distributionD)-1):
             if i == 0:
@@ -89,6 +89,7 @@ def Predict(user, articles, distribution, group_granularity):
     # print(f"distributionMerged:{distributionMerged}")
     articles_num = int(np.sum(distributionMerged))
     # print(f"articles_num:{articles_num}")
+
     # Go through all article groups recommend articles from groups with the highest count first 
     for _ in range(articles_num):
 
@@ -96,15 +97,12 @@ def Predict(user, articles, distribution, group_granularity):
             max_index = np.argmax(distributionMerged)
             max_coords  = np.unravel_index(max_index, distributionMerged.shape)
 
-
             targetScore = np.zeros(len(userScoreRounded))
 
             relevant_coords = max_coords[-len(userScoreRounded):]
 
             for i in range(len(targetScore)):
                 targetScore[i] = -1 + relevant_coords[i] * group_granularity
-
-
 
             for original_index, currentArticleScore in indexed_articles:
                
@@ -117,5 +115,6 @@ def Predict(user, articles, distribution, group_granularity):
 
             # after recommending, the chosen max value in distribution decreases
             distributionMerged[max_coords] -= 1
+
     # print(f"singleUserRecommendation:{singleUserRecommendation}")
     return singleUserRecommendation

@@ -6,6 +6,8 @@
 import numpy as np
 from tqdm import tqdm
 import copy
+
+
 # For political diversity
 def calculatePoliticalScore(history_dict, party_dict_raw, party_list, num_users):
          
@@ -26,7 +28,6 @@ def calculatePoliticalScore(history_dict, party_dict_raw, party_list, num_users)
                 party_dict[k] = -1
                 # party_dict[k] = 0
         
-    
     for user_idx, article_list in history_dict.items():
 
         # Update: for multi-party situation
@@ -36,7 +37,6 @@ def calculatePoliticalScore(history_dict, party_dict_raw, party_list, num_users)
                     continue
                 # print(party_dict[article])
                 user_score_matrix[user_idx][party_dict[article]] += 1
-    
 
     # user_score_matrix = roundColumnScore(user_score_matrix)
     user_score_matrix =  compute_political_leaning(user_score_matrix)
@@ -57,6 +57,7 @@ def roundColumnScore(scores_matrix):
     else:
         return 2*(scores_matrix - min)/denominator - 1
 
+
 def compute_political_leaning(counts_matrix):
     republican_count = counts_matrix[:, 0]
     democrat_count = counts_matrix[:, 1]
@@ -71,7 +72,9 @@ def compute_political_leaning(counts_matrix):
 
     return leaning_score.reshape(-1, 1)
 
-def calculateArticleScore(history_dict, userScores, num_users, num_items,  party_dict, party_list, article_pool, positive_score_party_name, negative_score_party_name):
+
+def calculateArticleScore(history_dict, userScores, num_users, num_items, party_dict, party_list, article_pool, positive_score_party_name, negative_score_party_name):
+    
     # article_mention_matrix = np.full((len(article_pool), len(party_list)), 0, dtype=float)
     article_mention_matrix = np.zeros((len(article_pool), len(party_list)), dtype=float)
     
@@ -85,8 +88,6 @@ def calculateArticleScore(history_dict, userScores, num_users, num_items,  party
         
         article_mention_matrix[i, 0] = positive_score_parties_count  # First column for positive score party count (e.g., Republican count)
         article_mention_matrix[i, 1] = negative_score_parties_count    # Second column for negative score party count (e.g., Democrat count) 
-
-
 
     # Initialize article scores and counts
     articleScores = np.zeros(len(article_pool), dtype=float)
@@ -108,7 +109,6 @@ def calculateArticleScore(history_dict, userScores, num_users, num_items,  party
 
                 processed_articles.add(index)
 
-
     # Step 2: For articles with no readers, use proportional method
     # Calculate the overall leaning for all articles using party_mentions
     total_mentions = np.sum(article_mention_matrix, axis=1)  # Total mentions across both parties
@@ -123,7 +123,6 @@ def calculateArticleScore(history_dict, userScores, num_users, num_items,  party
         else:
             proportional_scores[i] = 0  # If no mentions, set score to 0
 
-
     # Step 3: For articles that have been read (processed), calculate the average score
     for idx in processed_articles:
         if articleCounts[idx] > 0:
@@ -135,13 +134,6 @@ def calculateArticleScore(history_dict, userScores, num_users, num_items,  party
         if idx not in processed_articles:
             articleScores[idx] = proportional_scores[idx]
 
-
     print("Finished calculating article score")
 
     return articleScores.reshape(-1, 1)  # Return as column vector
-
-
-
-
-
-

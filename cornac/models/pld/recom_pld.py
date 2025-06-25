@@ -17,6 +17,7 @@ import os
 import configparser
 import sys
 
+
 class PLD(Recommender):
 
     """Political diversity algorithm
@@ -94,7 +95,6 @@ class PLD(Recommender):
 
         self.group_recommendations_generated = False
 
-        
 
     def fit(self, train_set, val_set=None):
 
@@ -137,7 +137,6 @@ class PLD(Recommender):
                     f"Please check your configuration file and ensure the section [{section_name}] exists."
                 )
 
-
             self.positive_score_party = config[section_name]['positive_score_party_name']
             self.negative_score_party = config[section_name]['negative_score_party_name']
 
@@ -148,8 +147,6 @@ class PLD(Recommender):
             # calculate user scores
             self.userScores = calculatePoliticalScore(self.history_dict, self.party_dict, self.party_list, self.num_users)
 
-
-        
         else:
 
             df = pd.read_csv(self.user_score_path)
@@ -160,36 +157,27 @@ class PLD(Recommender):
             df = df.iloc[:, 1:]
             self.articleScores = df.to_numpy()
   
-
         return self
 
     
-
-    def rank(self, user_idx, item_indices=None, k=-1, **kwargs):
+    def rank(self, user_idx, item_indices = None, k = -1, **kwargs):
         if not self.group_recommendations_generated:
-            self.generate_group_recommendation( item_indices=item_indices,  **kwargs )
+            self.generate_group_recommendation(item_indices = item_indices, **kwargs )
             self.group_recommendations_generated = True
         
         predictions = self.group_prediction_dict[tuple(self.userScores[user_idx])]
-
         prediction_idx = [self.article_pool_idx[item] for item in predictions]
-
         
         scores = np.zeros(len( self.article_pool_idx))
- 
         max_score = len(predictions)
+
         for item in predictions:
-            
-            # article_index = self.article_pool.index(item)  # Get the index in article_collection
             scores[item] = max_score  
             max_score -= 1
         
         scores = common.roundRowScore(scores, 1, 0)
         
-
         return prediction_idx, scores
-        
-
 
 
     def generate_group_recommendation(self, item_indices = None, **kwargs):
@@ -197,42 +185,46 @@ class PLD(Recommender):
         existArticleScore = os.path.isfile(self.item_score_path)
         existScores = existUserScore and existArticleScore
         impression_items_list = [] 
+        
         if self.article_pool is not None:
-
 
             item_idx2id = {v: k for k, v in self.iid_map.items()} # cornac item ID : raw item ID
             user_idx2id = {v: k for k, v in self.uid_map.items()} # cornac user ID : raw user ID
             item_id2idx = {k: v for k, v in self.iid_map.items()} # raw item ID : cornac item ID
 
-
-
             assert isinstance(item_idx2id, dict), "item_idx2id must be a dictionary"
             assert isinstance(user_idx2id, dict), "user_idx2id must be a dictionary"
             assert isinstance(item_id2idx, dict), "item_id2idx must be a dictionary"
-
             
             for iid in self.article_pool:
                 if iid in item_id2idx:
                     idx = item_id2idx[iid]
                     impression_items_list.append(idx)
-        elif  item_indices is None:
+
+        elif item_indices is None:
             impression_items_list = list(np.arange(self.total_items))
+    
         else:
             impression_items_list = list(item_indices)
 
         self.article_pool_idx = impression_items_list
 
-        
         if self.update_score or not existArticleScore:
 
-
             # calculate article scores
-            self.articleScores = calculateArticleScore(self.history_dict, self.userScores,  self.num_users, self.num_items, self.party_dict,self.party_list,  self.article_pool_idx , self.positive_score_party, self.negative_score_party)
-
+            self.articleScores = calculateArticleScore(
+                self.history_dict,
+                self.userScores,
+                self.num_users,
+                self.num_items,
+                self.party_dict,
+                self.party_list,
+                self.article_pool_idx,
+                self.positive_score_party,
+                self.negative_score_party)
 
             for i in range(len(self.articleScores)):
                 self.articleScores[i] = roundScore4Predict(self.articleScores[i], self.distribution, self.group_granularity)
-
        
             for i in range(len(self.userScores)):
                 self.userScores[i] = roundScore4Predict(self.userScores[i], self.distribution,  self.user_group_granularity)
@@ -251,7 +243,6 @@ class PLD(Recommender):
         df.insert(0, 'User ID', range(len(self.userScores)))
         df.to_csv(self.user_score_path, index=False)
 
-
         userScoreRange = [row[0][0] for row in self.distribution]
         # print(f"userScoreRange:{userScoreRange}")
         rowDistribution = []
@@ -262,22 +253,13 @@ class PLD(Recommender):
         userGroups = list(itertools.product(*rowDistribution))
         # print(f"userGroups:{userGroups}")
 
-
         self.group_prediction_dict = {}
         
-
         for userGroup in tqdm(userGroups, total=len(userGroups), desc="Computing results for every user group: "):
             predictions = diversity_predict(np.array(userGroup), self.articleScores, self.distribution, self.group_granularity)
             self.group_prediction_dict[tuple(userGroup)] = predictions
         
         # print(f"self.group_prediction_dict = {self.group_prediction_dict}")
-
-
-     
-
-
-        
-
 
 
 # Function to round either user or article score to the level of granularity of score groups
@@ -292,9 +274,3 @@ def roundScore4Predict(score, distribution, group_granularity):
                 score[i] = distribution[group][0][0]
 
     return score
-
-            
-                
-            
-                
-         
