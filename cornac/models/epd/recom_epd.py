@@ -23,7 +23,7 @@ class EPD(Recommender):
         The name of the recommender model.
     
     articles_collection: list
-        The list of whole articles, with article political reference
+        The list of whole articles, with article political reference.
 
     political_type_dict: dict
         The dictionary of political classes, keys are indices, values are political type of articles.
@@ -32,35 +32,36 @@ class EPD(Recommender):
         The number of items(here are articles) in one experiment.
 
     k: int, optional, default: 3
-        The number of political and non-political articles each time added into recommendation collection
+        The number of political and non-political articles each time added into recommendation collection.
 
     pageWidth: int, optional, default: 24
-        The maximum number of articles added for each user group
+        The maximum number of articles added for each user group.
     
     trainable: boolean, optional, default: True
-        When False, the model is not trained and Cornac assumes that the model already
-        pre-trained (U and V are not None).
+        When False, the model is not trained and Cornac assumes that the model is already pre-trained.
+        (U and V are not 'None'.)
     
     verbose: boolean, optional, default: False
-        When True, running logs are displayed.
+        When 'True', running logs are displayed.
     
     """
 
-    def __init__(self,
-                 party_path, 
-                 political_type_dict,
-                 num_items,
-                configure_path,
-                 k = 3, 
-                 pageWidth = 24,
-                 name="EPD", 
-                 trainable=True,
-                 verbose=False,
-                  userGroupDict = {},
-                  dataset_name = "mind",
-                 political_ref_path="./",
-                         **kwargs
-                 ):
+    def __init__(
+        self,
+        party_path,
+        political_type_dict,
+        num_items,
+        configure_path,
+        k = 3,
+        pageWidth = 24,
+        name = "EPD",
+        trainable = True,
+        verbose = False,
+        userGroupDict = {},
+        dataset_name = "mind",
+        political_ref_path = "./",
+        **kwargs):
+        
         super().__init__( name=name, trainable=trainable, verbose=verbose, **kwargs)
       
         self.party_path =  party_path

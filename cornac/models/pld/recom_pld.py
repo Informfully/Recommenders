@@ -28,30 +28,30 @@ class PLD(Recommender):
         The name of the recommender model.
 
     trainable: boolean, optional, default: True
-        When False, the model is not trained and Cornac assumes that the model already
-        pre-trained (U and V are not None).
+        When False, the model is not trained and Cornac assumes that the model already is pre-trained.
+        (U and V are not 'None').
     
     verbose: boolean, optional, default: False
         When True, running logs are displayed.
     
     num_users: int, default: 0
-        The number of users in dataset
+        The number of users in dataset.
     
     num_items: int, default: 0
-        The number of items in dataset
+        The number of items in dataset.
 
     party_dict: dict
-        A dictionary whose keys are article ids and values are references of this articles
+        A dictionary whose keys are article ids and values are references of this articles.
 
     distribution: Nested Lists
         Every elment in outer layer is a list which includes user group type and a list of the article distribution for this user type. 
-        Example is as the {project_path}/examples/pld_mind.py
+        Example is as the '{project_path}/examples/pld_mind.py'.
 
     update_score: boolean, default: True
-        When False, use existed score files under the folder ./cornac/models/pld
+        When 'False', use existed score files under the folder './cornac/models/pld'.
 
-    configure_path: str, default: './parameters.ini'
-        configure file which includes parties to be calculated
+    configure_path: str, default: './parameters.ini'.
+        Configure file which includes parties to be calculated.
     
     """
 
@@ -69,8 +69,8 @@ class PLD(Recommender):
         name="PLD",
         trainable=True,
         verbose=False,
-        **kwargs
-    ):
+        **kwargs):
+        
         Recommender.__init__(self, name=name, trainable=trainable, verbose=verbose, **kwargs)
 
         self.party_dict = party_dict
