@@ -1,6 +1,7 @@
 #############################################################################################################
-# VERSION:      1.0 (STANDALONE)                                                                            #
-# DESCRIPTION:  PLD - Political Diversity Model for Cornac                                                  #
+# VERSION:          4.3 (STANDALONE)                                                                        #
+# DESCRIPTION:      PLD - Political Diversity Model for Cornac                                              #
+# DOCUMENTATION:    https://informfully.readthedocs.io/en/latest/participatory.html                         #
 #############################################################################################################
 
 from .article_recommender_diversity import Predict as diversity_predict
@@ -70,7 +71,7 @@ class PLD(Recommender):
         trainable=True,
         verbose=False,
         **kwargs):
-        
+
         Recommender.__init__(self, name=name, trainable=trainable, verbose=verbose, **kwargs)
 
         self.party_dict = party_dict

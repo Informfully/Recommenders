@@ -1,6 +1,7 @@
 #############################################################################################################
-# VERSION:      1.0 (STANDALONE)                                                                            #
-# DESCRIPTION:  PLD - Political Diversity Model for Cornac                                                  #
+# VERSION:          4.3 (STANDALONE)                                                                        #
+# DESCRIPTION:      PLD - Political Diversity Model for Cornac                                              #
+# DOCUMENTATION:    https://informfully.readthedocs.io/en/latest/participatory.html                         #
 #############################################################################################################
 
 import math

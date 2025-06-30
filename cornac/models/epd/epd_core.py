@@ -1,6 +1,7 @@
 #############################################################################################################
-# VERSION:      1.0 (STANDALONE)                                                                            #
-# DESCRIPTION:  EPD - Exposure Diversity Model for Cornac                                                   #
+# VERSION:          4.3 (STANDALONE)                                                                        #
+# DESCRIPTION:      EPD - Exposure Diversity Model for Cornac                                               #
+# DOCUMENTATION:    https://informfully.readthedocs.io/en/latest/deliberative.html                          #
 #############################################################################################################
 
 from operator import itemgetter as i
