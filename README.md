@@ -129,10 +129,11 @@ If you use any code or data from this repository in a scientific publication, we
 
 ## Contributing
 
-You are welcome to contribute to the Informfully ecosystem and become a part of our community. Feel free to:
-  - fork any of the [Informfully repositories](https://github.com/Informfully)
-  - join and write on the [discussion board](https://github.com/orgs/Informfully/discussions)
-  - make changes and create pull requests
+You are welcome to contribute to the Informfully ecosystem and become a part of our community.
+Feel free to:
+* Fork any of the [Informfully repositories](https://github.com/Informfully/Documentation).
+* Suggest new features in [Future Release](https://github.com/orgs/Informfully/projects/1).
+* Make changes and create pull requests.
 
 Please post your feature requests and bug reports in our [GitHub issues](https://github.com/Informfully/Documentation/issues) section.
 
