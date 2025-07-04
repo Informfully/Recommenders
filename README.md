@@ -19,7 +19,7 @@ And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/ma
 ![Informfully Recommenders Pipeline Overview](https://github.com/Informfully/Documentation/blob/main/docs/source/uml/framework_extension_v4.2.png)
 
 Please find below an overview of the norm-aware Extension of datasets, models, re-rankers, and metrics for which Informfully Recommenders provide out-of-the-box support.
-Please note that this repository is fully backwards compatible.
+Please note that this repository is fully backward compatible.
 It includes and supports all elements that were already part of Cornac.
 
 ### Pre-processing Stage
@@ -45,7 +45,7 @@ It includes and supports all elements that were already part of Cornac.
 |-|-|-|
 | PLD | Participatory Diversity | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/pld) |
 | EPD | Deliberative Diversity  | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/epd) |
-| D-RDW | Diversity-Driven Random Walks | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/drdw) |
+| D-RDW | Diversity-Driven Random Walks | Paper (forthcoming), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/drdw) |
 | RP3-β | Random Walk | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rp3_beta) |
 | RWE-D | Random Walk with Erasure | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rwe_d) |
 | EMNF | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/enmf) |
@@ -53,7 +53,6 @@ It includes and supports all elements that were already part of Cornac.
 | NPA | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3292500.3330665), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/npa) |
 | NRMS | Neural Baseline | [Paper](https://aclanthology.org/D19-1671), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/nrms) |
 | VAE | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3178876.3186150), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/dae) |
-<!-- D-RDW Paper TBA -->
 
 ### Post-processing Stage
 
@@ -62,12 +61,12 @@ It includes and supports all elements that were already part of Cornac.
 | G-KL | Greedy Kullback-Leibler Divergence | [Paper](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/greedy_kl), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | PM-2 | Diversity by Proportionality | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
 | MMR | Maximal Marginal Relevance | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
-| DAP | Dynamic Attribute Penalization | [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
+| DAP | Dynamic Attribute Penalization | Paper (forthcoming), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
 
 | Simulator | Links |
 |-|-|
-| Rank-based User Simulator | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
-| Preference-based User Simulator | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
+| Rank-based User Simulator | Paper (forthcoming), [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
+| Preference-based User Simulator | Paper (forthcoming), [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
 
 ### Evaluation Stage
 
@@ -126,6 +125,20 @@ If you use any code or data from this repository in a scientific publication, we
     year={2024}
   }
   ```
+
+<!--
+- [Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations](TBD), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
+
+  ```
+  @inproceedings{heitz2025recommenders,
+    title={Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations},
+    author={Heitz, Lucien and Li, Runze and Inel, Oana and Bernstein, Abraham},
+    booktitle={Proceedings of the 19th ACM Conference on Recommender Systems},
+    pages={TBD},
+    year={2025}
+  }
+  ```
+-->
 
 ## Contributing
 
