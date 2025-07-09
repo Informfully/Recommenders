@@ -105,7 +105,7 @@ If you use any code or data from this repository in a scientific publication, we
 
 - [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
 
-  ```
+  ```tex
   @inproceedings{truong2021multi,
     title={Multi-modal recommender systems: Hands-on exploration},
     author={Truong, Quoc-Tuan and Salah, Aghiles and Lauw, Hady},
@@ -116,7 +116,7 @@ If you use any code or data from this repository in a scientific publication, we
 
 - [Informfully - Research Platform for Reproducible User Studies](https://dl.acm.org/doi/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
-  ```
+  ```tex
   @inproceedings{heitz2024informfully,
     title={Informfully - Research Platform for Reproducible User Studies},
     author={Heitz, Lucien and Croci, Julian A and Sachdeva, Madhav and Bernstein, Abraham},
