@@ -76,20 +76,26 @@ It includes and supports all elements that were already part of Cornac.
 | ILD | Intra-list Distance | [Paper](https://api.semanticscholar.org/CorpusID:11075976), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | RADio | RADio Divergence | [Paper](https://dl.acm.org/doi/abs/10.1145/3523227.3546780), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 
+| Sample Scripts | Links |
+|-|-|
+| Accuracy Evaluation (AUC) | [Script](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/evaluation_scripts/check_accuracy) |
+| Traditional Diversity Evaluation (Gini and ILD) | [Script](https://github.com/Informfully/Experiments/blob/main/experiments/recsys_2025/evaluation_scripts/check_diversity/check_diversity.py) |
+| Normative Diversity Evaluation (RADio) | [Script](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/evaluation_scripts/check_ntd) |
+
 | Gini Dimension | Required Augmentation |
-| - | - |
+|-|-|
 | Category Gini | Article Category |
 | Sentiment Gini | Sentiment Analysis |
 | Party Gini | Political Actors |
 
 | ILD Dimension | Required Augmentation |
-| - | - |
+|-|-|
 | Category ILD | Article Category |
 | Sentiment ILD | Sentiment Analysis |
 | Party ILD | Political Actors |
 
 | RADio Dimension | Required Augmentation |
-| - | - |
+|-|-|
 | Activation | Sentiment Analysis |
 | Calibration | Article Category, Text Complexity |
 | Fragmentation | Story Cluster |
