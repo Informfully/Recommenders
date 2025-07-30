@@ -18,10 +18,10 @@ from tqdm.auto import trange
 
 from ..recommender import Recommender
 from ..recommender import ANNMixin, MEASURE_DOT
-from ..recommender import ANNMixin, MEASURE_DOT
 from ...exception import ScoreException
 from ...utils import get_rng
 from ...utils.init_utils import xavier_uniform
+
 
 class CDL(Recommender, ANNMixin):
     """Collaborative Deep Learning.
@@ -243,7 +243,7 @@ class CDL(Recommender, ANNMixin):
                     feed_dict = {
                         model.text_mask: corruption_mask[batch_ids, :],
                         model.text_input: text_feature[batch_ids],
-                        model.ratings: batch_R.A,
+                        model.ratings: batch_R.toarray(),
                         model.C: batch_C,
                         model.item_ids: batch_ids,
                     }

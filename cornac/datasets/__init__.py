@@ -15,17 +15,14 @@
 
 from . import amazon_clothing
 from . import amazon_digital_music
-from . import amazon_digital_music
 from . import amazon_office
 from . import amazon_toy
 from . import citeulike
 from . import epinions
 from . import filmtrust
 from . import gowalla
-from . import gowalla
 from . import movielens
 from . import netflix
-from . import tafeng
 from . import tafeng
 from . import tradesy
 from . import yoochoose

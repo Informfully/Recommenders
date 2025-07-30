@@ -18,7 +18,7 @@
 
 [param_search.py](param_search.py) - Hyper-parameter tuning with GridSearch and RandomSearch.
 
----
+----
 
 ## Multimodal Algorithms (Using Auxiliary Data)
 
@@ -32,13 +32,7 @@
 
 [lightgcn_example.py](lightgcn_example.py) - LightGCN example with CiteULike dataset.
 
-[gcmc_example.py](gcmc_example.py) - Graph Convolutional Matrix Completion (GCMC) example with MovieLens 100K dataset.
-
-[lightgcn_example.py](lightgcn_example.py) - LightGCN example with CiteULike dataset.
-
 [mcf_office.py](mcf_office.py) - Fit Matrix Co-Factorization (MCF) to the Amazon Office dataset.
-
-[ngcf_example.py](ngcf_example.py) - NGCF example with CiteULike dataset.
 
 [ngcf_example.py](ngcf_example.py) - NGCF example with CiteULike dataset.
 
@@ -56,17 +50,11 @@
 
 [companion_example.py](companion_example.py) - Comparative Aspects and Opinions Ranking for Recommendation Explanations (Companion) with Amazon Toy and Games dataset.
 
-[companion_example.py](companion_example.py) - Comparative Aspects and Opinions Ranking for Recommendation Explanations (Companion) with Amazon Toy and Games dataset.
-
 [conv_mf_example.py](conv_mf_example.py) - Convolutional Matrix Factorization (ConvMF) with MovieLens dataset.
 
 [ctr_example_citeulike.py](ctr_example_citeulike.py) - Collaborative Topic Regression (CTR) with CiteULike dataset.
 
 [cvae_example.py](cvae_example.py) - Collaborative Variational Autoencoder (CVAE) with CiteULike dataset.
-
-[dmrl_example.py](dmrl_example.py) - Disentangled Multimodal Representation Learning (DMRL) with citeulike dataset.
-
-[trirank_example.py](trirank_example.py) - TriRank with Amazon Toy and Games dataset.
 
 [dmrl_example.py](dmrl_example.py) - Disentangled Multimodal Representation Learning (DMRL) with citeulike dataset.
 
@@ -78,15 +66,11 @@
 
 [lrppm_example.py](lrppm_example.py) - Learn to Rank user Preferences based on Phrase-level sentiment analysis across Multiple categories (LRPPM) with Amazon Toy and Games dataset.
 
-[lrppm_example.py](lrppm_example.py) - Learn to Rank user Preferences based on Phrase-level sentiment analysis across Multiple categories (LRPPM) with Amazon Toy and Games dataset.
-
 [mter_example.py](mter_example.py) - Multi-Task Explainable Recommendation (MTER) with Amazon Toy and Games dataset.
 
 ### Image
 
 [causalrec_clothing.py](causalrec_clothing.py) - CausalRec with Clothing dataset.
-
-[dmrl_clothes_example.py](dmrl_clothes_example.py) - Disentangled Multimodal Representation Learning (DMRL) with Amazon clothing dataset.
 
 [dmrl_clothes_example.py](dmrl_clothes_example.py) - Disentangled Multimodal Representation Learning (DMRL) with Amazon clothing dataset.
 
@@ -120,7 +104,9 @@
 
 [recvae_example.py](recvae_example.py) - New Variational Autoencoder for Top-N Recommendations with Implicit Feedback (RecVAE).
 
-[recvae_example.py](recvae_example.py) - New Variational Autoencoder for Top-N Recommendations with Implicit Feedback (RecVAE).
+[sansa_movielens.py](sansa_movielens.py) - Scalable Approximate NonSymmetric Autoencoder (SANSA) with MovieLens 1M dataset.
+
+[sansa_tradesy.py](sansa_movielens.py) - Scalable Approximate NonSymmetric Autoencoder (SANSA) with Tradesy dataset.
 
 [skm_movielens.py](skm_movielens.py) - SKMeans vs BPR on MovieLens data.
 
@@ -151,31 +137,3 @@
 [tifuknn_tafeng.py](tifuknn_tafeng.py) - Example of Temporal-Item-Frequency-based User-KNN (TIFUKNN).
 
 [upcf_tafeng.py](upcf_tafeng.py) - Example of Recency Aware Collaborative Filtering for Next Basket Recommendation (UPCF).
-
-[dae_movielens.py](dae_movielens.py) - Denoising Autoencoder with Movielens dataset
-
----
-
-## Experiment Scripts (Standard Sequential Workflow with Reranking)
-
-These scripts follow a standard sequential evaluation workflow where the model is trained, reranked, and evaluated without intermediate checkpointing or modular execution.
-
-- **[standard_dae_reranking_workflow.py](standard_dae_reranking_workflow.py)** - Implements the Multinomial Denoising Autoencoder (DAE) with reranking.
-- **[standard_drdw_workflow.py](standard_drdw_workflow.py)** - Executes the Diversity-Driven Random Walk model (D-RDW).
-- **[standard_mostpop_reranking_workflow.py](standard_mostpop_reranking_workflow.py)** - Applies the MostPop (Most Popular) model with reranking.
-- **[standard_nrms_reranking_workflow.py](standard_nrms_reranking_workflow.py)** - Utilizes the Neural News Recommendation model with Multi-Head Self-Attention (NRMS) along with reranking.
-
----
-
-## Pipeline Experiment Scripts (Flexible Modular Workflow with Reranking)
-
-Pipeline experiment scripts enable modular experimentation by supporting flexibility to skip steps, load pre-generated recommendations, and configure the workflow via `.ini` files.
-
-- **[pipeline_dae_reranking_workflow.py](pipeline_dae_reranking_workflow.py)** - Modular pipeline for the Multinomial Denoising Autoencoder (DAE) with reranking.
-- **[pipeline_drdw_workflow.py](pipeline_drdw_workflow.py)** - Flexible pipeline experiment for the Diversity-Driven Random Walk model (D-RDW).
-- **[pipeline_mostpop_reranking_workflow.py](pipeline_mostpop_reranking_workflow.py)** - Modular pipeline for the Most Popular (MostPop) model with reranking.
-- **[pipeline_nrms_reranking_workflow.py](pipeline_nrms_reranking_workflow.py)** - Pipeline experiment for the Neural News Recommendation model with Multi-Head Self-Attention (NRMS) with reranking.
-- **[pipeline_epd_reranking_workflow.py](pipeline_epd_reranking_workflow.py)** - Pipeline for the EPD model with reranking. The EPD model is based on the reference paper: _Deliberative Diversity for News Recommendations: Operationalization and Experimental User Study_. Note: The EPD codebase is not included here; recommendations are generated using another team's Cornac implementation.
-
-- **[pipeline_pld_reranking_workflow.py](pipeline_pld_reranking_workflow.py)** - Pipeline experiment for the PLD model with reranking. The PLD model is based on the reference paper: _Benefits of Diverse News Recommendations for Democracy: A User Study_. Note: The PLD model is not integrated here; recommendations are generated using another team's Cornac implementation.
-- **[pipeline_rdw_reranking_workflow.py](pipeline_rdw_reranking_workflow.py)** - Pipeline experiment for the RDW model with reranking. The RDW model is introduced in the reference paper: _Blockbusters and Wallflowers: Accurate, Diverse, and Scalable Recommendations with Random Walks_. Note: The RDW codebase is not included here; recommendations are generated using another team's Cornac implementation.

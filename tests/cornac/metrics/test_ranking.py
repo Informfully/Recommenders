@@ -53,14 +53,7 @@ class TestRanking(unittest.TestCase):
             1,
             ndcg.compute(gt_pos=np.asarray([0]), pd_rank=np.asarray([0])),
         )
-        self.assertEqual(
-            1,
-            ndcg.compute(gt_pos=np.asarray([0]), pd_rank=np.asarray([0])),
-        )
 
-        gt_pos = np.asarray([0, 2])  # [1, 3]
-        pd_rank = np.asarray([0, 2, 1])  # [1, 3, 2]
-        self.assertEqual(1, ndcg.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([0, 2])  # [1, 3]
         pd_rank = np.asarray([0, 2, 1])  # [1, 3, 2]
         self.assertEqual(1, ndcg.compute(gt_pos, pd_rank))
@@ -70,13 +63,9 @@ class TestRanking(unittest.TestCase):
 
         gt_pos = np.asarray([2])  # [3]
         pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
-        gt_pos = np.asarray([2])  # [3]
-        pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
         self.assertEqual(
             0.63,
             float("{:.2f}".format(ndcg_2.compute(gt_pos, pd_rank))),
-            # 0.63,
-            # float("{:.2f}".format(ndcg_2.compute(gt_pos, pd_rank))),
         )
 
     def test_ncrr(self):
@@ -86,18 +75,11 @@ class TestRanking(unittest.TestCase):
         self.assertEqual(ncrr.name, "NCRR@-1")
 
         self.assertEqual(1, ncrr.compute(np.asarray([0]), np.asarray([0])))
-        self.assertEqual(1, ncrr.compute(np.asarray([0]), np.asarray([0])))
 
         gt_pos = np.asarray([0, 2])  # [1, 3]
         pd_rank = np.asarray([0, 2, 1])  # [1, 3, 2]
         self.assertEqual(1, ncrr.compute(gt_pos, pd_rank))
-        gt_pos = np.asarray([0, 2])  # [1, 3]
-        pd_rank = np.asarray([0, 2, 1])  # [1, 3, 2]
-        self.assertEqual(1, ncrr.compute(gt_pos, pd_rank))
 
-        gt_pos = np.asarray([0, 2])  # [1, 3]
-        pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
-        self.assertEqual(((1 / 3 + 1 / 2) / (1 + 1 / 2)), ncrr.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([0, 2])  # [1, 3]
         pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
         self.assertEqual(((1 / 3 + 1 / 2) / (1 + 1 / 2)), ncrr.compute(gt_pos, pd_rank))
@@ -108,28 +90,16 @@ class TestRanking(unittest.TestCase):
         gt_pos = np.asarray([2])  # [3]
         pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
         self.assertEqual(0.5, ncrr_2.compute(gt_pos, pd_rank))
-        gt_pos = np.asarray([2])  # [3]
-        pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
-        self.assertEqual(0.5, ncrr_2.compute(gt_pos, pd_rank))
 
         gt_pos = np.asarray([2])  # [3]
         pd_rank = np.asarray([4, 1, 2])  # [5, 2, 3]
         self.assertEqual(0.0, ncrr_2.compute(gt_pos, pd_rank))
-        gt_pos = np.asarray([2])  # [3]
-        pd_rank = np.asarray([4, 1, 2])  # [5, 2, 3]
-        self.assertEqual(0.0, ncrr_2.compute(gt_pos, pd_rank))
 
-        gt_pos = np.asarray([0, 1, 2])  # [1, 2, 3]
-        pd_rank = np.asarray([5, 1, 6])  # [6, 2, 7]
-        self.assertEqual(1.0 / 3.0, ncrr_2.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([0, 1, 2])  # [1, 2, 3]
         pd_rank = np.asarray([5, 1, 6])  # [6, 2, 7]
         self.assertEqual(1.0 / 3.0, ncrr_2.compute(gt_pos, pd_rank))
 
         ncrr_3 = NCRR(k=3)
-        gt_pos = np.asarray([0, 1])  # [1, 2]
-        pd_rank = np.asarray([5, 1, 6, 8])  # [6, 2, 7, 9]
-        self.assertEqual(1.0 / 3.0, ncrr_3.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([0, 1])  # [1, 2]
         pd_rank = np.asarray([5, 1, 6, 8])  # [6, 2, 7, 9]
         self.assertEqual(1.0 / 3.0, ncrr_3.compute(gt_pos, pd_rank))
@@ -141,11 +111,7 @@ class TestRanking(unittest.TestCase):
         self.assertEqual(mrr.name, "MRR")
 
         self.assertEqual(1, mrr.compute(np.asarray([0]), np.asarray([0])))
-        self.assertEqual(1, mrr.compute(np.asarray([0]), np.asarray([0])))
 
-        gt_pos = np.asarray([0, 2])  # [1, 3]
-        pd_rank = np.asarray([0, 2, 1])  # [1, 3, 2]
-        self.assertEqual(1, mrr.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([0, 2])  # [1, 3]
         pd_rank = np.asarray([0, 2, 1])  # [1, 3, 2]
         self.assertEqual(1, mrr.compute(gt_pos, pd_rank))
@@ -153,16 +119,10 @@ class TestRanking(unittest.TestCase):
         gt_pos = np.asarray([0, 2])  # [1, 3]
         pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
         self.assertEqual(1 / 2, mrr.compute(gt_pos, pd_rank))
-        gt_pos = np.asarray([0, 2])  # [1, 3]
-        pd_rank = np.asarray([1, 2, 0])  # [2, 3, 1]
-        self.assertEqual(1 / 2, mrr.compute(gt_pos, pd_rank))
 
-        gt_pos = np.asarray([0, 2])  # [1, 3]
-        pd_rank = np.asarray([1])  # [2]
         gt_pos = np.asarray([0, 2])  # [1, 3]
         pd_rank = np.asarray([1])  # [2]
         try:
-            mrr.compute(gt_pos, pd_rank)
             mrr.compute(gt_pos, pd_rank)
         except ValueError:
             assert True
@@ -175,14 +135,10 @@ class TestRanking(unittest.TestCase):
         self.assertEqual(measure_at_k.k, -1)
 
         tp, tp_fn, tp_fp = measure_at_k.compute(np.asarray([0]), np.asarray([0]))
-        tp, tp_fn, tp_fp = measure_at_k.compute(np.asarray([0]), np.asarray([0]))
         self.assertEqual(1, tp)
         self.assertEqual(1, tp_fn)
         self.assertEqual(1, tp_fp)
 
-        gt_pos = np.asarray([0, 2])  # [1, 0, 1]
-        pd_rank = np.asarray([0, 2, 1])  # [1, 1, 1]
-        tp, tp_fn, tp_fp = measure_at_k.compute(gt_pos, pd_rank)
         gt_pos = np.asarray([0, 2])  # [1, 0, 1]
         pd_rank = np.asarray([0, 2, 1])  # [1, 1, 1]
         tp, tp_fn, tp_fp = measure_at_k.compute(gt_pos, pd_rank)
@@ -271,18 +227,11 @@ class TestRanking(unittest.TestCase):
         self.assertEqual(f1.name, "F1@-1")
 
         self.assertEqual(1, f1.compute(np.asarray([0]), np.asarray([0])))
-        self.assertEqual(1, f1.compute(np.asarray([0]), np.asarray([0])))
 
         gt_pos = np.asarray([0, 2])  # [1, 0, 1]
         pd_rank = np.asarray([0, 2, 1])  # [1, 1, 1]
         self.assertEqual((4 / 5), f1.compute(gt_pos, pd_rank))
-        gt_pos = np.asarray([0, 2])  # [1, 0, 1]
-        pd_rank = np.asarray([0, 2, 1])  # [1, 1, 1]
-        self.assertEqual((4 / 5), f1.compute(gt_pos, pd_rank))
 
-        gt_pos = np.asarray([2])  # [0, 0, 1]
-        pd_rank = np.asarray([1, 2, 0])  # [1, 1, 1]
-        self.assertEqual((1 / 2), f1.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([2])  # [0, 0, 1]
         pd_rank = np.asarray([1, 2, 0])  # [1, 1, 1]
         self.assertEqual((1 / 2), f1.compute(gt_pos, pd_rank))
@@ -293,13 +242,7 @@ class TestRanking(unittest.TestCase):
         gt_pos = np.asarray([2])  # [0, 0, 1]
         pd_rank = np.asarray([1, 2, 0])  # [1, 1, 1]
         self.assertEqual((2 / 3), f1_2.compute(gt_pos, pd_rank))
-        gt_pos = np.asarray([2])  # [0, 0, 1]
-        pd_rank = np.asarray([1, 2, 0])  # [1, 1, 1]
-        self.assertEqual((2 / 3), f1_2.compute(gt_pos, pd_rank))
 
-        gt_pos = np.asarray([0])  # [1, 0, 0]
-        pd_rank = np.asarray([1, 2])  # [0, 1, 1]
-        self.assertEqual(0, f1_2.compute(gt_pos, pd_rank))
         gt_pos = np.asarray([0])  # [1, 0, 0]
         pd_rank = np.asarray([1, 2])  # [0, 1, 1]
         self.assertEqual(0, f1_2.compute(gt_pos, pd_rank))
@@ -312,27 +255,19 @@ class TestRanking(unittest.TestCase):
 
         item_indices = np.arange(4)
         gt_pos = np.array([2, 3])  # [0, 0, 1, 1]
-        item_indices = np.arange(4)
-        gt_pos = np.array([2, 3])  # [0, 0, 1, 1]
         pd_scores = np.array([0.1, 0.4, 0.35, 0.8])
-        auc_score = auc.compute(item_indices, pd_scores, gt_pos)
         auc_score = auc.compute(item_indices, pd_scores, gt_pos)
         self.assertEqual(0.75, auc_score)
 
         item_indices = np.arange(4)
         gt_pos = np.array([1, 3])  # [0, 1, 0, 1]
-        item_indices = np.arange(4)
-        gt_pos = np.array([1, 3])  # [0, 1, 0, 1]
         pd_scores = np.array([0.1, 0.4, 0.35, 0.8])
-        auc_score = auc.compute(item_indices, pd_scores, gt_pos)
         auc_score = auc.compute(item_indices, pd_scores, gt_pos)
         self.assertEqual(1.0, auc_score)
 
         gt_pos = np.array([2])  # [0, 0, 1, 0]
-        gt_pos = np.array([2])  # [0, 0, 1, 0]
         gt_neg = np.array([1, 1, 0, 0])
         pd_scores = np.array([0.1, 0.4, 0.35, 0.8])
-        auc_score = auc.compute(item_indices, pd_scores, gt_pos, gt_neg)
         auc_score = auc.compute(item_indices, pd_scores, gt_pos, gt_neg)
         self.assertEqual(0.5, auc_score)
 
@@ -344,24 +279,14 @@ class TestRanking(unittest.TestCase):
 
         item_indices = np.arange(3)
         gt_pos = np.array([0])  # [1, 0, 0]
-        item_indices = np.arange(3)
-        gt_pos = np.array([0])  # [1, 0, 0]
         pd_scores = np.array([0.75, 0.5, 1])
         self.assertEqual(0.5, mAP.compute(item_indices, pd_scores, gt_pos))
-        self.assertEqual(0.5, mAP.compute(item_indices, pd_scores, gt_pos))
 
-        item_indices = np.arange(3)
-        gt_pos = np.array([2])  # [0, 0, 1]
         item_indices = np.arange(3)
         gt_pos = np.array([2])  # [0, 0, 1]
         pd_scores = np.array([1, 0.2, 0.1])
         self.assertEqual(1 / 3, mAP.compute(item_indices, pd_scores, gt_pos))
-        self.assertEqual(1 / 3, mAP.compute(item_indices, pd_scores, gt_pos))
 
-        item_indices = np.arange(10)
-        gt_pos = np.array([1, 3, 5])  # [0, 1, 0, 1, 0, 1, 0, 0, 0, 0]
-        pd_scores = np.linspace(0.0, 1.0, len(item_indices))[::-1]
-        self.assertEqual(0.5, mAP.compute(item_indices, pd_scores, gt_pos))
         item_indices = np.arange(10)
         gt_pos = np.array([1, 3, 5])  # [0, 1, 0, 1, 0, 1, 0, 0, 0, 0]
         pd_scores = np.linspace(0.0, 1.0, len(item_indices))[::-1]
