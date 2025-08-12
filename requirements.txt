@@ -3,7 +3,7 @@ scipy
 Cython
 tqdm
 powerlaw
-tensorflow>=2.0.0,<=2.12.0
+tensorflow
 torch>=2.0.1  
 pandas
 spacy
