@@ -10,14 +10,9 @@
 # Licensed under the MIT License.
 from ..recommender import Recommender
 import pandas as pd
-# import tensorflow.keras as keras
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
-# from tensorflow.compat.v1 import keras
-# from tensorflow.keras import layers
-# from tensorflow.keras.optimizers import Adam
-# tf.compat.v1.disable_eager_execution()  # Force TF1.x behavior
 
 from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
 
@@ -81,7 +76,6 @@ class LSTUR(Recommender):
         Recommender.__init__(
             self, name=name, trainable=trainable, verbose=verbose, **kwargs)
         self.seed = seed 
-        # tf.compat.v1.set_random_seed(seed)
         tf.random.set_seed(seed)
         np.random.seed(seed)
 
@@ -397,14 +391,6 @@ class LSTUR(Recommender):
                                      history_size = self.history_size,  title_size = self.title_size)
 
         # Configure GPU settings
-        # gpus = tf.config.experimental.list_physical_devices("GPU")
-        # if gpus:
-        #     try:
-        #         for gpu in gpus:
-        #             tf.config.experimental.set_memory_growth(gpu, True)
-        #         print(f"Using GPU: {gpus}")
-        #     except RuntimeError as e:
-        #         print(f"GPU memory growth setting failed: {e}")
         gpus = tf.config.list_physical_devices("GPU")
         if gpus:
             try:
@@ -418,20 +404,11 @@ class LSTUR(Recommender):
         # Build model on GPU
         # with tf.device('/GPU:1'):
         self.model, self.scorer = self._build_graph()
-        # self.model.compile(loss="categorical_crossentropy",
-        #                     optimizer=keras.optimizers.Adam(learning_rate=self.learning_rate))
-            # Compile model with Adam optimizer (TensorFlow 2.x compatible)
         self.model.compile(
         loss="categorical_crossentropy",
-        optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate)  # Ensure Adam is used from tf.keras.optimizers
+        optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate)  
     )
         
-        # self.model, self.scorer = self._build_graph()
-
-        # self.model.compile(loss="categorical_crossentropy",
-        #                    optimizer=keras.optimizers.Adam(learning_rate=self.learning_rate))
-
-
         self.loss_log = []  # Store the loss values over epochs
         # self.click_title_all_users = {}
         for epoch in range(1, self.epochs + 1):

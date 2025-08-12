@@ -361,9 +361,6 @@ class NPA(Recommender):
         
         Recommender.fit(self, train_set, val_set)
 
-        tf.compat.v1.enable_eager_execution()
-        tf.config.run_functions_eagerly(True)   
-        
         self.train_set = train_set
         self.val_set = val_set
 

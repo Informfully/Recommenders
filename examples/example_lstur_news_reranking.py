@@ -43,7 +43,6 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=Warning)
 
-
 import json
 import numpy as np
 import pandas as pd
@@ -52,21 +51,13 @@ import random
 import sys
 
 from cornac.data import Reader
-
 from cornac.eval_methods import BaseMethod
-
 from cornac.metrics import MAE, RMSE, Recall, FMeasure
-
 from cornac.experiment.experiment import Experiment
-
 from cornac.metrics import NDCG, AUC, MRR
-
 from cornac.metrics import GiniCoeff, ILD, EILD, Precision, Activation, Calibration, Fragmentation, Representation, AlternativeVoices, Alpha_NDCG, Binomial
-
 from cornac.datasets import mind as mind
-
 from cornac.rerankers import GreedyKLReranker
-
 from cornac.rerankers.pm2 import PM2Reranker
 
 from cornac.models import LSTUR
@@ -74,6 +65,7 @@ from cornac.rerankers import GreedyKLReranker, PM2Reranker, MMR_ReRanker, Dynami
 
 #  Load data and set up environment
 def main():
+
     current_dir = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, current_dir)
 
@@ -83,7 +75,6 @@ def main():
     config_files_dir = os.path.join(current_dir, 'example_config_files')
     sys.path.insert(0, news_files_dir)
     sys.path.insert(0, config_files_dir)
-
 
     input_path = news_files_dir
 
