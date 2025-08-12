@@ -23,7 +23,8 @@
 # ============================================================================
 
 import tensorflow as tf
-tf.compat.v1.disable_eager_execution()
+tf.compat.v1.enable_eager_execution()
+tf.config.run_functions_eagerly(True)
 tf.get_logger().setLevel('INFO')
 tf.autograph.set_verbosity(0)
 

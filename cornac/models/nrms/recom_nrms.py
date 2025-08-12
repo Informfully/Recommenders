@@ -13,10 +13,8 @@
 
 from tqdm.auto import trange
 from ..recommender import Recommender
-# import tensorflow.keras as keras
 import tensorflow as tf
-from tensorflow.compat.v1 import keras
-tf.compat.v1.disable_eager_execution()
+from tensorflow import keras
 from tensorflow.keras import layers
 from cornac.utils.newsrec_utils.layers import AttLayer2, SelfAttention
 from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
@@ -154,7 +152,7 @@ class NRMS(Recommender):
 
 
         # Configure GPU settings
-        gpus = tf.config.experimental.list_physical_devices("GPU")
+        gpus = tf.config.list_physical_devices("GPU")
         if gpus:
             try:
                 for gpu in gpus:
@@ -167,7 +165,7 @@ class NRMS(Recommender):
         # with tf.device('/GPU:0'):
         self.model, self.scorer = self._build_graph()
         self.model.compile(loss="categorical_crossentropy",
-                            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate))
+                            optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate))
 
     def load_dict(self, file_path):
         """load json file
@@ -352,7 +350,6 @@ class NRMS(Recommender):
             object: An instance of self.
         """
         Recommender.fit(self, train_set, val_set)
-
         self.train_set = train_set
         self.val_set = val_set
 
@@ -690,7 +687,7 @@ class NRMS(Recommender):
         # Compile the model with the stored learning rate
         model.model.compile(
             loss="categorical_crossentropy",
-            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=model.learning_rate)
+            optimizer=keras.optimizers.Adam(learning_rate=model.learning_rate)
         )
 
         # Load the saved model weights

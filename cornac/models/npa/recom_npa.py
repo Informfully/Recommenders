@@ -7,15 +7,14 @@ import random
 import re
 import json
 import tensorflow as tf
-from tensorflow.compat.v1 import keras
-tf.compat.v1.disable_eager_execution()
+from tensorflow import keras
 from tensorflow.keras import layers
 import numpy as np
 from cornac.utils.newsrec_utils.layers import PersonalizedAttentivePooling
 from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
 import pandas as pd
 from tqdm.auto import tqdm
-# tf.compat.v1.disable_eager_execution()
+
 import os
 import pickle
 
@@ -69,7 +68,8 @@ class NPA(Recommender):
         Recommender.__init__(
             self, name=name, trainable=trainable, verbose=verbose,  **kwargs)
         self.seed = seed
-        tf.compat.v1.set_random_seed(seed)
+        tf.random.set_seed(seed)
+        np.random.seed(seed)
         if word2vec_embedding is not None:
             self.word2vec_embedding = word2vec_embedding  # Load directly from params
         else:
@@ -361,6 +361,9 @@ class NPA(Recommender):
         
         Recommender.fit(self, train_set, val_set)
 
+        tf.compat.v1.enable_eager_execution()
+        tf.config.run_functions_eagerly(True)   
+        
         self.train_set = train_set
         self.val_set = val_set
 
@@ -392,7 +395,7 @@ class NPA(Recommender):
 
         
         # Configure GPU settings
-        gpus = tf.config.experimental.list_physical_devices("GPU")
+        gpus = tf.config.list_physical_devices("GPU")
         if gpus:
             try:
                 for gpu in gpus:
@@ -404,9 +407,10 @@ class NPA(Recommender):
         # Build model on GPU
         # with tf.device('/GPU:3'):
         self.model, self.scorer = self._build_graph()
+        # self.model.compile(loss="categorical_crossentropy",
+        #                     optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate))
         self.model.compile(loss="categorical_crossentropy",
-                            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate))
-
+                            optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate))
         # self.model, self.scorer = self._build_graph()
 
         # self.model.compile(loss="categorical_crossentropy",
@@ -713,7 +717,7 @@ class NPA(Recommender):
         # Compile the model with the stored learning rate
         model.model.compile(
             loss="categorical_crossentropy",
-            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=model.learning_rate)
+            optimizer= keras.optimizers.Adam(learning_rate=model.learning_rate)
         )
 
         #################
