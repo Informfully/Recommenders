@@ -177,20 +177,26 @@ def get_readability(text, lang='en'):
         (https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests#Flesch_reading_ease).
 
     """
-    # print(f"Computing readability for language:{lang}")
-    try:
-        textstat.set_lang(lang)
-    except KeyError:  # Handle invalid language codes
-        if lang in new_langs.keys():
-            lang = 'en'  # Default to English
-            textstat.set_lang(lang)  # Set language to English
-        else:
-            # print(f"Language code '{lang}' not supported.")
-            # return None
-            raise ValueError(f"Invalid language code '{lang}' provided. Supported language codes are: {', '.join(new_langs.keys())}")
-    
+     
     if not isinstance(text, str):
         raise TypeError(f"Invalid input: Expected a string for 'text', but received {type(text).__name__}.")
+
+    # Extract language root (e.g., "en" from "en_US")
+    lang_root = lang.split("_")[0]
+    
+    # Check if language is supported by either textstat or our custom configs
+    all_supported_langs = set(textstat_langs + list(new_langs.keys()))
+    
+    if lang_root not in all_supported_langs:
+        raise ValueError(f"Invalid language code '{lang}' provided. Supported language codes are: {', '.join(sorted(all_supported_langs))}")
+    
+    # Only set language if it's valid
+    if lang_root in textstat_langs:
+        textstat.set_lang(lang_root)  # Set to root language for textstat
+    else:
+        # For custom languages, we'll use our own calculations, so set to English as fallback
+        textstat.set_lang('en')
+    
     try:
         if not text:
             return None  # Empty text
@@ -201,6 +207,7 @@ def get_readability(text, lang='en'):
         if lang_root in textstat_langs:
             readability = textstat.flesch_reading_ease(text)
         else:
+             # Use our custom formula
             flesch = (
                     get_lang_cfg(lang_root, "fre_base")
                     - float(
@@ -214,8 +221,6 @@ def get_readability(text, lang='en'):
             )
             readability = round(flesch, 2)
     except Exception as e:
-        # print(f"An error occurred while getting readability score: {e}")
-        # readability = None
         raise RuntimeError(f"An error occurred while calculating the readability score: {e}")
 
     return readability
