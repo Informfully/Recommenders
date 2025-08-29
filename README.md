@@ -107,7 +107,7 @@ Please look at the relevant documentation page for a [demo script](https://infor
 
 ## Citation
 
-If you use any code or data from this repository in a scientific publication, we ask you to cite the following paper:
+If you use any code or data from this repository in a scientific publication, we ask you to cite the following papers:
 
 - [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
 
