@@ -501,8 +501,15 @@ def diversity_eval_on_dyn_rerankers(
         ]
     test_user_indices = set(test_set.uir_tuple[0])
     for user_idx in test_user_indices:
+        pos_item_idx = (
+            pos_items(train_mat.getrow(user_idx))
+            if user_idx < train_mat.shape[0]
+            else []
+        )
+        user_history_dict[user_idx] = pos_item_idx
+    # for user_idx in test_user_indices:
     
-        user_history_dict[user_idx] = pos_items(train_mat.getrow(user_idx))
+    #     user_history_dict[user_idx] = pos_items(train_mat.getrow(user_idx))
     for user_idx in tqdm(
             test_user_indices, desc="Diversity evaluation on Dynamic rerankers", disable=not verbose, miniters=100
     ):

@@ -15,29 +15,28 @@ def calculatePoliticalScore(history_dict, party_dict_raw, party_list, num_users)
     user_score_matrix = np.full((num_users, len(party_list)), 0, dtype=float)
     party_dict = {}
     for k, v in party_dict_raw.items():
+        k_norm = str(k).lower()
         if len(list(v)) == 0:
-            party_dict[k] = -1
-            # party_dict[k] = 0
+            party_dict[k_norm] = -1
+            # party_dict[k_norm] = 0
         else:
-
             political_dict = {item: v[item] for item in party_list if item in v.keys()}
-
             if political_dict:
                 max_party = max(political_dict, key=political_dict.get)
-                party_dict[k] = party_list.index(max_party)
+                party_dict[k_norm] = party_list.index(max_party)
             else:
-                party_dict[k] = -1
-                # party_dict[k] = 0
+                party_dict[k_norm] = -1
+                # party_dict[k_norm] = 0
         
     for user_idx, article_list in history_dict.items():
-
         # Update: for multi-party situation
         for i, article in enumerate(article_list):
-            if article in party_dict.keys():
-                if party_dict[article] == -1:
+            article_norm = str(article).lower()
+            if article_norm in party_dict.keys():
+                if party_dict[article_norm] == -1:
                     continue
-                # print(party_dict[article])
-                user_score_matrix[user_idx][party_dict[article]] += 1
+                # print(party_dict[article_norm])
+                user_score_matrix[user_idx][party_dict[article_norm]] += 1
 
     # user_score_matrix = roundColumnScore(user_score_matrix)
     user_score_matrix =  compute_political_leaning(user_score_matrix)
@@ -81,12 +80,12 @@ def calculateArticleScore(history_dict, userScores, num_users, num_items, party_
     
     # for i in range(len(article_pool)):
     for i, article_id in enumerate(article_pool):
-        
-        parties = party_dict.get(article_id, {}) 
+        article_norm = str(article_id).lower()
+        parties = party_dict.get(article_norm, {})
 
         positive_score_parties_count = parties.get(positive_score_party_name, 0)
         negative_score_parties_count = parties.get(negative_score_party_name, 0)
-        
+
         article_mention_matrix[i, 0] = positive_score_parties_count  # First column for positive score party count (e.g., Republican count)
         article_mention_matrix[i, 1] = negative_score_parties_count    # Second column for negative score party count (e.g., Democrat count) 
 

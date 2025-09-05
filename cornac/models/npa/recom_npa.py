@@ -17,6 +17,7 @@ from tqdm.auto import tqdm
 
 import os
 import pickle
+import gc 
 
 class NPA(Recommender):
     """NPA model(Neural News Recommendation with Attentive Multi-View Learning)
@@ -110,15 +111,7 @@ class NPA(Recommender):
         self.epochs = epochs
         self.batch_size = batch_size
 
-        ## set News recommendation utils
-        # self.news_organizer = NewsRecUtil(news_title =self.news_title, word_dict = self.word_dict,
-        #                              impressionRating = self.impressionRating, user_history= self.userHistory,
-        #                              history_size = self.history_size,  title_size = self.title_size)
 
-
-        # session_conf = tf.ConfigProto()
-        # session_conf.gpu_options.allow_growth = True
-        # sess = tf.Session(config=session_conf)
 
 
 
@@ -429,6 +422,8 @@ class NPA(Recommender):
             step = 0
             self.current_epoch = epoch
             epoch_loss = 0
+            if epoch > 1 and epoch % 3 == 0:
+                gc.collect()
 
             tqdm_util = tqdm(
                 self.news_organizer.load_data_from_file(train_set, self.npratio,self.batch_size), desc=f"Epoch {epoch}",
@@ -518,7 +513,7 @@ class NPA(Recommender):
             raise Exception(
                 "item_idx should be an int, list, or numpy array")
         
-        batch_size = 256
+        batch_size = self.batch_size
         candidate_title_indexes = []
         click_title_indexes = []
         user_indexes = []
@@ -572,6 +567,8 @@ class NPA(Recommender):
             )
 
             all_predictions.append(batch_prediction)
+            if (start // batch_size) % 8 == 0:
+                gc.collect()
 
         # Concatenate all batch predictions into a single array
         

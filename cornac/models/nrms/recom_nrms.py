@@ -27,7 +27,7 @@ import re
 import json
 import os
 import pandas as pd
-
+import gc 
 
 class NRMS(Recommender):
     """NRMS model(Neural News Recommendation with Multi-Head Self-Attention)
@@ -395,6 +395,10 @@ class NRMS(Recommender):
             self.current_epoch = epoch
             epoch_loss = 0
 
+            #  Memory cleanup every few epochs 
+            if epoch > 1 and epoch % 3 == 0:
+                gc.collect()
+
             tqdm_util = tqdm(
                 self.news_organizer.load_data_from_file(train_set, self.npratio,self.batch_size), desc=f"Epoch {epoch}",
                 leave=False , # Removes stale progress bars
@@ -505,7 +509,7 @@ class NRMS(Recommender):
 
     
 
-        batch_size = 256  # Define batch size
+        batch_size = self.batch_size  # Define batch size
         candidate_title_indexes = []
         click_title_indexes = []
         # Get user's click history or handle unknown users
@@ -555,6 +559,8 @@ class NRMS(Recommender):
             )
 
             all_predictions.append(batch_prediction)
+            if (start // batch_size) % 8 == 0:
+                gc.collect()
 
         # Concatenate all batch predictions into a single array
         final_predictions = np.concatenate(all_predictions, axis=0)

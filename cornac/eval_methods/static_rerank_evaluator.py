@@ -510,8 +510,14 @@ def diversity_eval_on_rerankers(
         ]
     test_user_indices = set(test_set.uir_tuple[0])
     for user_idx in test_user_indices:
+        pos_item_idx = (
+            pos_items(train_mat.getrow(user_idx))
+            if user_idx < train_mat.shape[0]
+            else []
+        )
+        user_history_dict[user_idx] = pos_item_idx
     
-        user_history_dict[user_idx] = pos_items(train_mat.getrow(user_idx))
+
 
     for user_idx in tqdm(
         test_user_indices, desc="Diversity Eval on Re-ranking Results", disable=not verbose, miniters=100
