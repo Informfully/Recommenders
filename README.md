@@ -45,9 +45,9 @@ It includes and supports all elements that were already part of Cornac.
 |-|-|-|
 | PLD | Participatory Diversity | [Paper](https://www.tandfonline.com/doi/full/10.1080/21670811.2021.2021804), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/pld) |
 | EPD | Deliberative Diversity  | [Paper](https://dl.acm.org/doi/abs/10.1145/3604915.3608834), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/epd) |
-| D-RDW | Diversity-Driven Random Walks | Paper (forthcoming), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/drdw) |
-| RP3-β | Random Walk | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rp3_beta) |
-| RWE-D | Random Walk with Erasure | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rwe_d) |
+| D-RDW | Diversity-Driven Random Walks | [Paper](https://doi.org/10.1145/3705328.3748016), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/drdw) |
+| RP3-β | Random Walks | [Paper](https://dl.acm.org/doi/abs/10.1145/2792838.2800180), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rp3_beta) |
+| RWE-D | Random Walks with Erasure | [Paper](https://dl.acm.org/doi/abs/10.1145/3442381.3449970), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/rwe_d) |
 | EMNF | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3373807), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/enmf) |
 | LSTUR | Neural Baseline | [Paper](https://aclanthology.org/P19-1033), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/lstur) |
 | NPA | Neural Baseline | [Paper](https://dl.acm.org/doi/abs/10.1145/3292500.3330665), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/models/npa) |
@@ -61,12 +61,12 @@ It includes and supports all elements that were already part of Cornac.
 | G-KL | Greedy Kullback-Leibler Divergence | [Paper](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/greedy_kl), [Code](https://github.com/Informfully/Recommenders/blob/main/cornac/metrics/diversity.py) |
 | PM-2 | Diversity by Proportionality | [Paper](https://dl.acm.org/doi/abs/10.1145/2348283.2348296), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/pm2) |
 | MMR | Maximal Marginal Relevance | [Paper](https://dl.acm.org/doi/pdf/10.1145/290941.291025), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/mmr) |
-| DAP | Dynamic Attribute Penalization | Paper (forthcoming), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
+| DAP | Dynamic Attribute Penalization | [Paper](https://doi.org/10.1145/3705328.3748016), [Code](https://github.com/Informfully/Recommenders/tree/main/cornac/rerankers/dynamic_attribute_penalization) |
 
 | Simulator | Links |
 |-|-|
-| Rank-based User Simulator | Paper (forthcoming), [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
-| Preference-based User Simulator | Paper (forthcoming), [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
+| Rank-based User Simulator | [Paper](https://doi.org/10.1145/3705328.3748016), [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
+| Preference-based User Simulator | [Paper](https://doi.org/10.1145/3705328.3748016), [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/rerankers/user_simulator.py) |
 
 ### Evaluation Stage
 
@@ -109,18 +109,19 @@ Please look at the relevant documentation page for a [demo script](https://infor
 
 If you use any code or data from this repository in a scientific publication, we ask you to cite the following papers:
 
-- [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
+- [Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
 
   ```tex
-  @inproceedings{truong2021multi,
-    title={Multi-modal recommender systems: Hands-on exploration},
-    author={Truong, Quoc-Tuan and Salah, Aghiles and Lauw, Hady},
-    booktitle={Fifteenth ACM Conference on Recommender Systems},
-    pages={834--837},
-    year={2021}
+  @inproceedings{heitz2025recommenders,
+    title={Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations},
+    author={Heitz, Lucien and Li, Runze and Inel, Oana and Bernstein, Abraham},
+    booktitle={Proceedings of the 19th ACM Conference on Recommender Systems},
+    pages={792--801},
+    year={2025},
   }
-
-- [Informfully - Research Platform for Reproducible User Studies](https://dl.acm.org/doi/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
+  ```
+  
+- [Informfully - Research Platform for Reproducible User Studies](https://doi.org/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
   ```tex
   @inproceedings{heitz2024informfully,
@@ -131,20 +132,17 @@ If you use any code or data from this repository in a scientific publication, we
     year={2024}
   }
   ```
+  
+- [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
 
-<!--
-- [Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations](TBD), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
-
-  ```
-  @inproceedings{heitz2025recommenders,
-    title={Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations},
-    author={Heitz, Lucien and Li, Runze and Inel, Oana and Bernstein, Abraham},
-    booktitle={Proceedings of the 19th ACM Conference on Recommender Systems},
-    pages={TBD},
-    year={2025}
+  ```tex
+  @inproceedings{truong2021multi,
+    title={Multi-modal recommender systems: Hands-on exploration},
+    author={Truong, Quoc-Tuan and Salah, Aghiles and Lauw, Hady},
+    booktitle={Fifteenth ACM Conference on Recommender Systems},
+    pages={834--837},
+    year={2021}
   }
-  ```
--->
 
 ## Contributing
 
