@@ -30,8 +30,7 @@ def find_sentences_with_text(soup, text):
 
         return matching_sentences
     except Exception as e:
-        # print(f"Error finding sentences with text: {e}")
-        # return None
+
         raise Exception(f"Error finding sentences with text: {e}")
 
 
@@ -86,6 +85,5 @@ def get_article_text_from_url(url):
             return article_content_element
 
         except Exception as e:
-            # print("Error:", e, 'for url', url)
-            # return None
+
             raise Exception(f"Error while processing the URL {url}: {e}")

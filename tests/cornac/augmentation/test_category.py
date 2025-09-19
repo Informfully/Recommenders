@@ -5,7 +5,7 @@ from cornac.augmentation.category import get_category
 
 class TestGetCategory(unittest.TestCase):
 
-    @patch('cornac.augmentation.category.classifier')
+    @patch('cornac.augmentation.category._classifier')
     def test_with_candidate_labels_high_confidence(self, mock_classifier):
         user_labels = ["news", "sports", "life"]
         sample_text = "In an adrenaline-charged match, the Springville Strikers snatched a thrilling win."
@@ -16,7 +16,7 @@ class TestGetCategory(unittest.TestCase):
         result = get_category(sample_text, candidate_labels=user_labels)
         self.assertEqual(result, "sports")
 
-    @patch('cornac.augmentation.category.classifier')
+    @patch('cornac.augmentation.category._classifier')
     def test_with_candidate_labels_low_confidence(self, mock_classifier):
         user_labels = ["news", "sports", "life"]
         sample_text = "A very ambiguous statement."

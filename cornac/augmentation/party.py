@@ -56,8 +56,7 @@ def get_party(ne_list, lang, lookup_parties):
     try:
         if not isinstance(ne_list, list):
             raise ValueError(f"Error: when extraing party, expected ne_list to be a list, but got {type(ne_list)} instead.")
-            # print("Error: ne_list is not a list. Received:", type(ne_list))
-            # return {}, {}
+
 
         for entity in ne_list:
             if isinstance(entity, dict):
@@ -92,10 +91,5 @@ def get_party(ne_list, lang, lookup_parties):
         raise ve  
     except Exception as e:
         raise RuntimeError(f"Error in get_party function: {e}")
-
-    # except Exception as e:
-    #     # Log any errors during party extraction but ensure the pipeline continues
-    #     print(f"Error in get_party function: {e}")
-    #     return {}, lookup_parties  # Return empty parties in case of failure, but don't stop the pipeline
 
     return parties, lookup_parties

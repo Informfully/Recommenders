@@ -25,8 +25,6 @@ def get_min_maj_ratio(ne_list, **kwargs):
     # Check if ne_list is a valid iterable
     if not isinstance(ne_list, list):
         raise TypeError(f"Invalid input: Expected a list for 'ne_list', but received {type(ne_list).__name__}.")
-        # print("Error: ne_list is not a list. Received:", type(ne_list))
-        # return {}  # Return an empty dictionary if ne_list is not valid
 
     # Iterate through each entity in the named entity list
     for entity in ne_list:
@@ -61,13 +59,11 @@ def get_min_maj_ratio(ne_list, **kwargs):
                         for major_place_of_birth in major_place_of_births:
                             if (major_place_of_birth in entity_dict.get('place_of_birth', [])) or not entity_dict.get('place_of_birth'):
                                 place_of_birth_match = True
-
                         if ethnicity_match and place_of_birth_match:
                             count['ethnicity'][1] += entity_dict.get('frequency', 1)
-                            break
-
-                        count['ethnicity'][0] += entity_dict.get('frequency', 1)
-                        break
+                        else:
+                            count['ethnicity'][0] += entity_dict.get('frequency', 1)
+                        break 
 
                 if not loop_break:
                     count['ethnicity'][0] += entity_dict.get('frequency', 1)

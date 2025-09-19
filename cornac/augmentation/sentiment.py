@@ -40,10 +40,23 @@ def load_model(model_name="cardiffnlp/xlm-roberta-base-sentiment-multilingual", 
     
     return model, tokenizer
 
-model, tokenizer = load_model()
-# Create the sentiment analysis pipeline
-sentiment_analyzer = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer, top_k=None)
+# model, tokenizer = load_model()
+# # Create the sentiment analysis pipeline
+# sentiment_analyzer = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer, top_k=None)
 
+# Add global variables for lazy loading
+_model = None
+_tokenizer = None
+_sentiment_analyzer = None
+def get_sentiment_analyzer():
+    """Lazy load the sentiment analyzer only when needed."""
+    global _model, _tokenizer, _sentiment_analyzer
+    
+    if _sentiment_analyzer is None:
+        _model, _tokenizer = load_model()
+        _sentiment_analyzer = pipeline("sentiment-analysis", model=_model, tokenizer=_tokenizer, top_k=None)
+    
+    return _sentiment_analyzer
 
 def get_sentiment(text):
     """ Enhance the dataset with its sentiment (-1.0, 1.0) by analyzing sentiment on a sentence-by-sentence basis,
@@ -66,6 +79,7 @@ def get_sentiment(text):
         return None
 
     try:
+        sentiment_analyzer = get_sentiment_analyzer()
         # Split text into manageable chunks
         if len(text) <= 512:
             merged_sentences = [text]
