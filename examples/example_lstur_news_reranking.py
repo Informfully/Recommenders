@@ -23,21 +23,17 @@
 # ============================================================================
 
 import tensorflow as tf
-import os
-tf.compat.v1.enable_eager_execution()
-tf.config.run_functions_eagerly(True)
-
-# Set environment variables
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
-
-# Logging setup
 tf.get_logger().setLevel('INFO')
 tf.autograph.set_verbosity(0)
 
 import logging
 tf.get_logger().setLevel(logging.ERROR)
 logging.disable(logging.WARNING)
+
+import os
+# Set environment variables
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -57,8 +53,6 @@ from cornac.experiment.experiment import Experiment
 from cornac.metrics import NDCG, AUC, MRR
 from cornac.metrics import GiniCoeff, ILD, EILD, Precision, Activation, Calibration, Fragmentation, Representation, AlternativeVoices, Alpha_NDCG, Binomial
 from cornac.datasets import mind as mind
-from cornac.rerankers import GreedyKLReranker
-from cornac.rerankers.pm2 import PM2Reranker
 
 from cornac.models import LSTUR
 from cornac.rerankers import GreedyKLReranker, PM2Reranker, MMR_ReRanker, DynamicAttrReRanker
@@ -153,23 +147,7 @@ def main():
 
     
     ### generating one-hot encoding vectors for sentiment and party
-    ### Adjust based on your need
-    def sentiment_to_one_hot(score):
-        if -1 <= score < -0.5:
-            return [1, 0, 0, 0]
-        elif -0.5 <= score < 0:
-            return [0, 1, 0, 0]
-        elif 0 <= score < 0.5:
-            return [0, 0, 1, 0]
-        elif 0.5 <= score <= 1:
-            return [0, 0, 0, 1]
-
-    # Apply the function to each sentiment value
-    one_hot_encoded = {key: sentiment_to_one_hot(value) for key, value in sentiment.items()}
-
-    # Save the result to a new JSON file
-    with open(f"{input_path}/combined_sentiment_one_hot.json", "w", encoding="utf-8") as f:
-        json.dump(one_hot_encoded, f, indent=4)
+    ### Adjust based on your needs
 
     def sentiment_to_one_hot(score):
         if -1 <= score < -0.5:
@@ -260,7 +238,7 @@ def main():
     Target_Mind_distribution = {
             "sentiment": {"type": "continuous", "distr": [
                 {"min": -1, "max": -0.5, "prob": 0.25},
-                {"min": -0.5, "max": 0, "prob": 25},
+                {"min": -0.5, "max": 0, "prob": 0.25},
                 {"min": 0, "max": 0.5, "prob": 0.25},
                 {"min": 0.5, "max": 1.01, "prob": 0.25}
             ]},
