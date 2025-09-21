@@ -99,10 +99,8 @@ class TestGetSentiment(unittest.TestCase):
         text = "This text will cause an error in sentiment analysis."
         mock_sentiment_analyzer.side_effect = Exception("Sentiment analysis error")
 
-        # result = get_sentiment(text)
         with self.assertRaises(RuntimeError) as context:
             get_sentiment(text) 
-        # self.assertIsNone(result)
         self.assertIn("Error calculating sentiment", str(context.exception))
 
 

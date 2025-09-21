@@ -122,8 +122,7 @@ def set_ner_lang(lang='en'):
         return ner
         
     except Exception as e:
-        # print(f"An error occurred while loading the SpaCy model: {e}")
-        # return None
+
         raise RuntimeError(f"An unexpected error occurred while loading the SpaCy model '{model_name}': {e}") from e
 
 
@@ -229,8 +228,6 @@ def get_ner(text, ner_model=set_ner_lang(), **kwargs):
                                      'frequency': len(with_name),
                                      'label': label}))
     except Exception as e:
-        # print(f"An error occurred while getting Named Entities: {e}")
-        # ne_list = None
         raise RuntimeError(f"An error occurred while getting Named Entities: {e}")
 
 

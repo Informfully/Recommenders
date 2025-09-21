@@ -31,8 +31,7 @@ class TestGetReadability(unittest.TestCase):
         self.assertIsNone(result)
 
     def test_invalid_text_type(self):
-        # result = get_readability(12345, lang="en")  # Non-string input
-        # self.assertIsNone(result)
+
         """Test with invalid input type (non-string)"""
         with self.assertRaises(TypeError):
             get_readability(12345, lang="en")  # Integer input should raise TypeError

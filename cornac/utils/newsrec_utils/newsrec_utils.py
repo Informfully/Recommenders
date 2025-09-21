@@ -5,6 +5,7 @@ import json
 import pandas as pd
 import gc
 from typing import Dict, List, Any, Generator, Tuple
+from collections import OrderedDict
 
 class NewsRecUtil:
     """
@@ -14,7 +15,8 @@ class NewsRecUtil:
     """
     
     def __init__(self, news_title=None, word_dict=None, impressionRating=None, 
-                 user_history=None, history_size=50, title_size=30, max_cache_size=1000, batch_memory_limit=64):
+                 user_history=None, history_size=50, title_size=30,
+                              max_cache_size=1000, batch_memory_limit=64):
         """
         Initialize NewsRecUtil with news data and configuration.
         
@@ -32,10 +34,6 @@ class NewsRecUtil:
             Maximum number of historical articles to consider per user
         title_size : int
             Maximum number of words per news title
-        max_cache_size : int
-            Maximum number of items to keep in cache (default: 1000)
-        batch_memory_limit : int
-            Maximum batch size for memory efficiency (default: 64)
         """
         self.history_size = history_size  # Fixed typo from 'hisory_size'
         self.title_size = title_size
@@ -44,18 +42,21 @@ class NewsRecUtil:
         self.news_title = news_title
         self.word_dict = word_dict
         self.click_title_all_users = {}
-
+        
         # Caching mechanisms to improve performance
-        self.user_history_cache = {}
-        self.news_tokenization_cache = {}
         self._mappings_cached = False
-
+        
         # Memory optimization settings
         self.max_cache_size = max_cache_size
         self.batch_memory_limit = batch_memory_limit  # Limit batch size for memory efficiency
-
+        
         # Pre-allocated arrays for batch generation (will be initialized later)
         self._batch_arrays = None
+
+        self._word_pattern = re.compile(r"[\w]+|[.,!?;|]")
+
+        self.user_history_cache = OrderedDict()  # Use OrderedDict for LRU
+        self.news_tokenization_cache = OrderedDict()
         
     def newsample(self, news: List[int], ratio: int) -> List[int]:
         """
@@ -211,19 +212,25 @@ class NewsRecUtil:
 
                             # Yield batch when it's full
                             if batch_idx >= batch_size:
+                                # yield {
+                                #     "user_index_batch": batch_users.copy(),
+                                #     "clicked_title_batch": batch_history.copy(),
+                                #     "candidate_title_batch": batch_candidates.copy(),
+                                #     "labels": batch_labels.copy(),
+                                # }
                                 yield {
-                                    "user_index_batch": batch_users.copy(),
-                                    "clicked_title_batch": batch_history.copy(),
-                                    "candidate_title_batch": batch_candidates.copy(),
-                                    "labels": batch_labels.copy(),
-                                }
+                                "user_index_batch": batch_users[:batch_idx],     
+                                "clicked_title_batch": batch_history[:batch_idx],
+                                "candidate_title_batch": batch_candidates[:batch_idx],
+                                "labels": batch_labels[:batch_idx],
+                            }
                                 
                                 # Reset batch index and clear arrays
                                 batch_idx = 0
-                                batch_labels.fill(0)
-                                batch_users.fill(0)
-                                batch_candidates.fill(0)
-                                batch_history.fill(0)
+                                # batch_labels.fill(0)
+                                # batch_users.fill(0)
+                                # batch_candidates.fill(0)
+                                # batch_history.fill(0)
                                 
                                 # Periodic cache cleanup to prevent memory overflow
                                 self._periodic_cache_cleanup()
@@ -235,11 +242,12 @@ class NewsRecUtil:
         # Yield remaining data if any
         if batch_idx > 0:
             yield {
-                "user_index_batch": batch_users[:batch_idx].copy(),
-                "clicked_title_batch": batch_history[:batch_idx].copy(),
-                "candidate_title_batch": batch_candidates[:batch_idx].copy(),
-                "labels": batch_labels[:batch_idx].copy(),
-            }
+        "user_index_batch": batch_users[:batch_idx],     # No .copy()
+        "clicked_title_batch": batch_history[:batch_idx], # No .copy()
+        "candidate_title_batch": batch_candidates[:batch_idx], # No .copy()
+        "labels": batch_labels[:batch_idx],              # No .copy()
+    }
+
 
     def _get_cached_user_history(self, user_idx: int) -> np.ndarray:
         """
@@ -300,15 +308,20 @@ class NewsRecUtil:
         Periodically clean up caches to prevent memory overflow.
         """
         # Clean user history cache if it gets too large
-        if len(self.user_history_cache) > self.max_cache_size:
-            # Keep only the most recent half of the cache
-            items = list(self.user_history_cache.items())
-            self.user_history_cache = dict(items[len(items)//2:])
+        while len(self.user_history_cache) > self.max_cache_size:
+            self.user_history_cache.popitem(last=False)  # Remove oldest, no temp list
+        
+        while len(self.news_tokenization_cache) > self.max_cache_size:
+            self.news_tokenization_cache.popitem(last=False)  # Remove oldest, no temp list
+        # if len(self.user_history_cache) > self.max_cache_size:
+        #     # Keep only the most recent half of the cache
+        #     items = list(self.user_history_cache.items())
+        #     self.user_history_cache = dict(items[len(items)//2:])
             
-        # Clean news tokenization cache if it gets too large
-        if len(self.news_tokenization_cache) > self.max_cache_size:
-            items = list(self.news_tokenization_cache.items())
-            self.news_tokenization_cache = dict(items[len(items)//2:])
+        # # Clean news tokenization cache if it gets too large
+        # if len(self.news_tokenization_cache) > self.max_cache_size:
+        #     items = list(self.news_tokenization_cache.items())
+        #     self.news_tokenization_cache = dict(items[len(items)//2:])
 
     def _convert_data(self, label_list: List[List[int]], user_indexes: List[List[int]], 
                      candidate_title_indexes: List[np.ndarray], 
@@ -494,9 +507,11 @@ class NewsRecUtil:
         list
             List of words/tokens
         """
-        pat = re.compile(r"[\w]+|[.,!?;|]")
+        # pat = re.compile(r"[\w]+|[.,!?;|]")
+        # if isinstance(sent, str):
+        #     return pat.findall(sent.lower())
         if isinstance(sent, str):
-            return pat.findall(sent.lower())
+            return self._word_pattern.findall(sent.lower())
         else:
             return []
 

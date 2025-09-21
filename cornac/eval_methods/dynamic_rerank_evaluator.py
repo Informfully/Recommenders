@@ -39,9 +39,7 @@ def cache_rankings(model, user_idx, item_indices,  k = -1):
         return model.ranked_items[user_idx], model.item_scores[user_idx]
 
 
-    # item_idx2id = {v: k for k, v in test_set.iid_map.items()} # cornac item ID : raw item ID
-    # user_idx2id = {v: k for k, v in test_set.uid_map.items()} # cornac user ID : raw user ID
-    # item_id2idx = {k: v for k, v in test_set.iid_map.items()} # raw item ID : cornac item ID
+
     if not getattr(model, 'is_fitted', False):
         raise RuntimeError("Model is not fitted. Re-ranking requires the model to be fitted or the candidate lists for all users to be ready. Please call `model.fit()` before ranking.")
 
@@ -58,40 +56,12 @@ def cache_rankings(model, user_idx, item_indices,  k = -1):
 
 
 
-# def cache_rankings(model, user_idx, item_indices, k):
-#     '''
-#     Helper function to compute or load a ranked list for a model for a specific user.
 
-#     This function handles ranking operations by:
-#     1. Returning pre-computed rankings and scores from the cache if available.
-#     2. Computing the rankings and scores if they are not already cached.
 
-#     Key Details:
-#     - Newly computed rankings and scores are stored in the cache for future use.
 
-#     Parameters:
-#     - `model`: The recommender model that performs the ranking.
-#     - `user_idx`: The index of the user for whom the ranking is performed.
-#     - `item_indices`: The list of item indices to be ranked.
 
-#     Returns:
-#     - `item_rank`: The ranked list of items for the user.
-#     - `item_scores`: The scores of items corresponding to index in `item_indices` input.
-#     '''
-#     if not hasattr(model, 'ranked_items'):
-#         model.ranked_items = {}
-#     if not hasattr(model, 'item_scores'):
-#         model.item_scores = {}
 
-#     if user_idx in model.ranked_items and user_idx in model.item_scores:
-#         return model.ranked_items[user_idx], model.item_scores[user_idx]
-    
-#     item_rank, item_scores = model.rank( user_idx=user_idx, item_indices=item_indices, k=k)
-  
-#     model.ranked_items[user_idx] = item_rank
-#     model.item_scores[user_idx] = item_scores
 
-#     return item_rank, item_scores
 
 def cache_dynamic_rerankings(reranker, user_idx, train_set, initial_item_rank, recommendation_list, prediction_scores):
     '''
@@ -130,14 +100,12 @@ def cache_dynamic_rerankings(reranker, user_idx, train_set, initial_item_rank, r
     if not hasattr(reranker, 'ranked_items'):
         reranker.ranked_items = {}
     
-    # item_idx2id = {v: k for k, v in test_set.iid_map.items()} # cornac item ID : raw item ID
-    # user_idx2id = {v: k for k, v in test_set.uid_map.items()} # cornac user ID : raw user ID
-    # item_id2idx = {k: v for k, v in test_set.iid_map.items()} # raw item ID : cornac item ID
+
 
     start_time = time.time()
     reranked_list = reranker.rerank(
                     user_idx = user_idx, interaction_history = train_set, candidate_items = initial_item_rank, prediction_scores = prediction_scores, recommendation_list = recommendation_list)
-                            # item_idx2id = item_idx2id, user_idx2id = user_idx2id, item_id2idx =  item_id2idx)
+
 
     reranking_time = time.time() - start_time
 
@@ -266,8 +234,7 @@ def ranking_eval_on_dyn_rerankers(
         if len(u_gt_pos_items) == 0:
             continue  # Skip if no impression items are clicked for this user
         
-        # item_rank, item_scores = cache_rankings(
-        # model, user_idx,  item_indices, k = -1)
+
         item_rank, item_scores = cache_rankings(
         model,   user_idx=user_idx, item_indices=item_indices, k=-1)
 
@@ -386,8 +353,7 @@ def preprocess_data_for_Fragmentation(user_idx, test_set,  train_set, model, rer
 
             # Separate cached and uncached samples
             for x in sampled_users:
-                # model_ranked_items, model_ranked_scores = cache_rankings(
-                #     model, x, item_indices, k = -1)
+
 
                 model_ranked_items, model_ranked_scores = cache_rankings(
         model,   user_idx = x, item_indices=item_indices, k=-1)
@@ -493,12 +459,6 @@ def diversity_eval_on_dyn_rerankers(
 
     user_history_dict = OrderedDict()
 
-    def pos_items(csr_row):
-        return [
-            item_idx
-            for (item_idx, rating) in zip(csr_row.indices, csr_row.data)
-            if rating >= rating_threshold
-        ]
     test_user_indices = set(test_set.uir_tuple[0])
     for user_idx in test_user_indices:
         pos_item_idx = (
@@ -507,9 +467,17 @@ def diversity_eval_on_dyn_rerankers(
             else []
         )
         user_history_dict[user_idx] = pos_item_idx
-    # for user_idx in test_user_indices:
     
-    #     user_history_dict[user_idx] = pos_items(train_mat.getrow(user_idx))
+    # check if metrics contain Binomial
+    globalProbs = []
+
+    for i, mt in enumerate(metrics):
+        if "Binomial" in mt.name:
+            global_prob = mt.globalFeatureProbs(user_history_dict)
+            globalProbs.append(global_prob)
+        else:
+            globalProbs.append([])
+
     for user_idx in tqdm(
             test_user_indices, desc="Diversity evaluation on Dynamic rerankers", disable=not verbose, miniters=100
     ):
@@ -559,16 +527,6 @@ def diversity_eval_on_dyn_rerankers(
         u_gt_rating[gd_item_idx] = gd_item_rating
         # interacted and positive rating in training set
         user_history = user_history_dict.get(user_idx, [])
-        # check if metrics contain Binomial
-        globalProbs = []
-        for i, mt in enumerate(metrics):
-            if "Binomial" in mt.name:
-                global_prob = mt.globalFeatureProbs(user_history_dict)
-                globalProbs.append(global_prob)
-            else:
-                globalProbs.append([])
-        
-        
         
         for j in range(len(rerankers)):
             reranker = rerankers[j]

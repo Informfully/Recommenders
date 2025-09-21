@@ -37,7 +37,6 @@ class TestGetParty(unittest.TestCase):
         lookup_parties = {}
         with self.assertRaises(ValueError) as context:
             result, lookup = get_party(ne_list, lang=lang, lookup_parties=lookup_parties)
-        # self.assertEqual(result, {})
         self.assertIn("Error: when extraing party, expected ne_list to be a list", str(context.exception))
 
 

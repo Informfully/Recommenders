@@ -203,7 +203,7 @@ def get_readability(text, lang='en'):
         # Check if the text contains any meaningful characters
         if not contains_meaningful_characters(text):
             return None
-        lang_root = lang.split("_")[0]
+        # lang_root = lang.split("_")[0]
         if lang_root in textstat_langs:
             readability = textstat.flesch_reading_ease(text)
         else:
