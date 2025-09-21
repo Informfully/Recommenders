@@ -73,8 +73,9 @@ class PLD(Recommender):
         **kwargs):
 
         Recommender.__init__(self, name=name, trainable=trainable, verbose=verbose, **kwargs)
-
-        self.party_dict = party_dict
+        
+        
+        self.party_dict = self._normalize_party_dict(party_dict)
         self.articles = list(party_dict.keys())
 
         # check the format of the distribution, make sure every user type has same article types, which means for every row there are same columns at the second element.
@@ -96,7 +97,40 @@ class PLD(Recommender):
 
         self.group_recommendations_generated = False
 
+    def _find_config_section(self, config, model_name):
+        """Find configuration section case-insensitively."""
+        model_name_lower = model_name.lower()
+        
+        # Look for exact match (case-insensitive)
+        for section_name in config.sections():
+            if section_name.lower() == model_name_lower:
+                return section_name
+        
+        return None
 
+    def _get_config_value(self, section, primary_key, fallback_keys=None):
+        """Get configuration value with case-insensitive key matching."""
+        fallback_keys = fallback_keys or []
+        all_keys = [primary_key] + fallback_keys
+        
+        # Try each key (case-insensitive)
+        for key in all_keys:
+            # Try exact key first
+            if key in section:
+                return section[key].strip()
+            
+            # Try case-insensitive match
+            for actual_key in section.keys():
+                if actual_key.lower() == key.lower():
+                    return section[actual_key].strip()
+        
+        # If not found, raise error with helpful message
+        available_keys = list(section.keys())
+        raise ValueError(
+            f"Required configuration key not found. Tried: {all_keys}\n"
+            f"Available keys: {available_keys}"
+        )
+    
     def fit(self, train_set, val_set=None):
 
         """Fit the model to observations.
@@ -126,20 +160,54 @@ class PLD(Recommender):
             config = configparser.ConfigParser()
             config.read(self.configure_path)
 
-            section_name = self.name
+            section_name = self._find_config_section(config, self.name)
 
-            if section_name in config:
-                raw_parties = config[section_name].get('parties', '')
-                self.party_list = raw_parties.split(",")
-                # print(f"self.party_list: {self.party_list}")
+            if section_name:
+                raw_parties =  self._get_config_value(
+                    config[section_name], 
+                    'parties',
+                    ['party_list', 'party_names', 'political_parties']
+                )
+                self.party_list = [party.strip() for party in raw_parties.split(",") if party.strip()]
+                
+                # Case-insensitive key lookup with fallbacks
+                self.positive_score_party = self._get_config_value(
+                    config[section_name], 
+                    'positive_score_party_name',
+                    ['positive_party', 'pos_party']
+                )
+                self.negative_score_party = self._get_config_value(
+                    config[section_name],
+                    'negative_score_party_name', 
+                    ['negative_party', 'neg_party']
+                )
+                
+                if self.verbose:
+                    print(f"Using configuration section: [{section_name}]")
+                    print(f"Loaded parties: {self.party_list}")
+                    
             else:
+                available_sections = list(config.sections())
                 raise ValueError(
-                    f"Configuration Error: Section '{section_name}' not found in '{self.configure_path}'.\n"
-                    f"Please check your configuration file and ensure the section [{section_name}] exists."
+                    f"Configuration Error: No section found for model '{self.name}'.\n"
+                    f"Available sections: {available_sections}.\n"
                 )
 
-            self.positive_score_party = config[section_name]['positive_score_party_name']
-            self.negative_score_party = config[section_name]['negative_score_party_name']
+            # section_name = self.name
+
+
+            # if section_name in config:
+            #     raw_parties = config[section_name].get('parties', '')
+            #     self.party_list = raw_parties.split(",")
+            #     # print(f"self.party_list: {self.party_list}")
+            # else:
+            #     raise ValueError(
+            #         f"Configuration Error: Section '{section_name}' not found in '{self.configure_path}'.\n"
+            #         f"Please check your configuration file and ensure the section [{section_name}] exists."
+            #     )
+
+            # self.positive_score_party = config[section_name]['positive_score_party_name']
+            # self.negative_score_party = config[section_name]['negative_score_party_name']
 
             train_uir = list(zip(*train_set.uir_tuple))
 
@@ -160,6 +228,17 @@ class PLD(Recommender):
   
         return self
 
+    def _normalize_party_dict(self, party_dict):
+        """Normalize party dictionary for case-insensitive lookups."""
+        if not isinstance(party_dict, dict):
+            raise ValueError("party_dict must be a dictionary")
+        
+        normalized_dict = {}
+        for key, value in party_dict.items():
+            # Convert key to lowercase for consistent lookup
+            normalized_key = str(key).lower()
+            normalized_dict[normalized_key] = value
+        return normalized_dict
     
     def rank(self, user_idx, item_indices = None, k = -1, **kwargs):
         if not self.group_recommendations_generated:

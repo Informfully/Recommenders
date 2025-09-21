@@ -21,13 +21,10 @@ import os
 import pickle
 import warnings
 from collections import Counter, OrderedDict, defaultdict
-from collections import Counter, OrderedDict, defaultdict
 
 import numpy as np
 from scipy.sparse import csc_matrix, csr_matrix, dok_matrix
-from scipy.sparse import csc_matrix, csr_matrix, dok_matrix
 
-from ..utils import estimate_batches, get_rng, validate_format
 from ..utils import estimate_batches, get_rng, validate_format
 
 

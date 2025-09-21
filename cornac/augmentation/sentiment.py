@@ -2,11 +2,7 @@ from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassifica
 import pandas as pd
 import numpy as np
 import os
-# Load the model and tokenizer from the local directory
-# model_dir = "./augmentation/DataEnhancement/models/xlm_roberta_sentiment"
-# tokenizer = AutoTokenizer.from_pretrained(model_dir)
-# model = AutoModelForSequenceClassification.from_pretrained(model_dir)
-# sentiment_analyzer = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer, top_k=None)
+
 
 def load_model(model_name="cardiffnlp/xlm-roberta-base-sentiment-multilingual", cache_dir=None):
     """Load the model and tokenizer from Hugging Face or use a local cache if available.
@@ -40,10 +36,20 @@ def load_model(model_name="cardiffnlp/xlm-roberta-base-sentiment-multilingual", 
     
     return model, tokenizer
 
-model, tokenizer = load_model()
-# Create the sentiment analysis pipeline
-sentiment_analyzer = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer, top_k=None)
 
+# Add global variables for lazy loading
+_model = None
+_tokenizer = None
+_sentiment_analyzer = None
+def get_sentiment_analyzer():
+    """Lazy load the sentiment analyzer only when needed."""
+    global _model, _tokenizer, _sentiment_analyzer
+    
+    if _sentiment_analyzer is None:
+        _model, _tokenizer = load_model()
+        _sentiment_analyzer = pipeline("sentiment-analysis", model=_model, tokenizer=_tokenizer, top_k=None)
+    
+    return _sentiment_analyzer
 
 def get_sentiment(text):
     """ Enhance the dataset with its sentiment (-1.0, 1.0) by analyzing sentiment on a sentence-by-sentence basis,
@@ -66,6 +72,7 @@ def get_sentiment(text):
         return None
 
     try:
+        sentiment_analyzer = get_sentiment_analyzer()
         # Split text into manageable chunks
         if len(text) <= 512:
             merged_sentences = [text]
@@ -108,6 +115,5 @@ def get_sentiment(text):
         return sentiment
 
     except Exception as e:
-        # print(f"Error calculating sentiment for text: '{text[:50]}...'. Error: {e}")
-        # return None
+
         raise RuntimeError(f"Error calculating sentiment for text: '{text[:50]}...'. Error: {e}")

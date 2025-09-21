@@ -20,7 +20,7 @@ import json
 import numpy as np
 from ..eval_methods.static_rerank_evaluator import StaticReRankEval
 from ..eval_methods.dynamic_rerank_evaluator import DynamicReRankEval
-
+from .result import ExperimentResult
 
 class PipelineExperiment(Experiment):
     """PipelineExperiment Class
@@ -44,7 +44,6 @@ class PipelineExperiment(Experiment):
     """
 
     def __init__(self,
-                 
                  model,
                  metrics,
                 eval_method = None,
@@ -52,6 +51,7 @@ class PipelineExperiment(Experiment):
                  user_based=True,
                  show_validation=True,
                  verbose=False,
+                 save_dir='.',
                  pipeline_config_file=None):
         """
         Initializes the PipelineExperiment class, setting up models, metrics, rerankers, and configuration 
@@ -77,6 +77,10 @@ class PipelineExperiment(Experiment):
         verbose : bool, optional (default=False)
             If True, detailed logs and debug information will be printed.
 
+        save_dir: str, optional, default: '.'
+            Path to a directory for storing logs. By default, 
+           logs will be saved in the current working directory.
+
         pipeline_config_file : str, optional
             Path to an .ini configuration file specifying pipeline parameters.
 
@@ -93,9 +97,6 @@ class PipelineExperiment(Experiment):
 
         eval_method : cornac.eval_methods.BaseMethod
             Evaluation method used to split the dataset and compute metrics.
-
-        save_dir : str
-            Directory to save evaluation results and recommendations.
 
         models : Recommender
             The recommender model being evaluated.
@@ -142,10 +143,8 @@ class PipelineExperiment(Experiment):
             self.eval_method = self.load_dataset(self.config)
         else:
             self.eval_method = eval_method 
-        self.save_dir = self.config['pipeline'].get(
-            'save_dir', '.')
+        self.save_dir = save_dir
         os.makedirs(self.save_dir, exist_ok=True)
-        
         #  self.models is a `recommender`` object. This pipeline can only process one model.
         self.model = self._validate_models(model)
         # Validate and assign rerankers
@@ -430,38 +429,6 @@ class PipelineExperiment(Experiment):
 
         return item_scores, item_scores_mapped_indices
     
-    def save_results(self, test_result, val_result, save_dir, result_type="model"):
-        """
-        Save the results of the experiment to the specified directory.
-
-        Parameters:
-        -----------
-        test_result : object
-            The test result to save.
-        val_result : object or None
-            The validation result to save, if applicable.
-        save_dir : str
-            Directory to save the results.
-        result_type : str, optional
-            The type of result being saved (e.g., 'model', 'static_reranker'). Default is 'model'.
-
-        """
-        # Check if `all_test_results` attribute exists, if not create it as a dictionary
-        if not hasattr(self, 'all_test_results'):
-            self.all_test_results = {}
-
-        # Add or update the test result for the given result type
-        self.all_test_results[result_type] = test_result
-
-        # If validation results need to be saved separately (optional)
-        if not hasattr(self, 'all_val_results'):
-            self.all_val_results = {}
-
-        if val_result is not None:
-            self.all_val_results[result_type] = val_result
-
-        # Define the path to save the recommendation dictionary
-        test_result.save(save_dir)
 
     def check_missing_recommendations(self, model, eval_method):
         """
@@ -512,6 +479,11 @@ class PipelineExperiment(Experiment):
                 missing_user_indices.append(user_idx)
 
         return missing_user_indices
+    
+    def _create_result(self):
+        super()._create_result()
+        self.rerank_result = ExperimentResult()
+
 
     def run(self):
         """
@@ -534,9 +506,12 @@ class PipelineExperiment(Experiment):
                 user_based=self.user_based,
                 show_validation=self.show_validation
             )
+            self.result.append(test_result)
+            if self.val_result is not None:
+                self.val_result.append(val_result)
 
-            self.save_results(test_result, val_result,
-                              self.mode_and_paths["model"]['save_eval_path'])
+            test_result.save(self.mode_and_paths["model"]['save_eval_path'])
+                             
             self.model.save_recommendations(
                 self.mode_and_paths["model"]['path'])
             output += "\n" + "="*8 + "model test result" + \
@@ -567,8 +542,10 @@ class PipelineExperiment(Experiment):
                 show_validation=self.show_validation,
                 train_mode=False
             )
-            self.save_results(test_result, val_result,
-                              self.mode_and_paths["model"]['save_eval_path'])
+            self.result.append(test_result)
+            if self.val_result is not None:
+                self.val_result.append(val_result)
+            test_result.save(self.mode_and_paths["model"]['save_eval_path'])
 
             output += "\n" + "="*8 + "model test result" + \
                 "="*8 + "\n"+"{}".format(test_result)
@@ -584,8 +561,7 @@ class PipelineExperiment(Experiment):
 
             self.model.item_scores, self.model.item_scores_mapped_indices = self.load_model_scores(save_dir)
 
-            # self.model.item_scores = self.load_model_scores(save_dir)
-
+            
             # models.ranked_items must contain recommendation list for all user idx in the test_set!
             # check if the self.models.ranked_items ready.
             missing_user_indices = self.check_missing_recommendations(
@@ -606,9 +582,8 @@ class PipelineExperiment(Experiment):
 
             test_result_static_reranker, val_result_static_reranker = static_reranker_evaluator.evaluate(
                 model=self.model, metrics=self.metrics,    user_based=self.user_based, rerankers=self.rerankers,  show_validation=self.show_validation)
-
-            self.save_results(test_result_static_reranker, val_result_static_reranker,
-                              self.mode_and_paths["static_reranker"]['save_eval_path'], result_type="static_reranker")
+            self.rerank_result.append(test_result_static_reranker)
+            test_result_static_reranker.save(self.mode_and_paths["static_reranker"]['save_eval_path'])
 
             output += "\n" + "="*8 + "static rerankers test result" + \
                 "="*8 + "\n"+"{}".format(test_result_static_reranker)
@@ -627,8 +602,8 @@ class PipelineExperiment(Experiment):
 
             test_result_static_reranker, val_result_static_reranker = static_reranker_evaluator.evaluate(
                 model=self.model, metrics=self.metrics,    user_based=self.user_based, rerankers=self.rerankers,  show_validation=self.show_validation)
-            self.save_results(test_result_static_reranker, val_result_static_reranker,
-                              self.mode_and_paths["static_reranker"]['save_eval_path'], result_type="static_reranker")
+            self.rerank_result.append(test_result_static_reranker)
+            test_result_static_reranker.save(self.mode_and_paths["static_reranker"]['save_eval_path'])
 
             output += "\n" + "="*8 + "static rerankers test result" + \
                 "="*8 + "\n"+"{}".format(test_result_static_reranker)
@@ -636,9 +611,8 @@ class PipelineExperiment(Experiment):
             dyn_reranker_evaluator = DynamicReRankEval(self.eval_method)
             test_result_dyn, val_result_dyn = dyn_reranker_evaluator.evaluate(
                 model=self.model, metrics=self.metrics, user_based = False, rerankers=self.dynamic_rerankers, show_validation=self.show_validation)
-
-            self.save_results(test_result_dyn, val_result_dyn,
-                              self.mode_and_paths["dynamic_reranker"]['save_eval_path'], result_type="dynamic_reranker")
+            self.rerank_result.append(test_result_dyn)
+            test_result_dyn.save(self.mode_and_paths["dynamic_reranker"]['save_eval_path'])
 
             output += "\n" + "="*8 + "dynamic rerankers test result" + \
                 "="*8 + "\n" + "{}".format(test_result_dyn)
@@ -656,9 +630,9 @@ class PipelineExperiment(Experiment):
             dyn_reranker_evaluator = DynamicReRankEval(self.eval_method)
             test_result_dyn, val_result_dyn = dyn_reranker_evaluator.evaluate(
                                 model=self.model, metrics=self.metrics, user_based = False, rerankers=self.dynamic_rerankers, show_validation=self.show_validation)
-
-            self.save_results(test_result_dyn, val_result_dyn,
-                              self.mode_and_paths["dynamic_reranker"]['save_eval_path'], result_type="dynamic_reranker")
+            
+            self.rerank_result.append(test_result_dyn)
+            test_result_dyn.save(self.mode_and_paths["dynamic_reranker"]['save_eval_path'])
 
             output += "\n" + "="*8 + "dynamic rerankers test result" + \
                 "="*8 + "\n" + "{}".format(test_result_dyn)

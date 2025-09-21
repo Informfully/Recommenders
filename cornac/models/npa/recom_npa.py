@@ -7,17 +7,17 @@ import random
 import re
 import json
 import tensorflow as tf
-from tensorflow.compat.v1 import keras
-tf.compat.v1.disable_eager_execution()
+from tensorflow import keras
 from tensorflow.keras import layers
 import numpy as np
 from cornac.utils.newsrec_utils.layers import PersonalizedAttentivePooling
 from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
 import pandas as pd
 from tqdm.auto import tqdm
-# tf.compat.v1.disable_eager_execution()
+
 import os
 import pickle
+import gc 
 
 class NPA(Recommender):
     """NPA model(Neural News Recommendation with Attentive Multi-View Learning)
@@ -69,7 +69,8 @@ class NPA(Recommender):
         Recommender.__init__(
             self, name=name, trainable=trainable, verbose=verbose,  **kwargs)
         self.seed = seed
-        tf.compat.v1.set_random_seed(seed)
+        tf.random.set_seed(seed)
+        np.random.seed(seed)
         if word2vec_embedding is not None:
             self.word2vec_embedding = word2vec_embedding  # Load directly from params
         else:
@@ -110,15 +111,7 @@ class NPA(Recommender):
         self.epochs = epochs
         self.batch_size = batch_size
 
-        ## set News recommendation utils
-        # self.news_organizer = NewsRecUtil(news_title =self.news_title, word_dict = self.word_dict,
-        #                              impressionRating = self.impressionRating, user_history= self.userHistory,
-        #                              history_size = self.history_size,  title_size = self.title_size)
 
-
-        # session_conf = tf.ConfigProto()
-        # session_conf.gpu_options.allow_growth = True
-        # sess = tf.Session(config=session_conf)
 
 
 
@@ -392,7 +385,7 @@ class NPA(Recommender):
 
         
         # Configure GPU settings
-        gpus = tf.config.experimental.list_physical_devices("GPU")
+        gpus = tf.config.list_physical_devices("GPU")
         if gpus:
             try:
                 for gpu in gpus:
@@ -404,9 +397,10 @@ class NPA(Recommender):
         # Build model on GPU
         # with tf.device('/GPU:3'):
         self.model, self.scorer = self._build_graph()
+        # self.model.compile(loss="categorical_crossentropy",
+        #                     optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate))
         self.model.compile(loss="categorical_crossentropy",
-                            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate))
-
+                            optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate))
         # self.model, self.scorer = self._build_graph()
 
         # self.model.compile(loss="categorical_crossentropy",
@@ -428,6 +422,8 @@ class NPA(Recommender):
             step = 0
             self.current_epoch = epoch
             epoch_loss = 0
+            if epoch > 1 and epoch % 3 == 0:
+                gc.collect()
 
             tqdm_util = tqdm(
                 self.news_organizer.load_data_from_file(train_set, self.npratio,self.batch_size), desc=f"Epoch {epoch}",
@@ -517,7 +513,7 @@ class NPA(Recommender):
             raise Exception(
                 "item_idx should be an int, list, or numpy array")
         
-        batch_size = 256
+        batch_size = self.batch_size
         candidate_title_indexes = []
         click_title_indexes = []
         user_indexes = []
@@ -571,6 +567,8 @@ class NPA(Recommender):
             )
 
             all_predictions.append(batch_prediction)
+            if (start // batch_size) % 8 == 0:
+                gc.collect()
 
         # Concatenate all batch predictions into a single array
         
@@ -713,7 +711,7 @@ class NPA(Recommender):
         # Compile the model with the stored learning rate
         model.model.compile(
             loss="categorical_crossentropy",
-            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=model.learning_rate)
+            optimizer= keras.optimizers.Adam(learning_rate=model.learning_rate)
         )
 
         #################

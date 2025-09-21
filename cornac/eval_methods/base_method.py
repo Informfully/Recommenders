@@ -167,14 +167,11 @@ def cache_rankings(model, user_idx, item_indices,  k = -1):
         return model.ranked_items[user_idx], model.item_scores[user_idx]
 
 
-    # item_idx2id = {v: k for k, v in test_set.iid_map.items()} # cornac item ID : raw item ID
-    # user_idx2id = {v: k for k, v in test_set.uid_map.items()} # cornac user ID : raw user ID
-    # item_id2idx = {k: v for k, v in test_set.iid_map.items()} # raw item ID : cornac item ID
     if not getattr(model, 'is_fitted', False):
         raise RuntimeError("Model is not fitted. Please call `model.fit()` before ranking.")
     
     item_rank, item_scores = model.rank( user_idx=user_idx, item_indices=item_indices, k=k) 
-    # item_rank, item_scores = model.rank( user_idx=user_idx, item_indices=item_indices, k=k,item_idx2id = item_idx2id, user_idx2id = user_idx2id, item_id2idx =  item_id2idx) 
+
 
 
     # Cache the results for future use
@@ -355,10 +352,7 @@ def preprocess_data_for_Fragmentation(user_idx, test_set, model, metrics, item_i
 
             # Separate cached and uncached samples
             for x in sampled_users:
-                # model_ranked_items, _ = cache_rankings(
-                #     model, x, item_indices, k=-1)
-                # model_ranked_items, _ = cache_rankings(
-                #     model, x, item_indices, k=-1)
+
                 model_ranked_items, _ = cache_rankings(
         model,   user_idx=x, item_indices=item_indices, k=-1)
 
@@ -438,8 +432,7 @@ def diversity_eval( model,metrics, train_set,test_set, val_set= None, rating_thr
             globalProbs.append(global_prob)
         else:
             globalProbs.append([])
-    pd_other_users = preprocess_data_for_Fragmentation(
-        user_idx, test_set, model, metrics, item_indices=None)
+
 
 
     for user_idx in tqdm(
@@ -483,6 +476,8 @@ def diversity_eval( model,metrics, train_set,test_set, val_set= None, rating_thr
         gd_row = gt_mat.getrow(user_idx)
         u_gt_rating[gd_row.indices] = gd_row.data
 
+        pd_other_users = preprocess_data_for_Fragmentation(
+        user_idx, test_set, model, metrics, item_indices=item_indices)
 
         for i, mt in enumerate(metrics):
             mt_score = mt.compute(
@@ -501,14 +496,11 @@ def diversity_eval( model,metrics, train_set,test_set, val_set= None, rating_thr
                 user_results[i][user_idx] = mt_score
 
 
-            # user_results[i][user_idx] = mt_score
-
      # avg results of ranking metrics
     for i, mt in enumerate(metrics):
         values = user_results[i].values()
         avg_results.append(sum(values) / len(values) if values else 0)
-        # avg_results.append(
-        #     sum(user_results[i].values()) / len(user_results[i]))
+
 
     return avg_results, user_results
 

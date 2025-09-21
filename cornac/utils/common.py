@@ -20,7 +20,6 @@ import numpy as np
 import scipy.sparse as sp
 import pandas as pd
 import random
-import pandas as pd
 import math
 from .fast_sparse_funcs import (
     inplace_csr_row_normalize_l1,
@@ -102,7 +101,7 @@ def clip(values, lower_bound, upper_bound):
 def intersects(x, y, assume_unique=False):
     """Return the intersection of given two arrays
     """
-    mask = np.in1d(x, y, assume_unique=assume_unique)
+    mask = np.isin(x, y, assume_unique=assume_unique)
     x_intersects_y = x[mask]
 
     return x_intersects_y
@@ -111,7 +110,7 @@ def intersects(x, y, assume_unique=False):
 def excepts(x, y, assume_unique=False):
     """Removing elements in array y from array x
     """
-    mask = np.in1d(x, y, assume_unique=assume_unique, invert=True)
+    mask = np.isin(x, y, assume_unique=assume_unique, invert=True)
     x_excepts_y = x[mask]
 
     return x_excepts_y
@@ -149,9 +148,8 @@ def validate_format(input_format, valid_formats):
     """Check the input format is in list of valid formats
     :raise ValueError if not supported
     """
-    if not input_format in valid_formats:
-        raise ValueError('{} data format is not in valid formats ({})'.format(
-            input_format, valid_formats))
+    if input_format not in valid_formats:
+        raise ValueError('{} data format is not in valid formats ({})'.format(input_format, valid_formats))
 
     return input_format
 
@@ -591,8 +589,7 @@ def get_rng(seed):
         return np.random.RandomState(seed)
     if isinstance(seed, np.random.RandomState):
         return seed
-    raise ValueError(
-        '{} can not be used to create a numpy.random.RandomState'.format(seed))
+    raise ValueError('{} can not be used to create a numpy.random.RandomState'.format(seed))
 
 
 def normalize(X, norm='l2', axis=1, copy=True):
@@ -643,7 +640,6 @@ def normalize(X, norm='l2', axis=1, copy=True):
         elif norm == 'l2':
             inplace_csr_row_normalize_l2(X_out)
         elif norm == 'max':
-            # norms = X_out.max(axis=1).A
             norms = X_out.max(axis=1).toarray()
             norms_elementwise = norms.repeat(np.diff(X_out.indptr))
             mask = norms_elementwise != 0

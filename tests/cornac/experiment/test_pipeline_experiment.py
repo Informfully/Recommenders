@@ -207,14 +207,14 @@ class TestExperiment(unittest.TestCase):
                                                                       party_category_json_path = self.party_category_json_path)
         # Define reranking pipeline
 
-    def test_with_mostpop(self):
+    def test_01_with_mostpop(self):
 
         Experiment(eval_method=self.mind_ratio_split, models=[self.most_pop_model],
                    metrics=self.metrics,
                    save_dir=self.dataset_save_path
                    ).run()
 
-    def test_pipeline_experiment(self):
+    def test_02_pipeline_experiment(self):
         experiment_config_file = './tests/configs/experiment_configs/demo_experiment_pipeline.ini'
 
         pipelineExp = PipelineExperiment(model=[self.most_pop_model],

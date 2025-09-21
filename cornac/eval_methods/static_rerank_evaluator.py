@@ -88,41 +88,7 @@ def cache_rankings(model, user_idx, item_indices, k = -1):
 
     return item_rank, item_scores
 
-# def cache_rankings(model, user_idx, item_indices, k):
-#     '''
-#     Helper function to compute or load a ranked list for a model for a specific user.
 
-#     This function handles ranking operations by:
-#     1. Returning pre-computed rankings and scores from the cache if available.
-#     2. Computing the rankings and scores if they are not already cached.
-
-#     Key Details:
-#     - Newly computed rankings and scores are stored in the cache for future use.
-
-#     Parameters:
-#     - `model`: The recommender model that performs the ranking.
-#     - `user_idx`: The index of the user for whom the ranking is performed.
-#     - `item_indices`: The list of item indices to be ranked.
-
-#     Returns:
-#     - `item_rank`: The ranked list of items for the user.
-#     - `item_scores`: The scores of items corresponding to index in `item_indices` input.
-#     '''
-#     if not hasattr(model, 'ranked_items'):
-#         model.ranked_items = {}
-#     if not hasattr(model, 'item_scores'):
-#         model.item_scores = {}
-
-#     if user_idx in model.ranked_items and user_idx in model.item_scores:
-#         # print(f"Found model {model.name} recommendation for user: {user_idx}")
-#         return model.ranked_items[user_idx], model.item_scores[user_idx]
-    
-#     item_rank, item_scores = model.rank( user_idx=user_idx, item_indices=item_indices, k=k)
-  
-#     model.ranked_items[user_idx] = item_rank
-#     model.item_scores[user_idx] = item_scores
-
-#     return item_rank, item_scores
 
 
 def cache_rerankings(reranker, user_idx, train_set, model_ranked_items, model_ranked_scores):
@@ -510,8 +476,22 @@ def diversity_eval_on_rerankers(
         ]
     test_user_indices = set(test_set.uir_tuple[0])
     for user_idx in test_user_indices:
+        pos_item_idx = (
+            pos_items(train_mat.getrow(user_idx))
+            if user_idx < train_mat.shape[0]
+            else []
+        )
+        user_history_dict[user_idx] = pos_item_idx
     
-        user_history_dict[user_idx] = pos_items(train_mat.getrow(user_idx))
+    globalProbs = []
+
+    for i, mt in enumerate(metrics):
+        if "Binomial" in mt.name:
+            global_prob = mt.globalFeatureProbs(user_history_dict)
+            globalProbs.append(global_prob)
+        else:
+            globalProbs.append([])
+
 
     for user_idx in tqdm(
         test_user_indices, desc="Diversity Eval on Re-ranking Results", disable=not verbose, miniters=100
@@ -601,14 +581,9 @@ def diversity_eval_on_rerankers(
         u_gt_rating[gd_item_idx] = gd_item_rating
 
         user_history = user_history_dict.get(user_idx, [])
-        globalProbs = []
+  
         pd_other_users = []
-        for i, mt in enumerate(metrics):
-            if "Binomial" in mt.name:
-                global_prob = mt.globalFeatureProbs(user_history_dict)
-                globalProbs.append(global_prob)
-            else:
-                globalProbs.append([])
+        
   
         # Compute metric times and store results
         user_results = [

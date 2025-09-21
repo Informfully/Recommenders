@@ -191,11 +191,9 @@ class Recommender:
         if self.__item_ids is None:
             self.__item_ids = list(self.iid_map.keys())
         return self.__item_ids
-        # self.ranked_items = {}
-        # self.item_scores = {}
 
     def reset_info(self):
-        self.best_value = -np.Inf
+        self.best_value = float("-inf")
         self.best_epoch = 0
         self.current_epoch = 0
         self.stopped_epoch = 0
@@ -219,8 +217,7 @@ class Recommender:
             return []
 
         init_signature = inspect.signature(init)
-        parameters = [p for p in init_signature.parameters.values()
-                      if p.name != "self"]
+        parameters = [p for p in init_signature.parameters.values() if p.name != "self"]
 
         return sorted([p.name for p in parameters])
 
@@ -498,8 +495,7 @@ class Recommender:
             Relative scores that the user gives to the item or to all known items
 
         """
-        raise NotImplementedError(
-            "The algorithm is not able to make score prediction!")
+        raise NotImplementedError("The algorithm is not able to make score prediction!")
 
     def default_score(self):
         """Overwrite this function if your algorithm has special treatment for cold-start problem"""
@@ -644,7 +640,6 @@ class Recommender:
             if item_indices is None
             else np.asarray(item_indices)
         )
-      
         item_scores = all_item_scores[item_indices]
 
         if k != -1:  # O(n + k log k), faster for small k which is usually the case

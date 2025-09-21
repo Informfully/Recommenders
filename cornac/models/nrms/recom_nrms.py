@@ -13,10 +13,8 @@
 
 from tqdm.auto import trange
 from ..recommender import Recommender
-# import tensorflow.keras as keras
 import tensorflow as tf
-from tensorflow.compat.v1 import keras
-tf.compat.v1.disable_eager_execution()
+from tensorflow import keras
 from tensorflow.keras import layers
 from cornac.utils.newsrec_utils.layers import AttLayer2, SelfAttention
 from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
@@ -29,7 +27,7 @@ import re
 import json
 import os
 import pandas as pd
-
+import gc 
 
 class NRMS(Recommender):
     """NRMS model(Neural News Recommendation with Multi-Head Self-Attention)
@@ -154,7 +152,7 @@ class NRMS(Recommender):
 
 
         # Configure GPU settings
-        gpus = tf.config.experimental.list_physical_devices("GPU")
+        gpus = tf.config.list_physical_devices("GPU")
         if gpus:
             try:
                 for gpu in gpus:
@@ -167,7 +165,7 @@ class NRMS(Recommender):
         # with tf.device('/GPU:0'):
         self.model, self.scorer = self._build_graph()
         self.model.compile(loss="categorical_crossentropy",
-                            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate))
+                            optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate))
 
     def load_dict(self, file_path):
         """load json file
@@ -352,7 +350,6 @@ class NRMS(Recommender):
             object: An instance of self.
         """
         Recommender.fit(self, train_set, val_set)
-
         self.train_set = train_set
         self.val_set = val_set
 
@@ -397,6 +394,10 @@ class NRMS(Recommender):
             step = 0
             self.current_epoch = epoch
             epoch_loss = 0
+
+            #  Memory cleanup every few epochs 
+            if epoch > 1 and epoch % 3 == 0:
+                gc.collect()
 
             tqdm_util = tqdm(
                 self.news_organizer.load_data_from_file(train_set, self.npratio,self.batch_size), desc=f"Epoch {epoch}",
@@ -508,7 +509,7 @@ class NRMS(Recommender):
 
     
 
-        batch_size = 256  # Define batch size
+        batch_size = self.batch_size  # Define batch size
         candidate_title_indexes = []
         click_title_indexes = []
         # Get user's click history or handle unknown users
@@ -558,6 +559,8 @@ class NRMS(Recommender):
             )
 
             all_predictions.append(batch_prediction)
+            if (start // batch_size) % 8 == 0:
+                gc.collect()
 
         # Concatenate all batch predictions into a single array
         final_predictions = np.concatenate(all_predictions, axis=0)
@@ -690,7 +693,7 @@ class NRMS(Recommender):
         # Compile the model with the stored learning rate
         model.model.compile(
             loss="categorical_crossentropy",
-            optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=model.learning_rate)
+            optimizer=keras.optimizers.Adam(learning_rate=model.learning_rate)
         )
 
         # Load the saved model weights

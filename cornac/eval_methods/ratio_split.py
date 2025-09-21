@@ -1,5 +1,4 @@
 # Copyright 2018 The Cornac Authors. All Rights Reserved.
-############################################################################
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +17,6 @@ from math import ceil
 
 from .base_method import BaseMethod
 from ..utils.common import safe_indexing
-from .static_rerank_evaluator import StaticReRankEval
-from .dynamic_rerank_evaluator import DynamicReRankEval
-from ..experiment.result import Result
 
 
 class RatioSplit(BaseMethod):
@@ -127,16 +123,4 @@ class RatioSplit(BaseMethod):
         test_data = safe_indexing(self.data, test_idx)
         val_data = safe_indexing(self.data, val_idx) if len(val_idx) > 0 else None
 
-        self.build(train_data=train_data,
-                   test_data=test_data, val_data=val_data)
-
-
-
-
-
-
-
-      
-
-
-    
+        self.build(train_data=train_data, test_data=test_data, val_data=val_data)

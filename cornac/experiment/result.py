@@ -1,5 +1,5 @@
 # Copyright 2018 The Cornac Authors. All Rights Reserved.
-############################################################################
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -237,8 +237,8 @@ class PSTResult(list):
         unbiased = np.average(data[2:], axis=0, weights=weights[2:]) * sum(weights[2:])
 
         # weighted average does not meaningful for size
-        for idx, headers in enumerate(headers):
-            if headers == "SIZE":
+        for idx, header in enumerate(headers):
+            if header == "SIZE":
                 unbiased[idx] = sizes[0]
 
         # update the table
@@ -260,7 +260,7 @@ class PSTResult(list):
 
 class ExperimentResult(list):
     """
-    Result Class for an Experiment. A list of obj:`cornac.experiment.Result`. 
+    Result Class for an Experiment. A list of :obj:`cornac.experiment.Result`. 
     """
 
     def __str__(self):

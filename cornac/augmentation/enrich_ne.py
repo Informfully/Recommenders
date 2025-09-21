@@ -214,14 +214,14 @@ def lookup_and_update(lookup_dict: EfficientDict, alternative: str, all_alternat
                       wikidata: WikidataQuery, language_tags: List[str] = None):
     # Check if alternative is in lookup_dict
     lookup_result = lookup_dict.get(alternative.lower())
+    # If earlier query get nothing, directly return None
+    if lookup_result == '':
+        return None
     # If already enriched, update all alternatives and return stored value
-    if lookup_result:
+    elif lookup_result:
         for dict_key in all_alternatives:
             lookup_dict.add(dict_key.lower(), lookup_result)
         return lookup_result
-    # If earlier query get nothing, directly return None
-    elif lookup_result == '':
-        return None
 
     # If not queried before, query Wikidata
     if language_tags:
@@ -242,9 +242,6 @@ def get_person_data(wikidata: WikidataQuery, entity: Dict, lookup_person: Effici
     """
     Get person data from Wikidata.
     """
-    # print(entity['text'])
-    # print(lookup_person.main_dict)
-    # print(lookup_person.hash_table)
     info = {
         'key': entity['text'],
         'frequency': entity['frequency'],
@@ -269,9 +266,6 @@ def get_org_data(wikidata: WikidataQuery, entity: Dict, lookup_org: EfficientDic
     """
     Get organization data from Wikidata.
     """
-    # print(entity['text'])
-    # print(lookup_org.main_dict)
-    # print(lookup_org.hash_table)
     info = {
         'frequency': entity['frequency'],
         'alternative': entity['alternative']

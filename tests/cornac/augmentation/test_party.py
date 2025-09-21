@@ -28,7 +28,7 @@ class TestGetParty(unittest.TestCase):
             {"Bob": {"frequency": 1, "party": ["Republican Party", "Independent"]}}
         ]
         result, lookup = get_party(ne_list, lang="en", lookup_parties={})
-        self.assertEqual(result, {"Republican Party": 3, "independent politician": 1})
+        self.assertEqual(result, {"Republican Party": 3, "Independent": 1})
 
     def test_invalid_ne_list(self):
         # Set up non-list input
@@ -37,7 +37,6 @@ class TestGetParty(unittest.TestCase):
         lookup_parties = {}
         with self.assertRaises(ValueError) as context:
             result, lookup = get_party(ne_list, lang=lang, lookup_parties=lookup_parties)
-        # self.assertEqual(result, {})
         self.assertIn("Error: when extraing party, expected ne_list to be a list", str(context.exception))
 
 

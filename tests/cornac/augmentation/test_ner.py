@@ -65,10 +65,6 @@ class TestGetNER(unittest.TestCase):
         self.assertEqual(result, [])
 
     def test_get_ner_with_unsupported_language(self):
-        # with patch('spacy.load') as mock_spacy_load:
-        #     mock_spacy_load.side_effect = Exception("Language model not supported")
-        #     ner_model = set_ner_lang('xx')  # Assume 'xx' is an unsupported language
-        #     self.assertIsNone(ner_model)
         with self.assertRaises(ValueError) as context:
             set_ner_lang('sample') 
         self.assertEqual(str(context.exception), "Language 'sample' is not supported. Available options: ['en', 'pt', 'de', 'fr', 'es', 'zh', 'ca', 'hr', 'da', 'nl', 'fi', 'el', 'it', 'ja', 'ko', 'lt', 'mk', 'xx', 'mul', 'nb', 'pl', 'ro', 'ru', 'sl', 'sv', 'uk']")   

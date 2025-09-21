@@ -33,8 +33,7 @@ def load_model(model_name='facebook/bart-large-mnli', cache_dir= None):
     
     return model, tokenizer
 
-model, tokenizer = load_model()
-classifier = pipeline("zero-shot-classification", model=model,tokenizer=tokenizer)
+_classifier = None
 
 def get_category(row, **kwargs):
     """ Enhance the dataset with its category (e.g. news, sports, life)
@@ -49,9 +48,13 @@ def get_category(row, **kwargs):
     -------
     cat: string, corresponding category name for each news id row
     """
+    global _classifier
     candidate_labels = kwargs.get('candidate_labels')
     meta_data = kwargs.get('meta_data')
     threshold = kwargs.get('threshold', 0.5)
+    if candidate_labels and _classifier is None:
+        model, tokenizer = load_model()
+        _classifier = pipeline("zero-shot-classification", model=model,tokenizer=tokenizer)
 
     if candidate_labels:
          # Ensure row is a string (text)
@@ -59,7 +62,7 @@ def get_category(row, **kwargs):
             raise TypeError(f"Expected row to be str (text), but got {type(row).__name__}")
         try:
             # run classifier
-            res = classifier(row, candidate_labels, multi_label=True)
+            res = _classifier(row, candidate_labels, multi_label=True)
 
             categories = res['labels']
             scores = res['scores']
@@ -83,4 +86,4 @@ def get_category(row, **kwargs):
             return -1
 
     # If no candidate labels and no metadata, return -1 (indicating no category found)
-    return -1  # -1 is the default return value in case of missing candidate_labels and meta_data
+    return -1 

@@ -10,14 +10,12 @@
 # Licensed under the MIT License.
 from ..recommender import Recommender
 import pandas as pd
-# import tensorflow.keras as keras
 import tensorflow as tf
-from tensorflow.compat.v1 import keras
+from tensorflow import keras
 from tensorflow.keras import layers
-# from tensorflow.keras.optimizers import Adam
-tf.compat.v1.disable_eager_execution()  # Force TF1.x behavior
-from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
 
+from cornac.utils.newsrec_utils.newsrec_utils import NewsRecUtil
+import gc
 
 import numpy as np
 from cornac.utils.newsrec_utils.layers import (
@@ -78,7 +76,7 @@ class LSTUR(Recommender):
         Recommender.__init__(
             self, name=name, trainable=trainable, verbose=verbose, **kwargs)
         self.seed = seed 
-        tf.compat.v1.set_random_seed(seed)
+        tf.random.set_seed(seed)
         np.random.seed(seed)
 
         if word2vec_embedding is not None:
@@ -106,8 +104,6 @@ class LSTUR(Recommender):
         self.word_emb_dim = word_emb_dim
         self.learning_rate = learning_rate
         self.dropout = dropout
-        # self.epochs = epochs
-        # self.batch_size = batch_size
         self.title_size = title_size
         self.history_size = history_size
         # self.head_num = head_num
@@ -120,26 +116,8 @@ class LSTUR(Recommender):
         self.filter_num = filter_num
         self.type = type
 
-        self.learning_rate = learning_rate
-        self.dropout = dropout
         self.epochs = epochs
         self.batch_size = batch_size
-
-        ## set News recommendation utils
-        # self.news_organizer = NewsRecUtil(news_title =self.news_title, word_dict = self.word_dict,
-        #                              impressionRating = self.impressionRating, user_history= self.userHistory,
-        #                              history_size = self.history_size,  title_size = self.title_size)
- 
-        # session_conf = tf.ConfigProto()
-        # session_conf.gpu_options.allow_growth = True
-        # sess = tf.Session(config=session_conf)
-         ## set News recommendation utils
-        
-
-
-
-
-
 
 
     def load_dict(self, file_path):
@@ -363,7 +341,6 @@ class LSTUR(Recommender):
         
         Recommender.fit(self, train_set, val_set)
 
-
         self.train_set = train_set
         self.val_set = val_set
 
@@ -394,7 +371,7 @@ class LSTUR(Recommender):
                                      history_size = self.history_size,  title_size = self.title_size)
 
         # Configure GPU settings
-        gpus = tf.config.experimental.list_physical_devices("GPU")
+        gpus = tf.config.list_physical_devices("GPU")
         if gpus:
             try:
                 for gpu in gpus:
@@ -403,29 +380,25 @@ class LSTUR(Recommender):
             except RuntimeError as e:
                 print(f"GPU memory growth setting failed: {e}")
 
+
         # Build model on GPU
         # with tf.device('/GPU:1'):
         self.model, self.scorer = self._build_graph()
-        # self.model.compile(loss="categorical_crossentropy",
-        #                     optimizer=keras.optimizers.Adam(learning_rate=self.learning_rate))
-            # Compile model with Adam optimizer (TensorFlow 2.x compatible)
         self.model.compile(
         loss="categorical_crossentropy",
-        optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=self.learning_rate)  # Ensure Adam is used from tf.keras.optimizers
+        optimizer= keras.optimizers.Adam(learning_rate=self.learning_rate)  
     )
         
-        # self.model, self.scorer = self._build_graph()
-
-        # self.model.compile(loss="categorical_crossentropy",
-        #                    optimizer=keras.optimizers.Adam(learning_rate=self.learning_rate))
-
-
         self.loss_log = []  # Store the loss values over epochs
         # self.click_title_all_users = {}
         for epoch in range(1, self.epochs + 1):
             step = 0
             self.current_epoch = epoch
             epoch_loss = 0
+
+            if epoch > 1 and epoch % 3 == 0:
+                gc.collect()
+            
             tqdm_util = tqdm(
                 self.news_organizer.load_data_from_file(train_set, self.npratio,self.batch_size), desc=f"Epoch {epoch}",
                 leave=False  # Removes stale progress bars
@@ -523,7 +496,7 @@ class LSTUR(Recommender):
                 "item_idx should be an int, list, or numpy array")
 
 
-        batch_size = 256  # Define batch size
+        batch_size = self.batch_size  # Define batch size
         candidate_title_indexes = []
         click_title_indexes = []
         user_indexes = []
@@ -576,6 +549,8 @@ class LSTUR(Recommender):
             )
 
             all_predictions.append(batch_prediction)
+            if (start // batch_size) % 8 == 0:
+                gc.collect()
             
         # Concatenate all batch predictions into a single array
         final_predictions = np.concatenate(all_predictions, axis=0)
