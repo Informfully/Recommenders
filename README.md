@@ -116,10 +116,6 @@ It includes and supports all elements that were already part of Cornac.
 | Traditional Diversity Evaluation (Gini and ILD) | [Script](https://github.com/Informfully/Experiments/blob/main/experiments/recsys_2025/evaluation_scripts/check_diversity/check_diversity.py) |
 | Normative Diversity Evaluation (RADio) | [Script](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/evaluation_scripts/check_ntd) |
 
-| Visualization |
-| - |
-| [Informfully](https://informfully.readthedocs.io/en/latest/recommendations.html) |
-
 Item visualization is done using the [Informfully Platform](https://github.com/Informfully/Platform).
 Please look at the relevant documentation page for a [demo script](https://informfully.readthedocs.io/en/latest/recommendations.html).
 
