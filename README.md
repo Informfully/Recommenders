@@ -123,19 +123,21 @@ Please look at the relevant documentation page for a [demo script](https://infor
 
 If you use any code or data from this repository in a scientific publication, we ask you to cite the following papers:
 
-* [Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
+* [Informfully Recommenders – Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2024.
 
   ```tex
   @inproceedings{heitz2025recommenders,
-    title={Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations},
+    title={Informfully Recommenders – Reproducibility Framework for Diversity-aware Intra-session Recommendations},
     author={Heitz, Lucien and Li, Runze and Inel, Oana and Bernstein, Abraham},
     booktitle={Proceedings of the 19th ACM Conference on Recommender Systems},
     pages={792--801},
     year={2025},
+    publisher={ACM New York, NY, USA},
+    url={https://doi.org/10.1145/3705328.3748148}
   }
   ```
   
-*-* [Informfully - Research Platform for Reproducible User Studies](https://doi.org/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
+* [Informfully - Research Platform for Reproducible User Studies](https://doi.org/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
   ```tex
   @inproceedings{heitz2024informfully,
@@ -143,19 +145,23 @@ If you use any code or data from this repository in a scientific publication, we
     author={Heitz, Lucien and Croci, Julian A and Sachdeva, Madhav and Bernstein, Abraham},
     booktitle={Proceedings of the 18th ACM Conference on Recommender Systems},
     pages={660--669},
-    year={2024}
+    year={2024},
+    publisher={ACM New York, NY, USA},
+    url={https://doi.org/10.1145/3640457.3688066}
   }
   ```
   
-* [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
+* [Multi-Modal Recommender Systems: Hands-On Exploration](https://doi.org/10.1145/3460231.3473324), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
 
   ```tex
   @inproceedings{truong2021multi,
     title={Multi-modal recommender systems: Hands-on exploration},
     author={Truong, Quoc-Tuan and Salah, Aghiles and Lauw, Hady},
-    booktitle={Fifteenth ACM Conference on Recommender Systems},
+    booktitle={Proceedings of the 15th ACM Conference on Recommender Systems},
     pages={834--837},
-    year={2021}
+    year={2021},
+    publisher={ACM New York, NY, USA},
+    url={https://doi.org/10.1145/3460231.3473324}
   }
 
 ## Contributing
