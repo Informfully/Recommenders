@@ -15,6 +15,7 @@ It is the combined documentation for all [code repositories](https://github.com/
 Informfully Recommenders is a norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac).
 Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
 And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
+Furthermore, we provide [sample recommendations](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/final_recommendations) of past experiments for testing and development purposes.
 
 ![Informfully Recommenders Pipeline Overview](https://raw.githubusercontent.com/Informfully/Documentation/refs/heads/main/docs/source/uml/framework_extension_v4.2.png)
 
@@ -39,13 +40,13 @@ It includes and supports all elements that were already part of Cornac.
 | Story Cluster | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/story.py) |
 | Article Category | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/category.py) |
 
-| [Splitting](https://informfully.readthedocs.io/en/latest/splitting.html) |
-|-|
-| Attribute-based Sorting |
-| Diversity-based Subset Construction |
-| Attribute-based Stratified Splitting |
-| Diversity-based Stratified Splitting |
-| Clustering-based Stratified Splitting |
+| [Splitting](https://informfully.readthedocs.io/en/latest/splitting.html) | Link |
+|-|-|
+| Attribute-based Sorting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Diversity-based Subset Construction | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Attribute-based Stratified Splitting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Diversity-based Stratified Splitting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Clustering-based Stratified Splitting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
 
 ### In-processing Stage
 
