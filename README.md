@@ -124,7 +124,7 @@ Please look at the relevant documentation page for a [demo script](https://infor
 
 If you use any code or data from this repository in a scientific publication, we ask you to cite the following papers:
 
-* [Informfully Recommenders – Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2024.
+* [Informfully Recommenders – Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
 
   ```tex
   @inproceedings{heitz2025recommenders,
