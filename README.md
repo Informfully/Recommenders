@@ -15,6 +15,7 @@ It is the combined documentation for all [code repositories](https://github.com/
 Informfully Recommenders is a norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac).
 Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
 And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
+Furthermore, we provide [sample recommendations](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/final_recommendations) of past experiments for testing and development purposes.
 
 ![Informfully Recommenders Pipeline Overview](https://raw.githubusercontent.com/Informfully/Documentation/refs/heads/main/docs/source/uml/framework_extension_v4.2.png)
 
@@ -39,13 +40,13 @@ It includes and supports all elements that were already part of Cornac.
 | Story Cluster | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/story.py) |
 | Article Category | [Script](https://github.com/Informfully/Recommenders/blob/main/cornac/augmentation/category.py) |
 
-| [Splitting](https://informfully.readthedocs.io/en/latest/splitting.html) |
-|-|
-| Attribute-based Sorting |
-| Diversity-based Subset Construction |
-| Attribute-based Stratified Splitting |
-| Diversity-based Stratified Splitting |
-| Clustering-based Stratified Splitting |
+| [Splitting](https://informfully.readthedocs.io/en/latest/splitting.html) | Link |
+|-|-|
+| Attribute-based Sorting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Diversity-based Subset Construction | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Attribute-based Stratified Splitting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Diversity-based Stratified Splitting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
+| Clustering-based Stratified Splitting | [Link](https://github.com/Informfully/Recommenders/blob/main/cornac/eval_methods/stratified_split_diversity.py) |
 
 ### In-processing Stage
 
@@ -116,10 +117,6 @@ It includes and supports all elements that were already part of Cornac.
 | Traditional Diversity Evaluation (Gini and ILD) | [Script](https://github.com/Informfully/Experiments/blob/main/experiments/recsys_2025/evaluation_scripts/check_diversity/check_diversity.py) |
 | Normative Diversity Evaluation (RADio) | [Script](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/evaluation_scripts/check_ntd) |
 
-| Visualization |
-| - |
-| [Informfully](https://informfully.readthedocs.io/en/latest/recommendations.html) |
-
 Item visualization is done using the [Informfully Platform](https://github.com/Informfully/Platform).
 Please look at the relevant documentation page for a [demo script](https://informfully.readthedocs.io/en/latest/recommendations.html).
 
@@ -127,19 +124,21 @@ Please look at the relevant documentation page for a [demo script](https://infor
 
 If you use any code or data from this repository in a scientific publication, we ask you to cite the following papers:
 
-- [Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
+* [Informfully Recommenders – Reproducibility Framework for Diversity-aware Intra-session Recommendations](https://doi.org/10.1145/3705328.3748148), Heitz *et al.*, Proceedings of the 19th ACM Conference on Recommender Systems, 2025.
 
   ```tex
   @inproceedings{heitz2025recommenders,
-    title={Informfully Recommenders – A Reproducibility Framework for Diversity-aware Intra-session Recommendations},
+    title={Informfully Recommenders – Reproducibility Framework for Diversity-aware Intra-session Recommendations},
     author={Heitz, Lucien and Li, Runze and Inel, Oana and Bernstein, Abraham},
     booktitle={Proceedings of the 19th ACM Conference on Recommender Systems},
     pages={792--801},
     year={2025},
+    publisher={ACM New York, NY, USA},
+    url={https://doi.org/10.1145/3705328.3748148}
   }
   ```
   
-- [Informfully - Research Platform for Reproducible User Studies](https://doi.org/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
+* [Informfully - Research Platform for Reproducible User Studies](https://doi.org/10.1145/3640457.3688066), Heitz *et al.*, Proceedings of the 18th ACM Conference on Recommender Systems, 2024.
 
   ```tex
   @inproceedings{heitz2024informfully,
@@ -147,19 +146,23 @@ If you use any code or data from this repository in a scientific publication, we
     author={Heitz, Lucien and Croci, Julian A and Sachdeva, Madhav and Bernstein, Abraham},
     booktitle={Proceedings of the 18th ACM Conference on Recommender Systems},
     pages={660--669},
-    year={2024}
+    year={2024},
+    publisher={ACM New York, NY, USA},
+    url={https://doi.org/10.1145/3640457.3688066}
   }
   ```
   
-- [Multi-Modal Recommender Systems: Hands-On Exploration](http://jmlr.org/papers/v21/19-805.html), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
+* [Multi-Modal Recommender Systems: Hands-On Exploration](https://doi.org/10.1145/3460231.3473324), Truong *et al.*, Proceedings of the 15th ACM Conference on Recommender Systems, 2021.
 
   ```tex
   @inproceedings{truong2021multi,
     title={Multi-modal recommender systems: Hands-on exploration},
     author={Truong, Quoc-Tuan and Salah, Aghiles and Lauw, Hady},
-    booktitle={Fifteenth ACM Conference on Recommender Systems},
+    booktitle={Proceedings of the 15th ACM Conference on Recommender Systems},
     pages={834--837},
-    year={2021}
+    year={2021},
+    publisher={ACM New York, NY, USA},
+    url={https://doi.org/10.1145/3460231.3473324}
   }
 
 ## Contributing
@@ -167,9 +170,9 @@ If you use any code or data from this repository in a scientific publication, we
 You are welcome to contribute to the Informfully ecosystem and become a part of our community.
 Feel free to:
 
-- Fork any of the [Informfully repositories](https://github.com/Informfully/Documentation).
-- Suggest new features in [Future Release](https://github.com/orgs/Informfully/projects/1).
-- Make changes and create pull requests.
+* Fork any of the [Informfully repositories](https://github.com/Informfully/Documentation).
+* Suggest new features in [Future Release](https://github.com/orgs/Informfully/projects/1).
+* Make changes and create pull requests.
 
 Please post your feature requests and bug reports in our [GitHub issues](https://github.com/Informfully/Documentation/issues) section.
 
