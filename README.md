@@ -5,9 +5,6 @@
 Welcome to Informfully ([GitHub](https://github.com/orgs/Informfully) & [Website](https://informfully.ch/))!
 Informfully is an open-source reproducibility platform for content distribution and user experiments.
 
-To view the full documentation, please visit [Informfully at Read the Docs](http://informfully.ch/docs).
-It is the combined documentation for all [code repositories](https://github.com/orgs/Informfully/repositories).
-
 **Links and Resources:** [GitHub](https://github.com/orgs/Informfully) | [Website](https://informfully.ch) | [X](https://x.com/informfully) | [Documentation](http://informfully.ch/docs) | [DDIS@UZH](https://www.ifi.uzh.ch/en/ddis.html) | [Google Play](https://play.google.com/store/apps/details?id=ch.uzh.ifi.news) | [App Store](https://apps.apple.com/us/app/informfully/id1460234202)
 
 ## Pipeline Overview
@@ -15,7 +12,7 @@ It is the combined documentation for all [code repositories](https://github.com/
 Informfully Recommenders is a norm-aware extension of [Cornac](https://github.com/PreferredAI/cornac).
 Please see the [Experiments Repository](https://github.com/Informfully/Experiments) for an overview of our past offline and online studies using this framework as back end.
 And see the [Online Tutorial](https://github.com/Informfully/Experiments/tree/main/experiments/tutorial) for a quick introduction on how to use this repository.
-Furthermore, we provide [sample recommendations](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/final_recommendations) of past experiments for testing and development purposes.
+Furthermore, we provide [sample recommendations](https://github.com/Informfully/Experiments/tree/main/experiments/recsys_2025/final_recommendations) from past experiments for testing and development.
 
 ![Informfully Recommenders Pipeline Overview](https://raw.githubusercontent.com/Informfully/Documentation/refs/heads/main/docs/source/uml/framework_extension_v4.2.png)
 
